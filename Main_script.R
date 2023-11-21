@@ -4,7 +4,7 @@
 #===============================================================================
 
 #load the config file and choose the option best suited for the data
-Sys.setenv(R_CONFIG_ACTIVE = "altered")
+Sys.setenv(R_CONFIG_ACTIVE = "global_south")
 
 
 #load packages
@@ -123,7 +123,7 @@ TAPE <- all_TAPE()
 
 #create an excel table
 TAPE_excel <- TAPE_excel()
-write.xlsx(TAPE_excel, 'Stevan_functions_tryout/try_if_header.xlsx')
+write.xlsx(TAPE_excel, 'Path of excel file')
 
 
 
