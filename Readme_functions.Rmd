@@ -1,0 +1,1807 @@
+---
+title: "README_functions_TAPE"
+author: "Stevan Paunoivc"
+date: "2023-08-16"
+output: PDF_document
+---
+
+# functions of the TAPE calculating tool
+
+## Table of contents
+
+-   Introduction
+
+-   Function explanation
+
+    -   Diversity
+
+    -   Synergies
+
+    -   Efficiency
+
+    -   Recycling
+
+    -   Resilience
+
+    -   Culture and Food traditions
+
+    -   Co-creation
+
+    -   Human and social values
+
+    -   Circular and Solidarity Economy
+
+    -   Responsable Governance
+
+    -   **CAET**
+
+    -   Dietary Diversity
+
+    -   Soil Health
+
+    -   Secure and Land Tenure
+
+    -   Woman Empowerment
+
+    -   Youth Employment and Emigration
+
+    -   Agricultural Biodiversity
+
+    -   Exposure to Pesticides
+
+    -   Productivity
+
+    -   Income
+
+    -   Food expenses
+
+    -   added Value
+
+    -   **TAPE**
+
+-   Contributing
+
+-   Contact
+
+### Introduction
+
+The FAO and a large number of partners have developed the Tool for Agroecological performance Evaluation (**TAPE**) to provide data on household, community and territorial scale while measuring the performance of farms across the different dimensions of sustainability. This R script provides functions for calculating the different parameters (CAET score, Dietary Diversity, Soil Health, Secure and Land Tenure, Woman Empowerment, Youth Employment Opportunities, Agricultural Biodiversity, Exposure to Pesticides, Productivity, Income and Added Value) and one for summarizing all of the results in one data frame. The calculations were adapted according to *\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_enter Aninas paper\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_* \### This script is then sourced to the Main script where the functions are executed.
+
+### variable **key**
+
+The variable **key** corresponds to the number the farm was given in the survey. It is used for mapping the daata and ordering the newly calculated factors to the right farm. Every function will incorporate the **key** variable for the sake of properly ordering it in the final data frame.
+
+#### Diversity
+
+The Diversity score is calculated by the sum of the amount of **cultivated crops**[score 0-4], amount of **tree species** [score 0-4], amount of **animal species** [score 0-4] and amount of **income producing activities** (div_activ) score [0-4]. this sum is then divided by 16 and multiplied by 100.
+
+```{r}
+caet_diversity <- function(){
+  Diversity <- data[,c('key', 'location1','sys_name', 'crops', 'animals', 'trees', 'div_activ')]
+  Diversity <- Diversity %>%
+    rowwise() %>%  #cleans data so there only is one number for crops animals trees ...
+    mutate(div_sum = sum(c(crops, animals, trees, div_activ), na.rm = TRUE),
+           div_aver = mean(c(crops ,animals ,trees ,div_activ),na.rm = TRUE),  # Is later used for Resilience
+           div_score = round((div_sum/16)*100,6)) # calculates score
+  return(Diversity)
+  }
+
+```
+
+### Synergies
+
+The Synergy score is calculated by the sum of the **crop-animal-integration** (cla_int) score [0-4], the **soil-plant-management** score [0-4], the **integration of trees** [score 0-4] and a score for the **connectivity of the farm to the landscape** [0-4]. This sum is then divided by 16 and multiplied by 100.
+
+```{r}
+caet_synergies <- function(){
+  Synergies <- data[,c('key', 'location1','sys_name', 'cla_int', 's_plant', 'tree_int', 'connectivity')]
+  Synergies <- Synergies %>% #creates dataframe to calculate indicator
+    rowwise() %>%
+    mutate(syn_sum = sum(c(cla_int ,s_plant ,tree_int ,connectivity),na.rm = TRUE),
+           syn_score = round((syn_sum/16)*100,6))
+  return(Synergies)
+}
+```
+
+### Efficiency
+
+The Efficiency score is calculated by the sum of the **use of external inputs** [score 0-4], **Management of soil fertility** [score 0-4], **Management of pests and diseases** [score 0-4] and by a score of how much of the **household needs are met with the farm production** (productivity) [score 0-4]. This sum is the divided by 16 and multiplied by 100.
+
+```{r}
+caet_efficiency <- function(){
+  Efficiency <- data[,c('key', 'location1','sys_name', 'ext_inp', 'soil_fert', 'pest_dis', 'productivity')]
+  Efficiency <- Efficiency %>%
+    rowwise() %>%
+    mutate(eff_sum = sum(c(ext_inp, soil_fert, pest_dis, productivity), na.rm = TRUE),
+           eff_score = round((eff_sum/16)*100,6))
+  return(Efficiency)
+}
+```
+
+### Recycling
+
+The Recycling score is calculated by the sum of **recycled biomass** [score 0-4], the **water saving** score [0-4], **independence of the market for genetic materials** (seeds_breeds) [score 0-4] and **renewable energy** score [0-4]. This sum is then divided by 16 and multiplied by 100.
+
+```{r}
+caet_recycling <- function(){
+  Recycling <- data[,c('key', 'location1', 'sys_name', 'rec_biomass', 'water', 'seeds_breeds', 'ren_energy')]
+  Recycling <- Recycling %>%
+    rowwise() %>%
+    mutate(rec_sum = sum(c(rec_biomass,water,seeds_breeds,ren_energy),na.rm = TRUE),
+           rec_score = round((rec_sum/16)*100,6))
+  return(Recycling)
+}
+```
+
+### Resilience
+
+The Resilience score is calculated by the sum of **stability of income and production** (stab) [score 0-4], the **capacity to recover after shocks** (vuln) [score 0-4], **environmental resilience** (indebt) [score 0-4] and the mean of the 4 diversity (div_aver) scores. The sum is then divided by 16 and multiplied by 100.
+
+```{r}
+caet_resilience <- function(){
+  Resilience <- data[,c('key', 'location1', 'sys_name', 'stab', 'vuln', 'indebt','crops', 'animals', 'trees', 'div_activ')]
+  Resilience <- Resilience %>%
+    rowwise() %>%
+    mutate(div_aver = mean(c(crops ,animals ,trees ,div_activ),na.rm = TRUE),
+           res_sum = sum(c(stab, vuln, indebt, div_aver), na.rm = TRUE),
+           res_score = round((res_sum/16)*100,6))
+  return(Resilience)
+}
+```
+
+### Culture and food traditions
+
+The Culture and food traditions score is calculated by the sum of a score for **nutritional diet** [score 0-4], the **protection of local or traditional identity** [score 0-4] and the **use of local varieties or breeds** [score 0-4]. The sum is then divided by 12 and multiplied by 100.
+
+```{r}
+caet_culture <- function(){
+  Culture <- data[,c('key', 'location1', 'sys_name', 'diet', 'local_id', 'local_var')]
+  Culture <- Culture %>%
+    rowwise() %>%
+    mutate(cultf_sum = sum(c(diet,local_id,local_var),na.rm = TRUE),
+           cultf_score = round((cultf_sum/12)*100,6))
+  return(Culture)
+}
+```
+
+### Co-creation
+
+The Co-creation score is calculated by the sum of the **availability of social platforms for knowledge transfer** (platforms)[score 0-4], **access and interest to agroecological knowledge** (ae_know) [score 0-4] and the **interconnection of producers to their community and grassroot networks** (partic_orgs) [score 0-4]. This sum is then divided by 12 and multiplied by 100.
+
+```{r}
+caet_cocreation <- function(){
+  Cocreation <- data[,c('key', 'location1', 'sys_name', 'platforms', 'ae_know', 'partic_orgs')]
+  Cocreation <- Cocreation %>%
+    rowwise() %>%
+    mutate(cocr_sum = sum(c(platforms,ae_know,partic_orgs),na.rm = TRUE),
+           cocr_score = round((cocr_sum/12)*100,6))
+  return(Cocreation)
+}
+```
+
+### Human and social values
+
+The score for human and social values is calculated by the sum of the **women empowerment** (women) score [0-4], a score that measures **working conditions, wages and family participation** (labour) [score 0-4], a score of weather the **youth wants to continue farming** (youth) [0-4] and a **animal welfare** (animalwel) score [0-4]. Then the sum is divided by 16 (or 12 if there are no animals on the farm) and multiplied by 100.
+
+```{r}
+caet_humanvalues <- function(){
+  Humanvalues <- data[,c('key', 'location1', 'sys_name', 'women', 'labour', 'youth', 'animalwel')]
+  Humanvalues <- Humanvalues %>%
+    rowwise() %>%
+    mutate(human_sum = sum(c(women,labour,youth ,animalwel),na.rm = TRUE),
+           human_score = round((human_sum/16)*100,6),
+           human_score = ifelse(is.na(animalwel),round((human_sum/12)*100,6),human_score))
+  return(Humanvalues)
+}
+```
+
+### Circular economy and solidarity
+
+The score for circular economy and solidarity is calculated by the sum of a score for **local marketing** (mkt_local) [score 0-4], **relationship with the consumers** (networks) [score 0-4] and and a score for the **local food system** (local_fs) [score 0-4]. The sum is then divided by 12 and multiplied by 100.
+
+```{r}
+caet_circular <- function(){
+  Circular <- data[,c('key', 'location1', 'sys_name', 'mkt_local', 'networks', 'local_fs')]
+  Circular <- Circular %>%
+    rowwise() %>%
+    mutate(circ_sum = sum(c(mkt_local ,networks ,local_fs),na.rm = TRUE),
+           circ_score = round((circ_sum/12)*100,6))
+  return(Circular)
+}
+```
+
+### Responsible Governance
+
+The score for responsible governance is calculated by the sum of the **producers rights and bargaining power** [score 0-4], **the cooperation between producers** [score 0-4] and the **possibility to participate in land governance** [score 0-4]. The sum is then divided by 12 and multiplied by 100.
+
+```{r}
+caet_governance <- function(){
+  Governance <- data[,c('key', 'location1', 'sys_name', 'prod_empow', 'prod_orgs', 'partic_prod')]
+  Governance <- Governance %>%
+    rowwise() %>%
+    mutate(respg_sum = sum(c(prod_empow,prod_orgs,partic_prod),na.rm = TRUE),
+           respg_score = round((respg_sum/12)*100,6))
+  return(Governance)
+}
+```
+
+### Caracterisation of Agroecological Transition (CAET)
+
+To calculate the Characterization of agroecological transition (CAET) the mean score of all the above calculated scores (Diversity, Synergies, Efficiency, Recycling, Resilience, Culture and food traditions, Co-creation, Human and social values and Responsible Governance) is calculated.
+
+```{r}
+caet_CAET <- function(){
+  calc_CAET <- data[,c("key",'region', 'country', 'location1', 'location2', '_gps_loc_latitude', '_gps_loc_longitude', 'sys_type', 'sys_name',
+                  'crops', 'animals', 'trees', 'div_activ','cla_int', 's_plant', 'tree_int', 'connectivity',
+                  'ext_inp', 'soil_fert', 'pest_dis', 'productivity', 'rec_biomass', 'water', 'seeds_breeds', 'ren_energy',
+                  'stab', 'vuln', 'indebt','diet', 'local_id', 'local_var','platforms', 'ae_know', 'partic_orgs',
+                  'women', 'labour', 'youth', 'animalwel','mkt_local', 'networks', 'local_fs','prod_empow', 'prod_orgs', 'partic_prod')]
+  calc_CAET <- calc_CAET %>%
+    rowwise() %>%
+    mutate(div_sum = sum(c(crops, animals, trees, div_activ), na.rm = TRUE),
+           div_aver = mean(c(crops ,animals ,trees ,div_activ),na.rm = TRUE),  # Is later used for Resilience
+           div_score = round((div_sum/16)*100,6),
+           syn_sum = sum(c(cla_int ,s_plant ,tree_int ,connectivity),na.rm = TRUE),
+           syn_score = round((syn_sum/16)*100,6),
+           eff_sum = sum(c(ext_inp, soil_fert, pest_dis, productivity), na.rm = TRUE),
+           eff_score = round((eff_sum/16)*100,6),
+           rec_sum = sum(c(rec_biomass,water,seeds_breeds,ren_energy),na.rm = TRUE),
+           rec_score = round((rec_sum/16)*100,6),
+           res_sum = sum(c(stab, vuln, indebt, div_aver), na.rm = TRUE),
+           res_score = round((res_sum/16)*100,6),
+           cultf_sum = sum(c(diet,local_id,local_var),na.rm = TRUE),
+           cultf_score = round((cultf_sum/12)*100,6),
+           cocr_sum = sum(c(platforms,ae_know,partic_orgs),na.rm = TRUE),
+           cocr_score = round((cocr_sum/12)*100,6),
+           human_sum = sum(c(women,labour,youth ,animalwel),na.rm = TRUE),
+           human_score = round((human_sum/16)*100,6),
+           human_score = ifelse(is.na(animalwel),round((human_sum/12)*100,6),human_score),
+           circ_sum = sum(c(mkt_local ,networks ,local_fs),na.rm = TRUE),
+           circ_score = round((circ_sum/12)*100,6),
+           respg_sum = sum(c(prod_empow,prod_orgs,partic_prod),na.rm = TRUE),
+           respg_score = round((respg_sum/12)*100,6),
+           caet_tot = mean(c(div_score,syn_score,eff_score,rec_score,res_score,cultf_score,cocr_score,human_score,circ_score,respg_score),na.rm = TRUE))
+    
+  CAET <- calc_CAET[,c('key', 'region', 'country', 'location1', 'location2', '_gps_loc_latitude', '_gps_loc_longitude', 'sys_type', 'sys_name',
+                         'div_score','syn_score','eff_score','rec_score','res_score','cultf_score','cocr_score','human_score',
+                       'circ_score','respg_score',"caet_tot")]
+  return(CAET)
+}
+```
+
+### Dietary Diversity
+
+The columns loaded in to the new data frame **DietaryDiv** contain the value of 1 or 0 for the answers "yes" and "no" of the survey. The values are given ans seen in the following table:
+
+| Food                                                                                                         | Value |
+|----------------------------------------------------|--------------------|
+| Foods made from grains White roots and tubers or plantains                                                   | 1     |
+| PULSES (beans, peas, fresh or dried seed, lentils or bean / pea products, including hummus, tofu and tempeh) | 1     |
+| NUTS and SEEDS (Tree nut, groundnut/peanut or certain seeds, or nut / seed "butters" or pastes)              | 1     |
+| Milk, Cheese or yoghurt                                                                                      | 1     |
+| Organ meats, Red flesh meat from mammals, Processed meat, Poultry and other white meats, Fish and seafood    | 1     |
+| EGGS                                                                                                         | 1     |
+| DARK GREEN leafy VEGETABLES (any medium to-dark green leafy vegetables, including wild / foraged leaves)     | 1     |
+| Vitamin A-rich vegetables or roots, Vitamin A-rich fruits                                                    | 1     |
+| other VEGETABLES (cucumber, eggplant, mushroom, onion, tomato, etc.)                                         | 1     |
+| other FRUITS (avocado, apple, pineapple, etc.)                                                               | 1     |
+
+These values are added to each other and multiplied by 10.
+
+```{r}
+step2_Dietary_Diversity <- function(){
+  DietaryDiv <- data[,c('key', 'grains_A', 'grains_B', 'pulses', 'nuts', 'dairy_E', 'dairy_F', 'meat_H', 'meat_I', 'meat_J', 'meat_K', 'meat_L',
+                       'eggs', 'darkgreen', 'darkyellow_N', 'darkyellow_O', 'otherveg', 'otherfruit', 'fried_salty_1', 'fried_salty_2', 'fried_salty_3',
+                       'sweet_foods', 'sweet_beverages_1', 'sweet_beverages_2')]
+  DietaryDiv <- DietaryDiv %>%
+    rowwise() %>%
+    mutate(grains = ifelse(grains_A == 1 | grains_B == 1, 1, 0),
+           dairy = ifelse(dairy_E == 1 | dairy_F == 1, 1, 0),
+           meat = ifelse(meat_H == 1 | meat_I == 1 | meat_J == 1 | meat_K == 1 | meat_L == 1, 1, 0),
+           darkyellow = ifelse(darkyellow_N == 1 | darkyellow_O == 1, 1, 0)) %>%
+    rowwise() %>%
+    mutate(dietary_diversity = sum(c(grains, pulses, nuts, dairy, meat, eggs, darkgreen, darkyellow, otherveg, otherfruit), na.rm = T)) %>%
+    mutate(dietary_diversity = dietary_diversity*10) %>%
+    mutate(dietary_diversity = ifelse(is.na(dietary_diversity), 0, dietary_diversity)) %>%
+    mutate(tl_dietary = case_when(dietary_diversity >= 70 ~ 3,
+                                  dietary_diversity >= 50 & dietary_diversity < 70 ~ 2,
+                                  dietary_diversity < 50 ~ 1))
+  return(DietaryDiv)
+}
+```
+
+###Soil Health
+
+The listed characteristics of soil health have a score of 1-5. The mean of all the categories is taken. This score is translated to a scale of 0-100.
+
+
+```{r}
+step2_SoilHealth <- function(){
+  SoilHealth <- data[,c('key', 'structure', 'compaction', 'depth', 'residues', 'color', 'water_ret', 'cover', 'erosion', 'invertebrates', 'microbio')]
+  SoilHealth <- SoilHealth %>%
+    rowwise() %>%
+    mutate(soil_health = mean(c(structure,compaction,depth,residues,color,water_ret,cover,erosion,invertebrates,microbio),na.rm = T)) %>%
+    mutate(soil_health = (soil_health-1) * 25)
+  return(SoilHealth)
+}
+```
+
+### Secure Land Tenure
+
+The land tenure score is driven by whether farmers have legal documentation of the farm (**yn**\_), whether their names are listed as owners (**name**\_), if they perceive the access to the land as secure (**ltperc**\_), and whether they have the right to sell, bequeath or inherit the land (**sell_,beq_, inh_**). The scores were given as seen in the following table:
+
+| Legal recognition | Name on document | Perceive access is secure | Sell/bequeath/inherit | landtenure_score |
+|---------------|---------------|---------------|---------------|---------------|
+| 1                 | 1                | 1                         | \>0                   | 100     |
+| 1                 | 0                | \-                        | \-                    | 50     |
+| 1                 | 1                | 0                         | \-                    | 50     |
+| 0                 | \-               | 1                         | \>0                   | 50     |
+| 0                 | \-               | 0                         | \-                    | 0     |
+| 0                 | \-               | \-                        | 0                     | 0     |
+
+We calculated the average of the two and scaled the values from 1-3 points to 0-100%.
+
+```{r}
+step2_LandTenure <- function(){
+  Landtenure <- data[,c('key', 'yn_men', 'name_men', 'ltperc_men', 'sell_men', 'beq_men', 'inh_men', 'yn_women', 'name_women', 'ltperc_women', 'sell_women', 'beq_women', 'inh_women')]
+  
+  Landtenure <- Landtenure %>%
+    rowwise() %>%
+    mutate(tmp_men = sum(c(sell_men, beq_men, inh_men), na.rm = T)) %>%
+    mutate(landtenure_men = 0) %>%
+    mutate(landtenure_men = case_when(yn_men == 1 & name_men == 1 & ltperc_men == 1 & tmp_men > 0 ~ 100,
+                                      yn_men == 1 & name_men == 0 ~ 50,
+                                      yn_men == 0 & ltperc_men == 1 & tmp_men > 0 ~ 50,
+                                      yn_men == 1 & name_men == 1 & ltperc_men == 0 ~ 50,
+                                      yn_men == 1 & name_men == 1 & ltperc_men != 1 & tmp_men > 0 ~ 50,
+                                      yn_men == 0 & ltperc_men == 0 ~ 0,
+                                      yn_men == 0 & tmp_men == 0 ~ 0)) %>%
+    rowwise() %>%
+    mutate(tmp_women = sum(c(sell_women, beq_women, inh_women), na.rm = T)) %>%
+    mutate(landtenure_women = 0) %>%
+    mutate(landtenure_women = case_when(yn_women == 1 & name_women == 1 & ltperc_women == 1 & tmp_women > 0 ~ 100,
+                                        yn_women == 1 & name_women == 0 ~ 50,
+                                        yn_women == 0 & ltperc_women == 1 & tmp_women > 0 ~ 50,
+                                        yn_women == 1 & name_women == 1 & ltperc_women == 0 ~ 50,
+                                        yn_women == 1 & name_women == 1 & ltperc_women != 1 & tmp_women > 0 ~ 50,
+                                        yn_women == 0 & ltperc_women == 0 ~ 0,
+                                        yn_women == 0 & tmp_women == 0 ~ 0))
+  Landtenure <- Landtenure %>%
+    mutate(landtenure = mean(c(landtenure_women, landtenure_men), na.rm = T))
+ 
+  return(Landtenure)
+}
+```
+
+### Womens Empowerment score
+
+The Womens empowerment score is the calculated by the mean of the following domains: Productive Decision, Decision Making, Income Use, Leadership and Time use. These domains have subdomains and will be written in **bold**. Additionally to the Womens empowerment score the Mens empowerment score is calculated. These variables will have the same name just with a ** _men_** inserted. The calculations are usually the same as for the womens empowerment score and will only be mentioned if they differ. **Productive decision** is defined by the mean of the following subdomains: Decisions about crops, animals & economic activities, Decisions for minor & major household expenditures, Perception about decisions in crops, animals & economic activities and Perception about decisions in minor & major household expenditures. It is dependent on questions with two possible answer sets with the corresponding values shown in the tables below.
+
+| answers        | value |
+|----------------|-------|
+| Myself         | 1     |
+| My husband     | 2     |
+| Both of us     | 3     |
+| Someone else   | 4     |
+| Not applicable | 88    |
+
+and
+
+| answers                                 | value |
+|-----------------------------------------|-------|
+| I think that I cannot take any decision | 1     |
+| Just little decisions                   | 2     |
+| Some decisions                          | 3     |
+| In great part / totally                 | 4     |
+| Not applicable                          | 88    |
+
+"Not applicable" can be ignored as it is transformed to NA values.
+
+For decisions about crop production (decrop), animal production (decanim) & other economic activities (decotact) new variables are created (prodec_c, prodec_a, prodec_oa) that assign the answers "Myself" and "Both of us" a score of [1] and the other two answers [0]. The same is done for decisions about minor (decminor) and major (decmajor) expenditures. After that the mean is taken for minor and major expenditures and another one for animal production, crop production and economic activities.
+
+```{r}
+ProductiveDecision <- data[, c('key', 'deccrop', 'decanim', 'decotact', # About crops, animals, and other economic activities
+                                 'decmajor', 'decminor', # About Major and minor hh expenditures (codifico e poi media)
+                                 'perc_dec_crop', 'perc_dec_anim' , 'perc_dec_otact', 'perc_dec_major', 'perc_dec_minor')] # Perception for crops, animals and other economic activities (codifico e poi media): 
+  # Decisions about crops, animals and other economic activities
+  ProductiveDecision <- ProductiveDecision %>%
+    mutate(prodec_c = case_when(deccrop %in% c(1,3) ~ 1,
+                                deccrop %in% c(2,4) ~ 0),
+           prodec_a = case_when(decanim %in% c(1,3) ~ 1,
+                                decanim %in% c(2,4) ~ 0),
+           prodec_oa = case_when(decotact %in% c(1,3) ~ 1,
+                                 decotact %in% c(2,4) ~ 0),
+           prodec_men_c = case_when(deccrop %in% c(2,3) ~ 1, # For Men Index
+                                    deccrop %in% c(1,4) ~ 0),
+           prodec_men_a = case_when(decanim %in% c(2,3) ~ 1, # For Men Index
+                                    decanim %in% c(1,4) ~ 0),
+           prodec_men_oa = case_when(decotact %in% c(2,3) ~ 1, # For Men Index
+                                     decotact %in% c(1,4) ~ 0)) %>%
+    rowwise() %>%
+    mutate(prodec_caoa = mean(c(prodec_c, prodec_a, prodec_oa), na.rm = T)) %>%
+    rowwise() %>%
+    mutate(prodec_men_caoa = mean(c(prodec_men_c, prodec_men_a, prodec_men_oa), na.rm = T)) # For Men Index
+  
+  # Decisions about major and minor household expenditures
+  ProductiveDecision <- ProductiveDecision %>%
+    mutate(prodec_maj = case_when(decmajor %in% c(1,3) ~ 1,
+                                  decmajor %in% c(2,4) ~ 0),
+           prodec_min = case_when(decminor %in% c(1,3) ~ 1,
+                                  decminor %in% c(2,4) ~ 0),
+           prodec_men_maj = case_when(decmajor %in% c(2,3) ~ 1, # For Men Index
+                                      decmajor %in% c(1,4) ~ 0), 
+           prodec_men_min = case_when(decminor %in% c(2,3) ~ 1, # For Men Index
+                                      decminor %in% c(1,4) ~ 0)) %>%
+    rowwise() %>%
+    mutate(prodec_mm = mean(c(prodec_maj, prodec_min), na.rm = TRUE)) %>%
+    rowwise() %>%
+    mutate(prodec_men_mm = mean(c(prodec_men_maj, prodec_men_min), na.rm = TRUE)) # For Men Index
+```
+
+For the perception about decisions crop production (perc_dec_crop), animal production (perc_dec_anim) and other economic activities (perc_dec_otact) as well as perception about decisions in major (perc_dec_major) and minor (perc_dec_minor) expenditures a the new variables were assigned the following scores:
+
+| Answers                                 | score |
+|-----------------------------------------|-------|
+| I think that I cannot take any decision | 0     |
+| Just little decisions                   | 0.33  |
+| Some decisions                          | 0.66  |
+| In great part / totally                 | 1     |
+
+For the men's perception on decision making the score is calculated as 1 - the women's score. The scores animal productions crop production and other economic activities are taken together and the mean is calculated. The same is done for perception about major and minor expenditures. Then the mean for both subdomains is taken separatly (perc_caoa and perc_mm)
+As a last step the domain **productive decision** is calculated by the mean of all its subdomains (prodec_women).
+
+```{r}
+ # Perception for crops, animals and other economic activities
+  ProductiveDecision <- ProductiveDecision %>%
+    mutate(perc_c = case_when(perc_dec_crop == 4 ~ 1,
+                              perc_dec_crop == 3 ~ 0.66,
+                              perc_dec_crop == 2 ~ 0.33,
+                              perc_dec_crop == 1 ~ 0),
+           perc_a = case_when(perc_dec_anim == 4 ~ 1,
+                              perc_dec_anim == 3 ~ 0.66,
+                              perc_dec_anim == 2 ~ 0.33,
+                              perc_dec_anim == 1 ~ 0),
+           perc_oa = case_when(perc_dec_otact == 4 ~ 1,
+                               perc_dec_otact == 3 ~ 0.66,
+                               perc_dec_otact == 2 ~ 0.33,
+                               perc_dec_otact == 1 ~ 0)) %>%
+    mutate(perc_men_c = 1 - perc_c, # For Men Index
+           perc_men_a = 1 - perc_a,
+           perc_men_oa = 1 - perc_oa) %>%
+    rowwise() %>%
+    mutate(perc_caoa = mean(c(perc_c , perc_a , perc_oa), na.rm = T)) %>%
+    rowwise() %>%
+    mutate(perc_men_caoa = mean(c(perc_men_c, perc_men_a, perc_men_oa), na.rm = T)) %>% # For the men Index
+    mutate(perc_maj = case_when(perc_dec_major == 4 ~ 1,
+                                perc_dec_major == 3 ~ 0.66,
+                                perc_dec_major == 2 ~ 0.33,
+                                perc_dec_major == 1 ~ 0),
+           perc_min = case_when(perc_dec_minor == 4 ~ 1,
+                                perc_dec_minor == 3 ~ 0.66,
+                                perc_dec_minor == 2 ~ 0.33,
+                                perc_dec_minor == 1 ~ 0)) %>%
+    mutate(perc_men_maj = 1 - perc_maj, # For Men Index
+           perc_men_min = 1 - perc_min) %>%
+    rowwise() %>%
+    mutate(perc_mm = mean(c(perc_maj, perc_min), na.rm = T)) %>% 
+    rowwise() %>%
+    mutate(perc_men_mm = mean(c(perc_men_maj, perc_men_min), na.rm = T)) %>% # For MEn Index
+    rowwise() %>%
+    mutate(prodec_women = mean(c(prodec_caoa, prodec_mm, perc_caoa, perc_mm), na.rm = T)) %>% #Total Productive Decisions score for Women
+    rowwise() %>%
+    mutate(prodec_men = mean(c(prodec_men_caoa, prodec_men_mm, perc_men_caoa, perc_men_mm), na.rm = T)) # Total Productive Decision score for Men
+  ProductiveDecision <- rapply(ProductiveDecision, f = function(x) ifelse(is.nan(x), NA, x), how = "replace" )
+  
+```
+
+The **Decision Making** score is calculated by the mean of the subdomains: Land tenure score, Credit score, Ownership score for Crops animals and assets and the Ownership score for major and minor household assets. Possible answers were assigned with the following numbers:
+
+| answers                                                    | score |
+|------------------------------------------------------------|-------|
+| Possible in official and secure channels (bank or similar) | 1     |
+| Possible in non-official channels                          | 2     |
+| Not possible. Access to credit is too hard or too risky    | 3     |
+
+and
+
+| answers                                 | score |
+|-----------------------------------------|-------|
+| I think that I cannot take any decision | 1     |
+| Just little decisions                   | 2     |
+| Some decisions                          | 3     |
+| In great part / totally                 | 4     |
+| Not applicable                          | 88    |
+
+To calculate the land tenure score we simply call the function "step2_LandTenure()", and choose the variables for men and women.
+
+```{r}
+## 2.4.2 Acces To and decision-making power over productive resources
+  
+  DecisionMaking <- data[,c('key', 'credit_women', 'credit_men',
+                            'owcrop', 'owanim', 'owotact', 'owmajor', 'owminor')]
+  
+  Landtenure <- step2_LandTenure()
+  
+  DecisionMaking <- DecisionMaking %>%
+    left_join(Landtenure[,c('key', 'landtenure_women', 'landtenure_men')], by = 'key')
+  
+
+```
+
+The credit score is calculated as shown in the following table.
+
+| Women                 | Men                   | Score |
+|-----------------------|-----------------------|-------|
+| Official channels     | \-                    | 1     |
+| Non-official channels | Not possible          | 0.8   |
+| Non-official channels | Non-official channels | 0.75  |
+| Non-official channels | Official channels     | 0.5   |
+| Not possible          | Not possible          | 0.25  |
+| Not possible          | Non-official channels | 0.1   |
+| Not possible          | Official channels     | 0     |
+| Non-official channels | NA                    | 0.5   |
+
+```{r}
+# Access to credit
+  DecisionMaking <- DecisionMaking %>%
+    mutate(credit_score = credit_men) %>%
+    mutate(credit_score = case_when(credit_women == 1 ~ 1,
+                                    credit_women == 2 & credit_men == 3 ~ 0.8,
+                                    credit_women == 2 & credit_men == 2 ~ 0.75,
+                                    credit_women == 2 & credit_men == 1 ~ 0.5,
+                                    credit_women == 3 & credit_men == 3 ~ 0.25,
+                                    credit_women == 3 & credit_men == 2 ~ 0.1,
+                                    credit_women == 3 & credit_men == 1 ~ 0,
+                                    credit_women == 2 & is.na(credit_men) ~ 0.5,
+                                    credit_women == 3 & is.na(credit_men) ~ 0)) %>%
+    mutate(credit_score_men = case_when(credit_men == 1 ~ 1,
+                                        credit_men == 2 & credit_women == 3 ~ 0.8,
+                                        credit_men == 2 & credit_women == 2 ~ 0.75,
+                                        credit_men == 2 & credit_women == 1 ~ 0.5,
+                                        credit_men == 3 & credit_women == 3 ~ 0.25,
+                                        credit_men == 3 & credit_women == 2 ~ 0.1,
+                                        credit_men == 3 & credit_women == 1 ~ 0,
+                                        credit_men == 2 & is.na(credit_women) ~ 0.5,
+                                        credit_men == 3 & is.na(credit_women) ~ 0))
+```
+
+The Subdomain Ownership asks about Ownership of crops (owcrop), animals (owanim) & economic assets (owtact) and for minor (owmajor) & major (owminor) household assets. The possible answers are the same as in the Productive Decision chapter and it is also calculated the same way. 
+
+```{r}
+# ownership of crops, animals, other activities
+  DecisionMaking <- DecisionMaking %>%
+    mutate(own_c = case_when(owcrop %in% c(1,3) ~ 1,
+                             owcrop %in% c(2,4) ~ 0),
+           own_a = case_when(owanim %in% c(1,3) ~ 1,
+                             owanim %in% c(2,4) ~ 0),
+           own_oa = case_when(owotact %in% c(1,3) ~ 1,
+                              owotact %in% c(2,4) ~ 0)) %>%
+    mutate(own_men_c = case_when(owcrop %in% c(2,3) ~ 1, # For Men Index
+                                 owcrop %in% c(1,4) ~ 0),
+           own_men_a = case_when(owanim %in% c(2,3) ~ 1,
+                                 owanim %in% c(1,4) ~ 0),
+           own_men_oa = case_when(owanim %in% c(2,3) ~ 1,
+                                  owanim %in% c(1,4) ~ 0)) %>%
+    rowwise() %>%
+    mutate(own_caoa = mean(c(own_c, own_a, own_oa), na.rm = T)) %>%
+    rowwise() %>%
+    mutate(own_men_caoa = mean(c(own_men_c, own_men_a, own_men_oa), na.rm = T))
+  
+  # Ownership of major & minor hh assets
+  DecisionMaking <- DecisionMaking %>%
+    mutate(own_maj = case_when(owmajor %in% c(1,3) ~ 1,
+                               owmajor %in% c(2,4) ~ 0),
+           own_min = case_when(owminor %in% c(1,3) ~ 1, 
+                               owminor %in% c(2,4) ~ 0)) %>%
+    mutate(own_men_maj = case_when(owmajor %in% c(2,3) ~ 1, # For Men Index
+                                   owmajor %in% c(1,4) ~ 0),
+           own_men_min = case_when(owminor %in% c(2,3) ~ 1,
+                                   owminor %in% c(1,4) ~ 0)) %>%
+    rowwise() %>%
+    mutate(own_mm = mean(c(own_maj, own_min), na.rm = T)) %>%
+    rowwise() %>%
+    mutate(own_men_mm = mean(c(own_men_maj, own_men_min), na.rm = T))
+
+```
+
+The total **decision making** score (cred_decmak_women) is calculated by the mean of all subdomains.
+
+```{r}
+# Total Access To and Decision-Making score
+  DecisionMaking <- DecisionMaking %>%
+    rowwise() %>%
+    mutate(cred_decmak_women = mean(c(landtenure_women, credit_score, own_caoa, own_mm), na.rm = T)) %>%
+    rowwise() %>%
+    mutate(cred_decmak_men = mean(c(landtenure_men, credit_score_men, own_men_caoa, own_men_mm), na.rm = T))
+  DecisionMaking <- rapply(DecisionMaking, f = function(x) ifelse(is.nan(x), NA, x), how = "replace" )
+```
+
+The Domain **Income Use** is calculated the same as Ownership or Productive Decision. With dec_rev_crop being the variable for decisions about income use generated by crops, dec_rev_anim by animals and dec_rev_oth by other economic activities. The final variable for **Income Use** is named decinc_women.
+
+```{r}
+  ## 2.4.3 Use of Income
+  IncomeUse <- data[, c('key', 'dec_rev_crop', 'dec_rev_anim', 'dec_rev_oth')] 
+  
+  IncomeUse <- IncomeUse %>%
+    mutate(decinc_c = case_when(dec_rev_crop %in% c(1,3) ~ 1,
+                                dec_rev_crop %in% c(2,4) ~ 0),
+           decinc_a = case_when(dec_rev_anim %in% c(1,3) ~ 1,
+                                dec_rev_anim %in% c(2,4) ~ 0),
+           decinc_oa = case_when(dec_rev_oth %in% c(1,3) ~ 1,
+                                 dec_rev_oth %in% c(2,4) ~ 0)) %>%
+    mutate(decinc_men_c = case_when(dec_rev_crop %in% c(2,3) ~ 1,
+                                    dec_rev_crop %in% c(1,4) ~ 0),
+           decinc_men_a = case_when(dec_rev_anim %in% c(2,3) ~ 1,
+                                    dec_rev_anim %in% c(1,4) ~ 0),
+           decinc_men_oa = case_when(dec_rev_oth %in% c(2,3) ~ 1,
+                                     dec_rev_oth %in% c(1,4) ~ 0)) %>%
+    rowwise() %>%
+    mutate(decinc_women = mean(c(decinc_c, decinc_a, decinc_oa), na.rm = T)) %>%
+    rowwise() %>%
+    mutate(decinc_men = mean(c(decinc_men_c, decinc_men_a, decinc_men_oa), na.rm = T))
+  IncomeUse <- rapply(IncomeUse, f = function(x) ifelse(is.nan(x), NA, x), how = "replace" )
+```
+
+For the **Leadership** we use the variables involv_agri_wom for involvement in agriculture related organisations and involv_othe_wom for involvement in other organisations. These have the following values assigned to them:
+
+| answer                                                  | Score |
+|--------------------------------------------------------------|-------|
+| I do not participate in such organizations                   | 1     |
+| I rarely participate in such meetings / organizations        | 2     |
+| I participate often but rarely speak in the meetings         | 3     |
+| I am an active member, sometimes speak in meetings           | 4     |
+| I often speak in meetings, participate in decision processes | 5     |
+
+The scores are then translated in to a scale from 0-1 ((score-1)\*0.25) and renamed to lead_wom_agri and lead_wom_othe. Finally the greater value of the two questions is taken as the **Leadership** score.
+
+```{r}
+## 2.4.4 Leadership in the community
+  Leadership <- data[,c('key', 'involv_agri_wom', 'involv_othe_wom', 'involv_agri_men', 'involv_othe_men')]
+  # Calculation according to STATA file
+  Leadership <- Leadership %>%
+    mutate(lead_wom_agri = (involv_agri_wom - 1)*0.25,
+           lead_wom_othe = (involv_othe_wom - 1)*0.25) %>%
+    mutate(lead_men_agri = (involv_agri_men - 1)*0.25,
+           lead_men_othe = (involv_othe_men - 1)*0.25) %>%
+    rowwise() %>%
+    mutate(leadership_score_women = max(lead_wom_agri, lead_wom_othe, na.rm = T)) %>%
+    rowwise() %>%
+    mutate(leadership_score_men = max(lead_men_agri, lead_men_othe, na.rm = T))
+  Leadership <- rapply(Leadership, f = function(x) ifelse(is.infinite(x), NA, x), how = "replace" )
+  
+```
+
+For the calculating the **time use score** the sum of the working hours per day is calculated (tmp_wtime_women). It is the sum of the hours spent on agricultural production (wtime_ag_women), food preparation (wtime_dom_women) and other domestic works and other gainful activities (wtime_otgain_women). The first parameter (hrs_women) is assigned the value of 1 if the sum of the working hours is lower than 10.5. Else it is 0. The second score (worktime_women) defines if the other gender works longer and is given a score of 1 if this is true and 0 if its not. The **time use score** (timeuse_women) is calculated by the average of the two scores.
+
+```{r}
+ ## 2.4.5 Time use (average between the two scores)
+  Timeuse <- data[,c('key', 'wtime_ag_women', 'wtime_dom_women', 'wtime_otgain_women', 'wtime_ag_men', 'wtime_dom_men', 'wtime_otgain_men')]
+  
+  
+  # More than 10.5 hours per day:       
+  Timeuse <- Timeuse %>%
+    rowwise() %>%
+    mutate(tmp_wtime_women = sum(c(wtime_ag_women, wtime_dom_women, wtime_otgain_women)),
+           tmp_wtime_men = sum(c(wtime_ag_men, wtime_dom_men, wtime_otgain_men))) %>% 
+    
+    mutate(hrs_women = case_when(tmp_wtime_women <= 10.5 & tmp_wtime_women >= 0 ~ 1,
+                                 is.na(tmp_wtime_women) | is.na(tmp_wtime_men) ~ NA,
+                                 TRUE ~ 0),
+           hrs_men = case_when(tmp_wtime_men <= 10.5 &  tmp_wtime_men >= 0 ~ 1,
+                               is.na(tmp_wtime_women) | is.na(tmp_wtime_men) ~ NA,
+                               TRUE ~ 0))
+  
+  # Time spent in Agricultural activities + food preparation & domestic works + other gainful activities
+  Timeuse <- Timeuse %>%
+    mutate(worktime_women = case_when(tmp_wtime_women > tmp_wtime_men ~ 0,
+                                      tmp_wtime_women == 0 & tmp_wtime_men == 0 ~ 0,
+                                      tmp_wtime_women <= tmp_wtime_men ~ 1,
+                                      is.na(tmp_wtime_women) | is.na(tmp_wtime_men) ~ NA),
+           worktime_men = case_when(tmp_wtime_men > tmp_wtime_women ~ 0,
+                                    tmp_wtime_men == 0 & tmp_wtime_women == 0 ~ 0,
+                                    tmp_wtime_men <= tmp_wtime_women ~ 1,
+                                    is.na(tmp_wtime_women) | is.na(tmp_wtime_men) ~ NA))
+  
+  # Total Time Use score:
+  Timeuse <- Timeuse  %>% 
+    rowwise() %>%
+    mutate(timeuse_women = mean(c(hrs_women, worktime_women), na.rm = T)) %>% 
+    mutate(timeuse_men = mean(c(hrs_men, worktime_men), na.rm = T)) 
+  Timeuse <- rapply(Timeuse, f = function(x) ifelse(is.nan(x), NA, x), how = "replace" )
+
+```
+
+All the data is now put together to one dataframe called "WomenEmpowerment". The final Women's empowerment score (wemp_score) is calculated by the mean of all the calculated domains (same goes for the Men's empowerment score (memp_score)). The means are then multiplied by 100. If there are no women on the farm the Women's empowerment score is NA. Additionally, another score is created called **GPI**, where the Women's empowerment score is divided by the Men's empowerment score and then multiplied by 100. 
+
+```{r}
+ ## 2.4.6 Total Women Empowerment Score
+  WomenEmpowerment <- ProductiveDecision %>%
+    select(c('key', 'prodec_women', 'prodec_men')) %>%
+    left_join(DecisionMaking[,c('key', 'cred_decmak_women', 'cred_decmak_men')], by = 'key') %>%
+    left_join(IncomeUse[,c('key', 'decinc_women', 'decinc_men')], by = 'key') %>%
+    left_join(Leadership[,c('key', 'leadership_score_women', 'leadership_score_men')], by = 'key') %>%
+    left_join(Timeuse[,c('key', 'timeuse_women', 'timeuse_men')], by = 'key') %>%
+    rowwise() %>%
+    mutate(wemp_score = mean(c(prodec_women, cred_decmak_women, decinc_women, leadership_score_women, timeuse_women), na.rm = T)*100) %>%
+    rowwise() %>%
+    mutate(memp_score = mean(c(prodec_men, cred_decmak_men, decinc_men, leadership_score_men, timeuse_men), na.rm = T)*100)
+  WomenEmpowerment <- rapply(WomenEmpowerment, f = function(x) ifelse(is.nan(x), NA, x), how = "replace" )
+  
+  rm(ProductiveDecision, DecisionMaking, IncomeUse, Leadership, Timeuse)
+  
+  # Replace the result with missing value if there are no women in the household:
+  WomenEmpowerment <- WomenEmpowerment %>% 
+    left_join(data[,c('key', 'hh_women')], by = 'key') %>%
+    mutate(wemp_score = ifelse(hh_women == 0, NA, wemp_score))
+  
+  
+  #implement GPI score
+  
+  WomenEmpowerment <- WomenEmpowerment %>%
+    mutate(GPI = wemp_score/memp_score * 100)
+  return(WomenEmpowerment)
+```
+
+### Youth employment and emigration
+
+ **y_members_occup** describes the occupation of the youngsters and contains the following values:
+
+| Description                                                                                         | Value |
+|----------------------------------------------------|--------------------|
+| Not working nor studying                                                                            | 0     |
+| Working in the agricultural production within the system assessed                                   | 1     |
+| Both working in the agricultural production within the system and also employed outside the system  | 2     |
+| Employed outside the system assessed                                                                | 3     |
+| Both working in the agricultural production within the system and also enrolled in formal education | 4     |
+| Enrolled in formal education                                                                        | 5     |
+| Works in his/her own farm                                                                           | 6     |
+
+Three new columns are created called "y_good", "y_med", "y_bad" ordering the values of **y_occup**. For example "y_good" would receive a value of 1 in cases where **y_occup** had values of either 1,4,5 or 6 (and a 0 in all the other cases). After that of all the values of y_good within the same farm are defined as a new variable **good_sum**. The same is done for the other two categories. The percentage of youngsters is calculated for each category (good_perc, medium_perc and bad_perc). The youth employment score (**youth_employ**) is then defined by **good_perc** + 0.5\* **med_perc**.
+
+```{r}
+data_y <- data_youngsters %>%
+    rename(key = '_parent_index') %>%
+    left_join(data[,c('key', 'ymembers')], 'key')
+  
+  # Employment
+  data_y <- data_y %>%
+    mutate(y_good = ifelse(y_occup %in% c(1,4,5,6),1,0),
+           y_med = ifelse(y_occup == 2,1,0),
+           y_bad = ifelse(y_occup %in% c(0,3),1,0))
+  
+  data_y <- data_y %>%
+    group_by(key) %>%
+    mutate(good_sum = sum(y_good,na.rm = TRUE),
+           med_sum = sum(y_med,na.rm = TRUE),
+           bad_sum = sum(y_bad,na.rm = TRUE))
+  
+  data_y <- data_y %>%
+    mutate(ymembers = ifelse(good_sum > ymembers, good_sum, ymembers))
+  
+  data_y <- data_y %>%
+    mutate(good_perc = good_sum*100/ymembers,
+           med_perc = med_sum*100/ymembers,
+           bad_perc = bad_sum*100/ymembers) %>% 
+    mutate(youth_employ = (good_perc + 0.5*med_perc))
+  
+  
+  
+```
+
+For Emigration the two variables **y_future_farm** and **y_keen_emigr** describe whether the youngsters want to be a farmer in the future or emigrate. For either statement being true a 1 is assigned to the corresponding variable. Then the youngsters are assigned to 4 categories as seen in the following table:
+
+| Description                                  | y_future_farm | y_keen_emigr | category |
+|---------------------|-----------------|-----------------|-----------------|
+| Would like to stay on the farm               | 1             | 0            | g1       |
+| Would like to emigrate                       | 0             | 1            | g2       |
+| Wants a farm but also would like to emigrate | 1             | 1            | g3       |
+| Neither wants a farm nor to emigrate         | 0             | 0            | g4       |
+
+For every farm the amount of youngsters for each category is defined as **gX_sum**. From this and **ymembers** we calculate the percentage of youngsters for every category (**gX_perc**). The emigration score (**youth_emigr**) is then calculated by **g1_perc** + 0.5\* (**g3_perc + g4_perc**).
+
+```{r}
+# Emigration
+  data_y <- data_y %>%
+    mutate(g1 = ifelse(y_future_farm == 1 & y_keen_emigr == 0,1,0), #if true = 1 if false =0
+           g2 = ifelse(y_future_farm == 0 & y_keen_emigr == 1,1,0),
+           g3 = ifelse(y_future_farm == 1 & y_keen_emigr == 1,1,0),
+           g4 = ifelse(y_future_farm == 0 & y_keen_emigr == 0,1,0))
+  
+  data_y <- data_y %>%
+    group_by(key) %>%
+    mutate(g1_sum = sum(g1, na.rm = TRUE),
+           g2_sum = sum(g2, na.rm = TRUE),
+           g3_sum = sum(g3, na.rm = TRUE),
+           g4_sum = sum(g4, na.rm = TRUE)) %>% 
+    mutate(g1_perc = g1_sum/ymembers*100,
+           g2_perc = g2_sum/ymembers*100,
+           g3_perc = g3_sum/ymembers*100,
+           g4_perc = g4_sum/ymembers*100) %>% 
+    mutate(youth_emigr = g1_perc + 0.5*g3_perc + 0.5*g4_perc) 
+  
+
+```
+
+The youth score (**youth_score**) is calculated as the mean of the employment (**youth_employ**) and emigration (**youth_emigr**). For systems without youngsters NA is defined as the value of **youth_score**. 
+
+```{r}
+  # calculate youth score
+  data_y <- data_y %>% 
+    rowwise() %>%
+    mutate(youth_score = mean(c(youth_employ , youth_emigr),na.rm = T)) %>% 
+    mutate(youth_score = ifelse(ymembers == 0,NA,youth_score))
+  
+  YouthScore <- data_y %>%
+    select(youth_employ, youth_emigr, youth_score, key) %>%
+    distinct()
+  return(YouthScore)
+
+```
+
+### Biodiversity Indicator
+
+The Biodiversity Indicator has two different options to calculate it depending on the configuration of the yml file. There you can enter **BiodiversityIndicator: "old"** or **BiodiversityIndicator: "new"** depending on the calculation you want. Additionally, an error message is printed if **BiodiversityIndicator:** is neither **"old"** nor **"new"** is defined.
+
+```{r}
+
+ if (config::get("BiodiversityIndicator", file = "~/projects/tape/Stevan_functions_tryout/config_try.yml") == "old"){
+  }
+  else if (config::get("BiodiversityIndicator", file = "~/projects/tape/Stevan_functions_tryout/config_try.yml") == "new"){
+  } 
+  else {
+    cat("Ups... something went wrong. Please check if your config.yml file contains the values new or old for the Parameter BiodiversityIndicator!")
+    }
+  
+```
+
+Here we will first explain the "old" way to calculate the Biodiversity Indicator. The variable "\_parent_index" is renamed to "key" as their values correspond and "\_text" is not a supported variable name in R. 
+The data gets grouped by the name of the crop species (**cname_label**) and **key**. The sum of the in the code listed variables is calculated per plant species per farm. 
+
+The land under production per crop (**cland**) is added up **cland_sum**, for the whole cropland of the farm. Later **(cland/cland_sum)\^2/cvar** is defined as **p2\_**. The sum of **p2\_** for every farm is defined as **shannon**. NA values for **shannon** are changed to 0. 
+The **GSIndex_crops** is calculated for every farm and defined as 100\*(1 - **shannon**). 
+
+```{r}
+## Crops
+    c1 <- data_c1 %>%
+    rename(key = '_parent_index')
+  
+  c1 <- c1 %>% 
+    group_by(cname_label, key) %>%
+    mutate(cprod = sum(cprod, na.rm = TRUE), #total production [kg]
+           cqsold = sum(cqsold, na.rm = TRUE), #Quantity sold [kg]
+           cpg = sum(cpg, na.rm = TRUE), #price at the gate [per kg]
+           cgift = sum(cgift, na.rm = TRUE), # quantity given for free [kg]
+           cland = sum(cland, na.rm = TRUE),# land under production [ha]
+           cvar = sum(cvar, na.rm = TRUE)) %>%  # number of varieties produced
+    ungroup() %>%
+  select(cname_label, key, cprod, cqsold, cpg, cgift, cland, cvar) %>%
+    arrange(cname_label) %>% 
+    distinct() %>% as.data.frame()
+  
+  c1 <- c1 %>%
+    mutate(cvar = ifelse(cvar > 50, 1, cvar)) %>% #if cvar is over 50 it is changed to a value of 1
+    group_by(key) %>%
+    mutate(cland_sum = sum(cland, na.rm = TRUE)) %>%
+    ungroup() %>%
+    arrange(key) %>%
+    mutate(p2_ = (cland/cland_sum)^2/cvar)
+  
+  c1 <- c1 %>%
+    group_by(key) %>%
+    mutate(shannon = sum(p2_, na.rm = TRUE)) %>% 
+    ungroup() %>%
+    mutate(shannon = ifelse(is.na(shannon), 1, shannon)) %>% #NA values for shannon are changed to 1
+    mutate(GSIndex_crops = 100*(1 - shannon)) %>%
+    select(!c("p2_")) #p2_ is deleted from the dataset
+  
+  GSIndex_crops <- c1 %>%
+    group_by(key, shannon, GSIndex_crops) %>%
+    distinct(key)
+  rm(c1) #c1 is removed from the environment
+```
+
+First the lsucv for cattle, sheep and pig are taken from the config file. The data is grouped by the name of the animal species (**aname**) and **key**. The sum of the in the code listed variables is calculated per animal species per farm.
+After that the livestock standard units were defined as the variable **livunit**. **nliv** is then defined as the lifestock units times the number of individuals for every animals on every farm e.g. if a farm has 3 pigs **nliv** would = 3* 0.2 (the livestocunit for pigs).
+
+```{r}
+## Animals
+  lsucv_cattle <- config::get("lsucv_cattle", file = "~/projects/tape/Stevan_functions_tryout/config_try.yml")
+  lsucv_sheep <- config::get("lsucv_sheep", file = "~/projects/tape/Stevan_functions_tryout/config_try.yml")
+  lsucv_pig <- config::get("lsucv_pig", file = "~/projects/tape/Stevan_functions_tryout/config_try.yml")
+  
+  a1 <- data_a1 %>%
+    rename(key = '_parent_index',) 
+  a1 <- a1 %>% 
+    group_by(aname,key) %>%
+    mutate(arais = sum(arais, na.rm = TRUE), #Total number of animals of this species currently raised into the farm
+           aborn = sum(aborn, na.rm = TRUE), #Total number of animals of this species born during the last 12 months
+           adied = sum(adied, na.rm = TRUE), #Total number of animals of this species died of natural causes during the last 12 months
+           abreed = sum(abreed, na.rm = TRUE), #Number of different breeds within this species
+           aqsold = sum(aqsold, na.rm = TRUE), #Number of animals sold
+           apg = sum(apg, na.rm = TRUE), #Price at the gate (per animal)
+           aqgift = sum(aqgift, na.rm = TRUE)) %>% #Number of animals given for free (gift, present …)
+    ungroup() %>%
+    select(aname, key, arais, aborn, adied, abreed, aqsold, apg, aqgift) %>%
+    arrange(aname) %>% distinct() %>% as.data.frame()
+  
+  # We convert in livestok standard units:
+  a1 <- a1 %>%
+    mutate(livunit = case_when(aname == 0 ~ lsucv_cattle,
+                               aname %in% c(1,2,3,4) ~ 0.8,
+                               aname %in% c(5,6) ~ 0.3,
+                               aname == 7 ~ lsucv_sheep,
+                               aname %in% c(8, 23) ~ 0.1,
+                               aname == 9 ~ lsucv_pig,
+                               aname == 10 ~ 1,
+                               aname == 11 ~ 0.17,
+                               aname == 12 ~ 0.02,
+                               aname %in% c(13, 19) ~ 0.01,
+                               aname %in% c(14, 15, 16, 22) ~ 0.03,
+                               aname == 17 ~ 0.005,
+                               aname == 18 ~ 0.35,
+                               aname == 20 ~ 0.003,
+                               aname %in% c(21, 77) ~ 0.002)) %>%
+    mutate(nliv = livunit * arais) # Multiplying livestock units per number of individuals
+  
+```
+
+The sum of **nliv** on every farm for every animal is taken and defined as **nliv_sum** . "p2\_" is defined as **(nliv/nliv_sum)\^2/abreed)** and summed up for every farm to get the **shannon_a**. The **GSIndex_animals** is calculated as **GSIndex_animals** = 100\*(1 - **shannon_a**).
+
+```{r}
+  a1 <- a1 %>%
+    group_by(key) %>%
+    mutate(nliv_sum = sum(nliv, na.rm = TRUE)) %>%  # total livestock size in SLU/TLU
+    ungroup() %>%
+    mutate(p2_ = (nliv/nliv_sum)^2/abreed) %>%   # weighted shares
+    group_by(key) %>%
+    mutate(shannon_a = sum(p2_, na.rm = TRUE)) %>% # shannon index
+    ungroup() %>%
+    mutate(shannon_a = ifelse(is.na(shannon_a), 1, shannon_a)) %>% ##NA values for shannon are changed to 1
+    mutate(GSIndex_animals = 100*(1 - shannon_a)) %>%
+    mutate(GSIndex_animals = ifelse(nliv == nliv_sum & abreed == 1, 10, GSIndex_animals)) %>% # Farms with only one animal category and 1 breed get a value of 10 instead of 0
+    select(!c("p2_")) %>% #p2_ is removed from the working environment
+    filter(!nliv == 0) # farms with a nliv value of 0 (no animals on the farm) are filtered out of the data frame.
+  
+  GSIndex_animals <- a1 %>%
+    group_by(key, shannon_a, GSIndex_animals) %>%
+    distinct(key)
+  rm(a1)
+```
+
+**nat_veg, bee ** and **poll** describe the Natural Vegetation, Beekeeping and Presence of Pollinators and have the following scores:
+
+| Answer                                                                                 | Score |
+|----------------------------------------------------|--------------------|
+| **Natural Vegetation**                                                                 |       |
+| Absent: area covered with natural or diverse vegetation is negligible.                 | 0     |
+| Small: less than 10% of the system is covered with natural or diverse vegetation.      | 0.33  |
+| Significant: at least 20% of the system is covered with natural or diverse vegetation. | 0.66  |
+| Abundant: more than 25% of the system is covered with natural or diverse vegetation.   | 1     |
+| **Beekeeping**                                                                         |       |
+| No, bees are not raised and are rare within the agroecosystem.                         | 0     |
+| No, bees are not raised but are widespread within the agroecosystem.                   | 0.5   |
+| Yes, bees are raised within the agroecosystem.                                         | 1     |
+| **Presence of Pollinators**                                                            |       |
+| Absent                                                                                 | 0     |
+| Little                                                                                 | 0.33  |
+| Significant                                                                            | 0.66  |
+| Abundant                                                                               | 1     |
+
+**b_gini** is then defined as the mean of these scores and **GSI_other** is **b_gini** multiplied by 100.
+
+```{r}
+ ## Beekeping & other
+  data_b <- data[,c('key', 'nat_veg', 'bee', 'poll')]
+  data_b <- data_b %>%
+    #Productive area covered by natural or diverse vegetation 
+    mutate(natveg_score = case_when(nat_veg == 1 ~ 0,
+                                    nat_veg == 2 ~ 0.33,
+                                    nat_veg == 3 ~ 0.66,
+                                    nat_veg == 4 ~ 1),
+           #Beekeping
+           bee_score = case_when(bee == 3 ~ 0,
+                                 bee == 2 ~ 0.5,
+                                 bee == 1 ~ 1),
+           #Presence of pollinators and other beneficial animals
+           poll_score = case_when(poll == 1 ~ 1,
+                                  poll == 2 ~ 0.66,
+                                  poll == 3 ~ 0.33,
+                                  poll == 4 ~ 0))
+  
+  data_b <- data_b %>%
+    rowwise() %>%
+    mutate(b_gini = mean(c(natveg_score, bee_score, poll_score), na.rm = T)) %>%
+    mutate(GSI_other = b_gini*100)
+```
+
+For the **Agricultural_diversity_old** the mean of the three GSI is taken. The data frame **Agricultural_biodiversity** is defined as **GSI_overall** data frame containing the calculated data from this step.
+
+```{r}
+## OVERALL GINI-SIMPSON DIVERSITY INDEX
+  GSI_overall <- GSIndex_crops %>%
+    left_join(GSIndex_animals, by = 'key') %>%
+    left_join(data_b[,c('key', 'GSI_other')], by = 'key') %>%
+    rowwise() %>%
+    mutate(Agricultural_diversity_old = mean(c(GSIndex_crops, GSIndex_animals, GSI_other), na.rm = T))
+  rm(GSIndex_crops, GSIndex_animals, data_b) # the data frames are removed from the Environment
+  
+  Agricultural_biodiversity <- GSI_overall
+  return(Agricultural_biodiversity)
+  
+```
+
+The new score starts exactly the same as the old one with calculating **GSIndex_crops** and **GSIndex_animals**. Here **Agricultural_diversity** is defined as the mean of **GSIndex_crops** and **GSIndex_animals**.
+
+```{r}
+ GSI_overall <- GSIndex_crops %>%
+      left_join(GSIndex_animals, by = 'key')
+    
+  ## 2.6.1  Agricultural diversity
+    Agricultural_biodiversity <- GSI_overall %>%
+      mutate(Agricultural_diversity = (GSIndex_crops + GSIndex_animals)/2) 
+```
+
+The area of semi natural habitats (**SNH_area_ha**) is taken from **sizeha_snh** or calculated from **length_snh** and **width_snh**. Then the total SNH area for every farm is calculated by adding all the SNH patches (**SNH_area_ha**) of a farm together. The **total_area** for every farm is calculated through the sum of the total area under agricultural production, the grazing area and the area of semi natural habitats.
+
+```{r}
+## Total agricultural Area (total area under agricultural production + total grazing area + area semi natural habitats)
+ 
+  snh_data <- data_snh %>% #Semi natural habitats
+    rename(key = '_parent_index') %>%
+    mutate(SNH_area_ha = ifelse(is.na(sizeha_snh), length_snh*width_snh*0.0001,sizeha_snh)) %>%
+    group_by(key) %>%
+    summarise_at(vars(SNH_area_ha), sum, na.rm = T)
+  
+  Area_total <- data[, c('key', 'area', 'area_g')] %>%
+    left_join(snh_data, by = 'key') %>%
+    rowwise() %>%
+    mutate(area_total = sum(area, area_g, SNH_area_ha, na.rm = T))
+  
+```
+
+The Patch size is calculated by dividing the area of the fields (**crop_field_area**) by the amount of fields. This variable is called **Patch_size**. It is then ordered to a score seen in the following table:
+
+| Patch size | score |
+|------------|-------|
+| \<0.5      | 100     |
+| 0.5 - 3    | 75  |
+| 3 - 16     | 50   |
+| 16- 100    | 25  |
+| \>= 100    | 0     |
+
+```{r}
+## 2.6.2 Patch size
+  # only crop fields are considered
+  Patch_size <- data[,c('key', 'crops_fields', 'crops_fields_area')]
+  Patch_size <- Patch_size %>%
+    mutate(Patch_size_n = crops_fields_area/crops_fields, # Medium patch size for crops
+           Patch_size = case_when(Patch_size_n < 0.5 ~ 100,
+                                  Patch_size_n >= 0.5 & Patch_size_n < 3 ~ 75,
+                                  Patch_size_n >= 3 & Patch_size_n < 16 ~ 50,
+                                  Patch_size_n >= 16 & Patch_size_n < 100 ~ 25,
+                                  Patch_size_n >= 100 ~ 0))
+  
+  Agricultural_biodiversity <- Agricultural_biodiversity %>%
+    left_join(Patch_size, by = 'key')
+  rm(Patch_size)
+```
+
+The tree data is grouped by key and the size of the area covered by trees is then summed together for every farm (**sizeha**) . The variable **tree_lines_ha** is created and calculated as the area of the tree lines, as this was not included in **sizeha**. The two variables are then added together to create **tree_total_area**, which is then divided by the total area (calculated before) to get the variable **Tree_habitat**. It is multiplied by 100 to get the value in %.
+
+```{r}
+## 2.6.3 Tree habitat
+  Tree <- data_tree %>%
+    rename(key = '_parent_index') %>%
+    group_by(key) %>%
+    summarise_at(vars(sizeha), sum, na.rm = T)
+  
+  Tree_habitat <- data[,c('key', 'width', 'length')]
+  Tree_habitat <- Tree_habitat %>%
+    left_join(Tree, by = 'key') %>%
+    mutate(tree_lines_ha = length * width * 0.0001) %>% # length and width are in m
+    rowwise() %>%
+    mutate(tree_area_total = sum(tree_lines_ha, sizeha, na.rm = T)) %>%
+    left_join(Area_total, by = 'key') %>%
+    mutate(Tree_habitat = (tree_area_total/area_total)*100)
+  
+  Agricultural_biodiversity <- Agricultural_biodiversity %>%
+    left_join(Tree_habitat[,c('key', 'sizeha', 'tree_lines_ha', 'Tree_habitat')], by = 'key')
+  rm(Tree_habitat, Tree)
+```
+
+The variable **count** is created in the new data frame SNH_div. It describes how many different semi natural habitats exist on one farm. These can be Hedges, Grasslands, Aquatic habitats etc. **SNH_area_ind** is a indicator that scales the percentage of SNH area of the farm. It is multiplied by 4 so that 25% SNH reaches the maximal score of 1. **SNH_div_ind** translates the variable **count** to a score as follows: 
+
+| count | SNH_div_ind |
+| --- | --- |
+| > 5 | 1 |
+| 4 | 0.75 |
+| 3 | 0.5 |
+| 2 | 0.25 |
+| < 2 | 0 |
+
+
+The mean of **SNH_div_ind** and \***SNH_area_ind** is taken as the final score **Semi_natural_habitats**. It is again multiplied by 100 to have the value in %. These three variables are then joined to the Agricultural_biodiversity data frame.
+
+```{r}
+## 2.6.4 Semi-natural Habitats
+  SNH <- data_snh %>%
+    rename(key = '_parent_index',)
+  # diversity of SNH 
+  SNH_div <- SNH %>%
+    group_by(key) %>%
+    summarise(count = n_distinct(snhname)) %>%
+    mutate_all(., as.numeric)
+  
+  SemiNaturalHabitats <- Area_total %>%
+    left_join(SNH_div, by = 'key') %>%
+    mutate(SNH_area_ind =  SNH_area_ha/area_total * 4) %>% # x 4, so that 25% of SNH gives max points
+    mutate(SNH_div_ind = case_when(count >= 5 ~ 1,
+                                   count == 4 ~ 0.75,
+                                   count == 3 ~ 0.5,
+                                   count == 2 ~ 0.25,
+                                   count < 2 ~ 0)) %>%
+    mutate(Semi_natural_Habitats = (SNH_area_ind + SNH_div_ind)/2) %>%
+    mutate(Semi_natural_Habitats = Semi_natural_Habitats * 100)%>%
+    mutate(Semi_natural_Habitats = ifelse(is.na(Semi_natural_Habitats), 0, Semi_natural_Habitats))
+  
+  Agricultural_biodiversity <- Agricultural_biodiversity %>%
+    left_join(SemiNaturalHabitats[,c('key', 'SNH_area_ind', 'SNH_div_ind', 'Semi_natural_Habitats')], by = 'key')
+  rm(SNH, SNH_div, SemiNaturalHabitats)
+```
+
+The **FertArea** is defined as 1 - the proportion of fertilized area compared to the total area. **N_input** is the score derived from the variable **fert_intensity**. **fert_intensity** describes the amount of organic/synthetic fertilizer was applied on the farm on a score from 1-5. **N_input** then translates it on a score from 0-1. The mean of **N_input** and **FertArea** (transformed to %) is defined as the variable **N_application** and the three new variables are joined to the data frame **Agricultural_biodiversity**.
+
+```{r}
+## 2.6.5 Nitrogen application
+  N_Fert <- data[, c('key', 'fert_ha', 'fert_intensity')] %>%
+    left_join(Area_total, by = 'key') %>%
+    mutate(FertArea = 1 - (fert_ha/area_total)) %>%
+    mutate(N_input = case_when(fert_intensity == 1 ~ 1,
+                               fert_intensity == 2 ~ 0.75,
+                               fert_intensity == 3 ~ 0.5,
+                               fert_intensity == 4 ~ 0.25,
+                               fert_intensity == 5 ~ 0)) %>%
+    mutate(N_application = (FertArea + N_input)/2) %>%
+    mutate(N_application = N_application * 100)
+  
+  Agricultural_biodiversity <- Agricultural_biodiversity %>%
+    left_join(N_Fert[,c('key', 'FertArea', 'N_input', 'N_application')], by = 'key')
+  rm(N_Fert)
+  
+```
+
+First the number of applications of pesticides (**cpapp_num**) is summed up to a total for each farm. **toxicity** is defined as the smaller toxicity level of either human or environmental pesticide toxicity (the highest toxicity has the value of 1 and the lowest 3). **nr_Appl_ha** is defined as number of pesticide application per hectare farmland. It is then translated to a score called **cp** as follows:
+
+| nr_Appl_ha    | cp  |
+|---------------|-----|
+| \>= 10        | 0   |
+| \< 10 & \>= 9 | 0.1 |
+| \< 9 & \>= 8  | 0.2 |
+| \< 8 & \>= 7  | 0.3 |
+| \< 7 & \>= 6  | 0.4 |
+| \< 6 & \>= 5  | 0.5 |
+| \< 5 & \>= 4  | 0.6 |
+| \< 4 & \>= 3  | 0.7 |
+| \< 3 & \>= 2  | 0.8 |
+| \< 2 & \>= 1  | 0.9 |
+| \< 1          | 1   |
+
+**cp_area** is defined as **1 - (cpestareaf/area_total)**. Which is 1 - the area where pesticides were applied divided by the total farm area. **cp_ecotox** is defined through the **toxicity** score as follows:
+
+| toxicity | cp_ecotox |
+|----------|-----------|
+| NA       | 1         |
+| 3        | 0.67      |
+| 2        | 0.33      |
+| 1        | 0         |
+
+The last variable **cp_ind** is defined by the mean of the three variables : **cp, cp_area, cp_ecotox**. Then all four variables were added to the Agricultural_biodiversity data frame.
+
+```{r}
+## 2.6.6 Pesticide application
+  ## Pesticide application
+
+  cp <- data_cp %>%
+    rename(key = '_parent_index') %>%
+    group_by(key) %>%
+    summarise_at(vars(cpapp_num), sum, na.rm = T) 
+
+  ## Toxiocology
+  cp_tox <- data_cp %>%
+    rename(key = '_parent_index') %>%
+    mutate(toxicity = ifelse(cptox <= cptoxenv, cptox, cptoxenv)) %>%
+    group_by(key) %>%
+    summarise_at(vars(toxicity), min, na.rm = T)
+  
+  ## Area
+  pesticides <- data[,c('key', 'cpestareaf')] %>%
+    left_join(Area_total, by = 'key') %>%
+    left_join(cp, by = 'key') %>%
+    left_join(cp_tox, by = 'key') %>%
+    mutate(nr_Appl_ha = cpapp_num/area_total) %>%
+    mutate(cp = case_when(nr_Appl_ha >= 10 ~ 0,
+                               nr_Appl_ha < 10 & nr_Appl_ha >= 9 ~ 0.1,
+                               nr_Appl_ha < 9 & nr_Appl_ha >= 8 ~ 0.2,
+                               nr_Appl_ha < 8 & nr_Appl_ha >= 7 ~ 0.3, 
+                               nr_Appl_ha < 7 & nr_Appl_ha >= 6 ~ 0.4,
+                               nr_Appl_ha < 6 & nr_Appl_ha >= 5 ~ 0.5,
+                               nr_Appl_ha < 5 & nr_Appl_ha >= 4 ~ 0.6,
+                               nr_Appl_ha < 4 & nr_Appl_ha >= 3 ~ 0.7,
+                               nr_Appl_ha < 3 & nr_Appl_ha >= 2 ~ 0.8,
+                               nr_Appl_ha < 2 & nr_Appl_ha >= 1 ~ 0.9,
+                               nr_Appl_ha < 1 ~ 1)) %>%
+    mutate(cp = replace_na(cp, 1)) %>%
+    mutate(cp_area = 1 - (cpestareaf/area_total)) %>%
+    mutate(cp_area = ifelse(cp_area < 0, 0, cp_area)) %>%
+    mutate(cp_ecotox = case_when(is.na(toxicity) ~ 1,
+                                 toxicity == 3 ~ 0.67,
+                                 toxicity == 2 ~ 0.33,
+                                 toxicity == 1 ~ 0)) %>%
+    rowwise() %>%
+    mutate(cp_ind = mean(c(cp, cp_area, cp_ecotox)))
+  
+  Agricultural_biodiversity <- Agricultural_biodiversity %>%
+    left_join(pesticides[,c('key', 'cp', 'cp_area', 'cp_ecotox', 'cp_ind')], by = 'key')
+  rm(cp, cp_tox, pesticides)
+```
+
+**field_op_nr** are the number of mechanized field operations per field on average. **FieldOP** is the corresponding score to it. The translation is shown in the table:
+
+| field_op_nr | FieldOP |
+|-------------|---------|
+| 1           | 100       |
+| 2           | 75    |
+| 3           | 50     |
+| 4           | 25    |
+| 5           | 0       |
+
+FieldOP is then added to the data frame Agricultural_biodiversity.
+
+```{r}
+  ### 2.6.7 Mechanical Field operations
+  Fieldoperations <- data[,c('key', 'mechz_fieldops')] %>%
+    rename(field_op_nr = `mechz_fieldops`) %>%
+    mutate(FieldOP = case_when(field_op_nr == 1 ~ 100,
+                               field_op_nr == 2 ~ 75,
+                               field_op_nr == 3 ~ 50,
+                               field_op_nr == 4 ~ 25,
+                               field_op_nr == 5 ~ 0))
+  
+  Agricultural_biodiversity <- Agricultural_biodiversity %>%
+    left_join(Fieldoperations[,c('key', 'FieldOP')], by = 'key')
+  rm(Fieldoperations)
+```
+
+**arais** is for the data frame Stockingrate is defined different as before. As the data was also grouped by **onfarm** (percentage of time spent on farm pastures) it is now defined as the number of animals from a species that has spent this percentage of time on the pasture, for every farm. (e.g. on a farm 4 cows on the farm spend 50% of their time on a pasture and 3 spend 70%, the farm would have an arais score of 3 and one of 4) **livunit** still are the livestock units and **nliv** is **arais** scaled with the livestock units. **stocking_rate** is defined as **nliv** per farm area. **AvStock** is the score for **stocking_rate** and translates in a linear scale defined through the following function: **AvStock** = 100-(25 * **stocking_rate**)
+when **stocking_rate** is over 4 **AvStock** is 0. 
+
+
+**AvStock** is then added to the data frame Agricultural_biodiversity.
+
+```{r}
+### 2.6.8 Stocking rate
+  # Number of animals converted to livestock units (lU/ha)
+  Stockingrate <- data_a1 %>%
+    rename(key = '_parent_index') 
+  
+  Stockingrate <- Stockingrate %>% 
+    group_by(aname, key, onfarm) %>%
+    mutate(arais = sum(arais, na.rm = TRUE)) %>% 
+    ungroup() %>%
+    select(aname, key, arais, onfarm) %>%
+    distinct() %>% as.data.frame()
+  
+  # We convert in livestok standard units:
+  Stockingrate <- Stockingrate %>%
+    mutate(livunit = case_when(aname == 0 ~ lsucv_cattle,
+                               aname %in% c(1,2,3,4) ~ 0.8,
+                               aname %in% c(5,6) ~ 0.3,
+                               aname == 7 ~ lsucv_sheep,
+                               aname %in% c(8, 23) ~ 0.1,
+                               aname == 9 ~ lsucv_pig,
+                               aname == 10 ~ 1,
+                               aname == 11 ~ 0.17,
+                               aname == 12 ~ 0.02,
+                               aname %in% c(13, 19) ~ 0.01,
+                               aname %in% c(14, 15, 16, 22) ~ 0.03,
+                               aname == 17 ~ 0.005,
+                               aname == 18 ~ 0.35,
+                               aname == 20 ~ 0.003,
+                               aname %in% c(21, 77) ~ 0.002)) %>%
+    mutate(nliv = livunit * arais) %>% # Multiplying livestock units per number of individuals
+    group_by(key) %>%
+    summarise_at(vars(nliv), sum, na.rm = T)
+  
+  Stockingrate <- Stockingrate %>%
+    left_join(Area_total, by = 'key') %>%
+    mutate(stocking_rate = nliv/area_total) %>%
+    mutate(AvStock = case_when(stocking_rate > 4 ~ 0,
+                               stocking_rate <= 4 ~ (100-(25 * stocking_rate))))
+  
+  Agricultural_biodiversity <- Agricultural_biodiversity %>%
+    left_join(Stockingrate[,c('key', 'AvStock')], by = 'key')
+  rm(Stockingrate)
+```
+
+**arais** is again defined as the number of animals from a species that has spent this percentage of time on the pasture, for every farm. **nliv** is calculated as before and contains the same values. **pasture_d** is the percentage of time spent on the pasture times **nliv**. The sum of **pasture_d**, **nliv** and **livunit** is taken for every farm separatly. The grazing intensity (**GI**) is then defined by first calculating **pasture_d** per grazing area on the farm and then translating it to the final score **Grazing_intensity** as follows:
+
+| GI         | Grazing_intensity |
+|------------|-------------------|
+| \> 2       | 0                 |
+| 2 - 1      | 25              |
+| 1 - 0.5    | 50               |
+| 0.5 - 0.25 | 75              |
+| \<= 0.25   | 100                 |
+
+**Grazing_intensity** is added to the data frame Agricultural_biodiversity.
+
+```{r}
+  ### 2.6.9 Grazing intensity
+  Grazing_intensity <- data_a1 %>%
+    rename(key = '_parent_index') 
+  
+  Grazing_intensity <- Grazing_intensity %>% 
+    group_by(aname, key, onfarm) %>%
+    mutate(arais = sum(arais, na.rm = TRUE)) %>% 
+    ungroup() %>%
+    select(aname, key, arais, onfarm) %>%
+    distinct() %>% as.data.frame()
+  
+  # We convert in livestok standard units:
+  Grazing_intensity <- Grazing_intensity %>%
+    mutate(livunit = case_when(aname == 0 ~ lsucv_cattle,
+                               aname %in% c(1,2,3,4) ~ 0.8,
+                               aname %in% c(5,6) ~ 0.3,
+                               aname == 7 ~ lsucv_sheep,
+                               aname %in% c(8, 23) ~ 0.1,
+                               aname == 9 ~ lsucv_pig,
+                               aname == 10 ~ 1,
+                               aname == 11 ~ 0.17,
+                               aname == 12 ~ 0.02,
+                               aname %in% c(13, 19) ~ 0.01,
+                               aname %in% c(14, 15, 16, 22) ~ 0.03,
+                               aname == 17 ~ 0.005,
+                               aname == 18 ~ 0.35,
+                               aname == 20 ~ 0.003,
+                               aname %in% c(21, 77) ~ 0.002)) %>%
+    mutate(nliv = livunit * arais) %>% # Multiplying livestock units per number of individuals
+    mutate(pasture_d = nliv * onfarm/100) %>% # livestock times percentage on farm
+    group_by(key) %>%
+    summarise_at(vars(pasture_d, nliv, livunit), sum, na.rm = T)
+  
+  Grazing_intensity <- Grazing_intensity %>%
+    left_join(Area_total, by = 'key') %>%
+    mutate(GI = pasture_d/area_g) %>%
+    mutate(Grazing_intensity = case_when(GI > 2 ~ 0,
+                                         GI <= 2 & GI > 1 ~ 25,
+                                         GI <= 1 & GI > 0.5 ~ 50,
+                                         GI <= 0.5 & GI > 0.25 ~ 75,
+                                         GI <= 0.25 ~ 100))
+  Grazing_intensity <- Grazing_intensity %>%
+    mutate(Grazing_intensity = ifelse(area_g == 0, NA, Grazing_intensity)) # Farmers that have no On-farm pastures have grazing intensity NA
+  
+  Agricultural_biodiversity <- Agricultural_biodiversity %>%
+    left_join(Grazing_intensity[,c('key', 'Grazing_intensity')], by = 'key')
+  
+```
+
+The variable **landuse_change** describes the area that was newly converted from natural/semi-natural vegetation to agricultural fields. **LUC_SNH** is 1 - the converted area divided by the total farm area. It is then multiplied by 100. If none of the area was changed the farm received a score of 100. **LUC_SNH** is then added to the data frame Agricultural_biodiversity.
+
+```{r}
+LUC <- data[,c('key', 'landuse_change')] %>%
+    left_join(Area_total, by = 'key') %>%
+    mutate(LUC_SNH = 1 - (landuse_change/area_total)) %>%
+    mutate(LUC_SNH = LUC_SNH * 100) %>%
+    mutate(LUC_SNH = ifelse(is.na(LUC_SNH), 100, LUC_SNH))
+  
+  Agricultural_biodiversity <- Agricultural_biodiversity %>%
+    left_join(LUC[,c('key', 'LUC_SNH')], by = 'key') 
+  rm(LUC)
+```
+
+The total score for Agricultural biodiversity is called **Biodiversity_Indicator**. It is calculated by the mean of all the variables we have calculated in this chapter, namely: **Agricultural_diversity, LUC_SNH, Grazing_intensity, AvStock, FieldOP, cp_ind, N_application, Semi_natural_Habitats, Tree_habitat, Patch_size**.
+
+```{r}
+  Agricultural_biodiversity <- Agricultural_biodiversity %>%
+    rowwise() %>%
+    mutate(Biodiversity_indicator = mean(c(Agricultural_diversity, LUC_SNH, Grazing_intensity, AvStock, FieldOP, cp_ind, N_application, Semi_natural_Habitats, Tree_habitat, Patch_size), na.rm = T)) %>%
+    rename( "cp_appl" = "cp") 
+    
+    return(Agricultural_biodiversity)
+```
+
+### Exposure to Pesticides
+
+First the score for organic pesticides is calculated. **coused1** is the quantity of organic pesticide used. With **comeas1** the unit of **coused1** is corrected to be in [kg]. Then **coused1** is defined as the sum of all the organic pesticides used on a farm (in kg).
+
+```{r}
+## Organic Pesticides
+  
+  co <- data_co %>%
+    rename(key = '_parent_index') %>%
+    mutate(coused1 = ifelse(is.na(coused1),NA,
+                           ifelse(is.na(comeas1),coused1,
+                                  ifelse(comeas1 %in% c('Grams', 'g'), coused1*0.001, coused1))))
+  
+  co <- co %>%
+    group_by(key) %>%
+    mutate(coused1 = sum(coused1, na.rm = T)) %>% 
+    ungroup() %>%
+    select(key, coused1) %>%
+    distinct()
+```
+
+The chemical pesticides are also corrected for their unit of measure. Then three new variables were defined **tox1, tox2, tox3**. They are assigned the value of 1 depending on the value of **cptox**(the human toxicity) (1, 2 or 3). **cpused** is defined as the quantity of all the pesticides used on the farm.
+
+```{r}
+## Chemical Pesticides
+  
+  cp <- data_cp %>%
+    rename(key = '_parent_index') %>% # Is human toxicity
+    mutate(cpused = ifelse(cpmeas %in% c('Grams', 'g'), cpused*0.001, cpused)) %>% 
+    mutate(tox1 = ifelse(cptox == 1,1,0),
+           tox2 = ifelse(cptox == 2,1,0),
+           tox3 = ifelse(cptox == 3,1,0))
+  cp <- cp %>%
+    group_by(key) %>%
+    mutate(cpused = sum(cpused, na.rm = T),
+           tox1 = ifelse(!is.na(tox1), max(tox1, na.rm = T), NA),
+           tox2 = ifelse(!is.na(tox2), max(tox2, na.rm = T), NA),
+           tox3 = ifelse(!is.na(tox3), max(tox3, na.rm = T), NA)) %>% 
+    select(key, cpused, tox1, tox2, tox3) %>% distinct()
+```
+
+The variable for the number of mitigation strategies when applying pesticides is called **mitigation**. It is calculated by adding all the values of columns (with binary data sets [1 or 0] depending on if the mitigation strategy was present or not) for different mitigation strategies for every farm together. The same is done for ecological pest management (**ecoman_num**). The variables **opestnum** (number of different pesticides used) **co, cp , mitigation** and **ecoman_num** area added to the data frame Pesticides.
+
+```{r}
+ ## Number of mitigation strategies
+  mitigation <- data %>%
+    select(starts_with('mitig')) %>%
+    select(!c('mitig')) %>%
+    apply(1,function(x) sum(x,na.rm = T)) %>%
+    data.frame() %>%
+    rename(mitigation = '.')
+  
+  ecoman_num <- data %>%
+    select(starts_with('ecoman')) %>%
+    select(!c('ecoman')) %>%
+    apply(1,function(x) sum(x,na.rm = T)) %>%
+    data.frame() %>%
+    rename(ecoman_num = ".")
+
+  ## Combining
+  Pesticides <- data %>%
+    select('key', 'opestnum') %>%
+    left_join(co, by = 'key') %>%
+    left_join(cp, by = 'key')
+  
+  Pesticides <- cbind(Pesticides, mitigation, ecoman_num)
+  rm(co, cp, mitigation, ecoman_num)
+```
+
+**pest_use** is defined as the score which is 0 if only chemical pesticides are used, 50 if both are used and 100 if no chemical pesticides were used. **pest_tox** is assigned a score through **tox1, tox2** and **tox3** as follows:
+
+| tox                               | pest_tox |
+|-----------------------------------|----------|
+| tox1 == 1                         | 0        |
+| tox2 == 1 & tox1 == 0             | 50       |
+| tox3 == 1 & tox2 == 0 & tox1 == 0 | 100      |
+| tox3 == 0 & tox2 == 0 & tox1 == 0 | 100      |
+
+**pest_mitig** increases by 25 for every additional mitigation strategy (**mitigation**) and has a maximum with 100. **pest_ecoman** increases by 25 for every additional mitigation strategy (**pest_ecoman**) and has a maximum with 100. **pest_score** is the mean of the 4 newly calculated variables(**pest_use, pest_tox, pest_mitig, pest_ecoman**), or if no pesticides were used it equals 100.
+
+```{r}
+# New pest score proposed by Anina (4 scores + overall score as mean of the 4 scores)
+  Pesticides <- Pesticides %>%
+    mutate_if(is.numeric, ~replace_na(., 0)) %>%
+    # Score 1: Organic vs. synthetic pesticide use
+    mutate(pest_use = case_when(cpused > 0 & coused1 == 0 ~ 0,
+                                cpused > 0 & coused1 > 0 ~ 50,
+                                coused1 > cpused & cpused == 0 ~ 100)) %>%
+    # Score 2: Toxicity
+    mutate(pest_tox = case_when(tox1 == 1 ~ 0,
+                                tox2 == 1 & tox1 == 0 ~ 50,
+                                tox3 == 1 & tox2 == 0 & tox1 == 0 ~ 100,
+                                tox3 == 0 & tox2 == 0 & tox1 == 0 ~ 100)) %>%
+    # Score 3: Number of mitigation measures
+    mutate(pest_mitig = case_when(mitigation == 0 ~ 0,
+                                  mitigation == 1 ~ 25,
+                                  mitigation == 2 ~ 50,
+                                  mitigation == 3 ~ 75,
+                                  mitigation >= 4 ~ 100)) %>%
+    # Score 4: Number of ecological management measures
+    mutate(pest_ecoman = case_when(ecoman_num == 0 ~ 0,
+                                   ecoman_num == 1 ~ 25,
+                                   ecoman_num == 2 ~ 50,
+                                   ecoman_num == 3 ~ 75,
+                                   ecoman_num >= 4 ~ 100)) %>%
+    # Overall pest-score
+    mutate(pest_score = case_when(cpused == 0 & coused1 == 0 ~ 100, # no pesticides used --> 100 % even if no ecoman and mitigation!
+                                  TRUE ~ (pest_use + pest_tox + pest_mitig + pest_ecoman)/4))
+  return(Pesticides)
+```
+
+###Economy
+
+The **total_area** is calculated as before and corresponds to the total farm area (with grazing area and semi natural habitats)
+
+```{r}
+step2_economy <- function(){
+  
+  SNH <- data_snh %>%
+    rename(key = '_parent_index') %>%
+    mutate(SNH_area_ha = ifelse(is.na(sizeha_snh), length_snh*width_snh*0.0001,sizeha_snh)) %>%
+    group_by(key) %>%
+    summarise_at(vars(SNH_area_ha), sum, na.rm = T)
+  
+  
+  
+  Area_total <- data[, c('key', 'area', 'area_g')] %>%
+    left_join(SNH, by = 'key') %>%
+    rowwise() %>%
+    mutate(area_total = sum(area, area_g, SNH_area_ha, na.rm = T))
+  
+```
+
+The data for household members is saved in the data frame data_workers. **nag_children** is defined as the household children / 2. Then the sum of all the household members is taken and defined as **fam_workers** (For children **nag_children** is used). **days_ext** is the sum of all the days external people have worked on the farm and **wage** is the sum of all their wage. The **ext_workers** variable describes the ammount of external workers that worked on the farm by dividing **days_ext** through 260 (based on a 5 day workweek). The number of workers is then described by the variable **num_workers** and is the sum of **fam_workers** and **ext_workers**.
+
+```{r}
+   ## Family of workers
+  data_workers <- data[,c('key', 'ag_men', 'ag_women', 'ag_myoung', 'ag_fyoung', 'ag_children')]
+  data_workers <- data_workers %>%
+    left_join(Area_total, by = 'key') %>%
+    mutate(nag_children = ag_children/2) %>%
+    rowwise() %>%
+    mutate(fam_workers = sum(c(ag_men, ag_women, ag_myoung, ag_fyoung, nag_children), na.rm = T))
+  
+  # External workers
+  ext_workers <- data_ext_workers %>%
+    rename(key = '_parent_index')
+  
+  ext_workers <- ext_workers %>%
+    select(key, days_ext, wage) %>%
+    group_by(key) %>%
+    mutate(days_ext = sum(days_ext, na.rm = T),
+           wage = sum(wage, na.rm = T)) %>% 
+    ungroup() %>%
+    mutate(ext_workers = days_ext/260) %>% # on a basis of 5 days worked per week
+    distinct()
+  
+  data_workers <- data_workers %>%
+    left_join(ext_workers, by = 'key') %>%
+    rowwise() %>%
+    mutate(num_workers = sum(c(fam_workers, ext_workers), na.rm = T))
+  
+```
+
+To **cname_label** the names of the different crops, the list **other_crop** is added, since it contains all the alternative crops which manually have to be added, since they aren't in the TAPE list of crops yet. **cpg** describes the price of the crop at the gate (price when the crop leaves the farmers possession). The data is grouped by the different crops (**cname_label**) and the mean of the price at the gate is taken and defined as **cpg_median**. **cpg_median** is there to correct for too high, too low or values with wrong units. If **cpg** is suspiciously wrong **cpg_corr** is given the value of **cpg_median**, in all other cases it has the value of **cpg**. To get the total production of the farm (**crop_prod**) [in money] the the total production (**cprod**) [in kg] is multiplied by **cpg_corr**. For **crop_sales** the quantity sold(**cqsold**) is multiplied by **cpg_corr**.
+
+```{r}
+ # Make a check for price at the gate (can't be 0 or too low)
+  cpg <- c1 %>%
+    select(c('cname_label', 'other_crop', 'cpg')) %>%
+    mutate(cname_label = ifelse(cname_label == 'Other', other_crop, cname_label)) %>%
+    group_by(cname_label) %>%
+    summarise_at(vars(cpg), median, na.rm = T) %>%
+    rename(cpg_median = cpg)
+  
+  c1 <- c1 %>%
+    left_join(cpg, by = 'cname_label') %>%
+    # corrections for cpg if = 0 or NA or too low
+    mutate(cpg_corr = ifelse(cpg == 0, cpg_median, cpg)) %>% 
+    mutate(cpg_corr = ifelse(is.na(cpg), cpg_median, cpg)) %>%
+    mutate(cpg_corr = ifelse(cpg/cpg_median < 0.1, cpg_median, cpg)) %>%
+    mutate(cpg_corr = ifelse(cpg/cpg_median > 10, cpg_median, cpg)) %>%
+    mutate(cpg_corr = ifelse(is.na(cpg_corr), cpg, cpg_corr)) 
+  rm(cpg)
+  
+  c1 <- c1 %>%
+    mutate(crop_prod = cprod * cpg_corr,
+           crop_sales = cqsold * cpg_corr) %>%
+    group_by(key) %>%
+    mutate(crop_prod = sum(crop_prod, na.rm = TRUE),
+           crop_sales = sum(crop_sales, na.rm = TRUE)) %>%
+    select(key,crop_prod,crop_sales) %>% 
+    distinct()
+```
+
+The same is done with forest products (just without the price correction). The Price at the gate is here called **cfppg** the total production **cfpprod** and the quantity sold **cfpqsold**.
+
+```{r}
+  ## Crops and forest products productivity
+  cfp <- data_cfp %>%
+    rename(key = '_parent_index') 
+  
+  cfp <- cfp %>%
+    mutate(cfp_prod = cfpprod * cfppg,
+           cfp_sales = cfpqsold * cfppg) %>%
+    group_by(key) %>%
+    mutate(cfp_prod = sum(cfp_prod, na.rm = T),
+           cfp_sales = sum(cfp_sales, na.rm = T)) %>%
+    select(key, cfp_prod, cfp_sales) %>%
+    distinct()
+```
+
+The same is also done for animal productivity where the price at the gate is called **apg** and **aname** the name of the animal and **aname_other** the list of names that aren't in TAPE yet.**apg_median** is used to calculate the corrected price **apg_corr*** . **anim_change** is is calculated by **aborn** (the animals of this species born in the last 12 months) - **adied**(the ones who died) times **apg_corr**. **anim_sales** is simply calculated by the sold animals times **apg_corr**. To get the final result both variables are summed up for all animal species on the farm. The animal production (**anim_prod**) is the sum of **anim_sales** and **anim_change** minus the expenses for purchasing livestock (**livexp**).
+
+```{r}
+a1 <- data_a1 %>%
+    rename(key = '_parent_index')
+  # Make a check for price at the gate (can't be 0 or too low)
+  apg <- a1 %>%
+    select(c('aname', 'aname_other', 'apg')) %>%
+    mutate(aname = ifelse(aname == 'Other', aname_other, aname)) %>%
+    group_by(aname) %>%
+    summarise_at(vars(apg), median, na.rm = T) %>%
+    rename(apg_median = apg)
+  
+  a1 <- a1 %>%
+    left_join(apg, by = 'aname') %>%
+    # corrections for cpg if = 0 or NA or too low
+    mutate(apg_corr = ifelse(apg == 0, apg_median, apg)) %>% 
+    mutate(apg_corr = ifelse(is.na(apg), apg_median, apg)) %>%
+    mutate(apg_corr = ifelse(apg/apg_median < 0.1, apg_median, apg)) %>%
+    mutate(apg_corr = ifelse(apg/apg_median > 10, apg_median, apg)) %>%
+    mutate(apg_corr = ifelse(is.na(apg_corr), apg, apg_corr)) 
+  rm(apg)
+  
+  a1 <- a1 %>%
+    mutate(anim_change = (aborn - adied) * apg_corr,
+           anim_sales = aqsold * apg_corr)
+  
+  a1 <- a1 %>%
+    group_by(key) %>%
+    mutate(anim_change = sum(anim_change, na.rm = T),
+           anim_sales = sum(anim_sales, na.rm = T)) %>%
+    select(key, anim_change, anim_sales) %>%
+    distinct()
+  
+  a1 <- a1 %>%
+    left_join(data[, c('key', 'livexp')], by = 'key') %>%
+    rowwise() %>%
+    mutate(anim_prod = sum(c(anim_sales, -livexp, anim_change), na.rm = T))
+```
+
+Animal Products repeat the same calculation as for e.g. crops. **apname** is the name of the product, **apname_other** of products that are categorized and **apppg** is the price at the gate. **anpr_prod** is the total production and **anpr_sales** are the total sales.
+
+```{r}
+## Animal Products Productivity
+  ap <- data_ap %>%
+    rename(key = '_parent_index') 
+  
+  # Make a check for price at the gate (can't be 0 or too low)
+  appg <- ap %>%
+    select(c('apname', 'apname_other', 'appg')) %>%
+    mutate(apname = ifelse(apname == 'Other', apname_other, apname)) %>%
+    group_by(apname) %>%
+    summarise_at(vars(appg), median, na.rm = T) %>%
+    rename(appg_median = appg)
+  
+  ap <- ap %>%
+    left_join(appg, by = 'apname') %>%
+    # corrections for cpg if = 0 or NA or too low
+    mutate(appg_corr = ifelse(appg == 0, appg_median, appg)) %>% 
+    mutate(appg_corr = ifelse(is.na(appg), appg_median, appg)) %>%
+    mutate(appg_corr = ifelse(appg/appg_median < 0.1, appg_median, appg)) %>%
+    mutate(appg_corr = ifelse(appg/appg_median > 10, appg_median, appg)) %>%
+    mutate(appg_corr = ifelse(is.na(appg_corr), appg, appg_corr)) 
+  rm(appg)
+  
+  ap <- ap %>%
+    mutate(anpr_prod = approd * appg_corr,
+           anpr_sales = apqsold * appg_corr) 
+  
+  ap <- ap %>%
+    group_by(key) %>%
+    mutate(anpr_prod = sum(anpr_prod, na.rm = TRUE),
+           anpr_sales = sum(anpr_sales, na.rm = TRUE)) %>%
+    select(key, anpr_prod, anpr_sales) %>% 
+    distinct()
+```
+
+All the data is then gathered together in a data frame. The **total_output** is then defined as the sum of **crop_prod, cfp_prod, anim_prod** and **anpr_prod**. **productivity_ha** is defined as the total output per hectare and **productivity_pers** is the total output per worker.
+
+```{r}
+Economy <- c1 %>%
+    left_join(cfp, by = 'key') %>%
+    left_join(a1, by = 'key') %>%
+    left_join(ap, by = 'key') %>%
+    rowwise() %>%
+    mutate(total_output = sum(c(crop_prod, cfp_prod, anim_prod, anpr_prod), na.rm = T))
+  rm(c1, a1, ap)
+  
+  Economy <- Economy %>%
+    left_join(data_workers, by = 'key') %>%
+    mutate(productivity_ha = total_output/area_total, 
+           productivity_pers = total_output/num_workers)
+  
+```
+
+The selected data covers all the expenditures for the farm, except expenses for food. The Variable **days_ext** is the sum of all the days external workers have worked on the farm and **wage** is their total wage. 
+
+```{r}
+  ## Subsidies, Cost of Inputs, Taxes, interest on loans, cost of renting land
+  Expenditures <- data %>%
+    select(c('key', 'subs', 'taxes', 'inter', 'rentcost'), ends_with('exp')) %>%
+    select(!c('foodexp'))
+  
+  ## Cost of hired labor
+  hired_labor <- data_ext_workers %>%
+    rename(key = '_parent_index') %>%
+    select(c('key', 'days_ext', 'wage')) %>%
+    group_by(key) %>%
+    summarise_at(vars(days_ext, wage), sum, na.rm = T)
+  
+  Expenditures <- Expenditures %>%
+    left_join(hired_labor, by = 'key')
+```
+
+The Depreciation of the machines is calculated by **init_v** (initial value) which is the product of the number of owned machines and their price. From **init_v** the residual value **res_v** is calculated as 10% of the initial value. The **depreciation** is then calculated with two additional variables **myused** , the number of years the machinery has been used and **myplan**, the remaining useful life of this machinery. The total **depreciation** is then calculated for every farm.
+
+```{r}
+ ## Depreciation
+  machine <- data_m %>%
+    rename(key = '_parent_index')
+  
+  machine <- machine %>%
+    mutate(init_v = mowned * mprice,
+           res_v = (init_v/100)*10,
+           depreciation = (init_v - res_v)/((myused + myplan) * (myused + myplan + 1)/2) * myplan)
+  
+  machine <- machine %>%
+    group_by(key) %>%
+    mutate(depreciation = sum(depreciation, na.rm = T)) %>%
+    select(key, depreciation) %>%
+    distinct()
+  
+  Expenditures <- Expenditures %>%
+    left_join(machine, by = 'key') %>%
+    mutate(depreciation = ifelse(is.na(depreciation), 0, depreciation))
+  
+```
+
+ **farm_revenue** is calculated from the sum of all the sales. The **cost_of_inputs** is the sum of all the expenses (except for foodexpenses) that was earlier loaded to the data frame. **Income** is then calculated as a last step. (Income = farm_revenue + subs - cost_of_inputs - wage - inter - taxes - rentcost - depreciation)
+
+```{r}
+Economy <- Economy %>%
+    rowwise() %>%
+    mutate(farm_revenue = sum(crop_sales, cfp_sales, anim_sales, anpr_sales, na.rm = T)) 
+  
+  Expenditures <- Expenditures %>%
+    left_join(Economy[,c('key', 'farm_revenue')], by = 'key') %>%
+    mutate(cost_of_inputs = rowSums(select(.,ends_with('exp')), na.rm = T)) %>%
+    replace(is.na(.), 0) %>%
+    mutate(Income = farm_revenue + subs - cost_of_inputs - wage - inter - taxes - rentcost - depreciation)
+   
+  Economy <- Economy %>%
+    left_join(Expenditures, by = c('key','days_ext','farm_revenue','livexp','wage'))
+  
+```
+
+The data for household members is loaded and the **hh_children** is divided by two and called **nhh_children** to calculate the variable for adult members of a household (**hh_adults**). **food_exp_capita** is the food expense a household had per adult.
+
+```{r}
+  food_expenses <- data %>%
+    select(c('key', 'foodexp', 'hh_men', 'hh_women', 'hh_myoung', 'hh_fyoung', 'hh_children')) %>%
+    mutate_all(., as.numeric) %>%
+    mutate(nhh_children = hh_children/2) %>%
+    rowwise() %>%
+    mutate(hh_adults = sum(c(hh_men, hh_women, hh_myoung, hh_fyoung, nhh_children), na.rm = T)) %>%
+    mutate(food_exp_capita = foodexp/hh_adults)
+
+```
+
+### Value added
+
+**ValueAdded** is calculated by the **total_output**, **cost_of_inputs** and **depreciation**. The data frame Economy is then returned as an output.
+
+```{r}
+
+Economy <- Economy %>%
+    left_join(food_expenses[c('food_exp_capita', 'foodexp','key')], by = 'key') 
+  
+  Economy <- Economy %>%
+    mutate(ValueAdded = total_output - cost_of_inputs - depreciation )
+  
+  return(Economy)
+```

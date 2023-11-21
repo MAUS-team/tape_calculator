@@ -1,0 +1,27 @@
+ default:
+  source: "DATA/TAPE_-_Agroscope_Kenya_-_all_versions_-_XML_header_-_2023-08-29-06-32-23.xlsx"
+  lsucv_cattle: 0.5
+  lsucv_sheep: 0.1
+  lsucv_pig: 0.2
+  BiodiversityIndicator: "new"
+  
+ global_north:
+  source: "DATA/TAPE_-_Agroscope_Kenya_-_all_versions_-_XML_header_-_2023-08-29-06-32-23.xlsx"
+  lsucv_cattle: 0.9
+  lsucv_sheep: 0.15
+  lsucv_pig: 0.25
+  BiodiversityIndicator: "new"
+  
+ global_south:
+  source: "DATA/TAPE_-_Agroscope_Kenya_-_all_versions_-_XML_header_-_2023-08-29-06-32-23.xlsx"
+  lsucv_cattle: 0.5
+  lsucv_sheep: 0.1
+  lsucv_pig: 0.2
+  BiodiversityIndicator: "new"
+  
+ altered:
+  source: "DATA/TAPE_-_Agroscope_Kenya_-_all_versions_-_XML_header_-_2023-08-29-06-32-23_altered.xlsx"
+  lsucv_cattle: 0.5
+  lsucv_sheep: 0.1
+  lsucv_pig: 0.2
+  BiodiversityIndicator: "new"
