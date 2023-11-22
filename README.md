@@ -10,7 +10,7 @@ The TAPE tool is a powerful instrument that allows users to calculate various pa
 
 3.  **config.yml**: This is where you can enter the location of the file(s) your draw your data from, as well as set diffferent configurations for the main script.
 
-4. **Visualise.R**: Here you find some plot options commonly used with the calculated TAPE data.
+4. **Visualise.R**: Here you find some plots options commonly used with the calculated TAPE data.
 
 This repository contains all the code necessary to run these scripts and use the TAPE tool. Whether you're a researcher studying sustainable agriculture, a policy maker looking for data to inform decisions, or simply someone interested in agroecology, this tool can provide valuable insights.
 
