@@ -1412,15 +1412,11 @@ step2_economy <- function(){
     mutate(ValueAdded = total_output - cost_of_inputs - depreciation )
   
   #scaling
-  median_Productivity <- median(Economy$total_output)
-  median_Income <- median(Economy$Income)
-  median_ValueAdded <- median(Economy$ValueAdded)
-  
   Economy <- Economy %>%
-    rowwise() %>%
-    mutate(Productivity_scaled = ((total_output - median_Productivity)/ (2 * max(Economy$total_output - median_Productivity)) + 0.5)*100) %>%
-    mutate(Income_scaled = ((Income - median_Income) / (2 * max(Economy$Income - median_Income)) + 0.5)*100) %>%
-    mutate( ValueAdded_scaled = ((ValueAdded - median_ValueAdded) / (2 * max(Economy$ValueAdded - median_ValueAdded)) + 0.5)*100) 
+    mutate(Income_scaled = (Income - min(Economy$Income))/(max(Economy$Income)-min(Economy$Income))*100,
+           Productivity_scaled = (total_output- min(Economy$total_output))/(max(Economy$total_output)-min(Economy$total_output))*100,
+           ValueAdded_scaled = (ValueAdded- min(Economy$ValueAdded))/(max(Economy$ValueAdded)-min(Economy$ValueAdded))*100)
+  
   
   
   
