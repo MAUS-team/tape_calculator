@@ -1,7 +1,7 @@
 ---
 title: "README_functions_TAPE"
-author: "Stevan Paunoivc"
-date: "2023-08-16"
+author: "Stevan Paunoivc & Simon Baumgartner"
+date: "2024-03-28"
 output: PDF_document
 ---
 

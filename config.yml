@@ -1,0 +1,99 @@
+ default:
+  source: "DATA/TAPE_Prosoils sample data.xlsx"
+  lsucv_cattle: 0.5
+  lsucv_buffalo: 0.6
+  lsucv_sheep: 0.1
+  lsucv_pig: 0.2
+  lsucv_horses: 0.5
+  lsucv_camels: 0.75
+  Indicator: "Agrobiodiversity" # or "Biodiversity" if you want to calculate the improved Biodiversity index
+  
+ Near_East_North_Africa:
+  source: "DATA/TAPE_Prosoils sample data.xlsx"
+  lsucv_cattle: 0.7
+  lsucv_buffalo: 0.7
+  lsucv_sheep: 0.1
+  lsucv_pig: 0.2
+  lsucv_horses: 0.4
+  lsucv_camels: 0.75
+  Indicator: "Biodiversity"
+  
+ Africa_South_of_Sahara:
+  source: "DATA/TAPE_Prosoils sample data.xlsx"
+  lsucv_cattle: 0.5
+  lsucv_buffalo: 0.6
+  lsucv_sheep: 0.1
+  lsucv_pig: 0.2
+  lsucv_horses: 0.5
+  lsucv_camels: 0.7
+  Indicator: "Agrobiodiversity"
+  
+ Central_America:
+  source: "DATA/TAPE_Prosoils sample data.xlsx"
+  lsucv_cattle: 0.7
+  lsucv_buffalo: 0.6
+  lsucv_sheep: 0.1
+  lsucv_pig: 0.25
+  lsucv_horses: 0.5
+  lsucv_camels: 0.75
+  Indicator: "Agrobiodiversity"
+  
+ South_Africa:
+  source: "DATA/TAPE_Prosoils sample data.xlsx"
+  lsucv_cattle: 0.7
+  lsucv_buffalo: 0.6
+  lsucv_sheep: 0.1
+  lsucv_pig: 0.2
+  lsucv_horses: 0.65
+  lsucv_camels: 0.75
+  Indicator: "Agrobiodiversity"
+  
+ OECD:
+  source: "DATA/TAPE_Prosoils sample data.xlsx"
+  lsucv_cattle: 0.9
+  lsucv_buffalo: 0.7
+  lsucv_sheep: 0.1
+  lsucv_pig: 0.25
+  lsucv_horses: 0.65
+  lsucv_camels: 0.9
+  Indicator: "Agrobiodiversity"
+  
+ East_and_South_East_Asia:
+  source: "DATA/TAPE_Prosoils sample data.xlsx"
+  lsucv_cattle: 0.65
+  lsucv_buffalo: 0.7
+  lsucv_sheep: 0.1
+  lsucv_pig: 0.25
+  lsucv_horses: 0.65
+  lsucv_camels: 0.8
+  Indicator: "Agrobiodiversity"
+  
+ South_Asia:
+  source: "DATA/TAPE_Prosoils sample data.xlsx"
+  lsucv_cattle: 0.5
+  lsucv_buffalo: 0.5
+  lsucv_sheep: 0.1
+  lsucv_pig: 0.2
+  lsucv_horses: 0.65
+  lsucv_camels: 0.8
+  Indicator: "Agrobiodiversity"
+  
+ Caribbean:
+  source: "DATA/TAPE_Prosoils sample data.xlsx"
+  lsucv_cattle: 0.6
+  lsucv_buffalo: 0.6
+  lsucv_sheep: 0.1
+  lsucv_pig: 0.2
+  lsucv_horses: 0.65
+  lsucv_camels: 0.8
+  Indicator: "Agrobiodiversity"
+  
+ Near_East:
+  source: "DATA/TAPE_Prosoils sample data.xlsx"
+  lsucv_cattle: 0.55
+  lsucv_buffalo: 0.6
+  lsucv_sheep: 0.1
+  lsucv_pig: 0.25
+  lsucv_horses: 0.56
+  lsucv_camels: 0.7
+  Indicator: "Agrobiodiversity"
