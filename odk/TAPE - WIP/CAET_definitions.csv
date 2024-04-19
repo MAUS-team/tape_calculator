@@ -1,0 +1,1001 @@
+"list_name","name","label::Malagasy (mg)","label::French (fr)","label::English (en)"
+"crops","0","0 - Monoculture ( tsy misy afatsy voly tokana)","0 - Monoculture (ou absence de cultures cultivées)","0 - Monoculture (or no crops cultivated)"
+"crops","0.5","0.5","0.5","0.5"
+"crops","1","1 - Voly somary vitsivitsy kely na voly tokana mandrakotra ny ankamaroan'ny faritra voavoly","1 - Petit nombre de cultures ou une seule culture couvrant la grande majorité de la surface cultivée.","1 - Small number of crops or one crop covering the big majority of the cultivated area."
+"crops","1.5","1.5","1.5","1.5"
+"crops","2","Eo eo ihany ny karazan'ny voly atao eny amin'ny velaran-tany somary ngeza","2 - Nombre moyen de cultures avec une surface cultivée significative.","2 - Average number of crops with significant cultivated area."
+"crops","2.5","2.5","2.5","2.5"
+"crops","3","3 - Maro ny karazana voly atao ary amin'ny velaran-tany ngeza","3 - Nombre significatif de cultures, incluant un pourcentage important de surface cultivée avec des légumineuses ou d'autres plantes fixatrices d'azote.","3 - Significant number of crops, including a significant percentage of area cultivated with legumes or other nitrogen-fixing plants."
+"crops","3.5","3.5","3.5","3.5"
+"crops","4","4 - Tena Maro ny karazana voly atao ary amin'ny velaran-tany tena ngeza","4 - Grand nombre de cultures, incluant un pourcentage important de surface cultivée avec des légumineuses dans une exploitation agricole spatialement diversifiée avec une pratique de culture multiple, poly- ou cultures intercalaires.","4 - High number of crops, including a significant percentage of area cultivated with legumes in a spatially diversified farm with multi-, poly-or inter-cropping."
+"animals","0","0 - Tsy misy fiompiana biby ","0 - Absence d'élevage d'animaux","0 - No animals raised"
+"animals","0.5","0.5","0.5","0.5"
+"animals","1","1 - Biby vitsivitsy amin'ny karazany iray na biby betsaka amin'ny karazana tokana ","1 - Quelques animaux d'une seule espèce ou un grand nombre d'animaux d'une seule race","1 - Few animals of one species only or high number of animals of one breed only"
+"animals","1.5","1.5","1.5","1.5"
+"animals","2","2 - Biby misy karazany mihoatra ny iray ","2 - Quelques animaux de plus d'une espèce","2 - Some animals of more than one species"
+"animals","2.5","2.5","2.5","2.5"
+"animals","3","3 - Betsaka biby isan-karazany ","3 - Nombre significatif d'animaux de différentes espèces","3 - Significant number of animals of different species."
+"animals","3.5","3.5","3.5","3.5"
+"animals","4","4 - Biby tena maro sady tena betsaka samihafa karazana ","4 - Grand nombre d'animaux de différentes espèces et races intégrés dans le système de production","4 - High number of animals of different species and breeds integrated within the production system"
+"trees","0","0 - Pas d'arbres (ni d'autres plantes vivaces).","0 - Pas d'arbres (ni d'autres plantes vivaces).","0 - No trees (nor other perennials)."
+"trees","0.5","0,5","0.5","0.5"
+"trees","1","1 - Peu d'arbres (et / ou d'autres plantes vivaces) d'une seule espèce.","1 - Peu d'arbres (et / ou d'autres plantes vivaces) d'une seule espèce.","1 - Few trees (and/or other perennials) of one species only."
+"trees","1.5","1,5","1.5","1.5"
+"trees","2","2 - Certains arbres (et / ou autres plantes vivaces) de plus d'une espèce.","2 - Certains arbres (et / ou autres plantes vivaces) de plus d'une espèce.","2 - Some trees (and/or other perennials) of more than one species."
+"trees","2.5","2,5","2.5","2.5"
+"trees","3","3 - Nombre important d'arbres (et / ou autres vivaces) d'espèces différentes.","3 - Nombre important d'arbres (et / ou autres vivaces) d'espèces différentes.","3 - Significant number of trees (and/or other perennials) of different species."
+"trees","3.5","3,5","3.5","3.5"
+"trees","4","4 - Nombre élevé d'arbres (et / ou autres plantes vivaces) de différentes espèces intégrées dans les terres agricoles.","4 - Nombre élevé d'arbres (et / ou autres plantes vivaces) de différentes espèces intégrées dans les terres agricoles.","4 - High number of trees (and/or other perennials) of different species integrated within the productive system"
+"div_activ","0","0 - Tsy miteraka fidiram-bola ny famokarana fambolena.","0 - La production agricole ne génère aucun revenu.","0 - Agricultural production does not provide any income."
+"div_activ","0.5","0.5","0.5","0.5"
+"div_activ","1","1 - Ny fidiram-bola dia vokatry ny hetsika tokana mifandraika amin'ny vokatra na serivisy manokana.","1 - Le revenu est généré par une seule activité liée à un produit ou un service spécifique.","1 - Income is generated from a single activity associated with a specific product or service."
+"div_activ","1.5","1.5","1.5","1.5"
+"div_activ","2","2 - Ny fidiram-bola dia azo avy amin'ny hetsika voafetra mifandraika amin'ny vokatra sy serivisy vitsivitsy vokarina ao amin'ny toeram-pambolena.","2 - Le revenu est généré par un nombre limité d'activités liées à un petit nombre de produits et services produits à la ferme.","2 - Income is generated from a limited number of activities related to a small range of products and services produced on the farm."
+"div_activ","2.5","2.5","2.5","2.5"
+"div_activ","3","3 - Ny fidiram-bola dia azo avy amin'ny hetsika maromaro mifandray amin'ny vokatra sy serivisy samihafa vokarina amin'ny toeram-pambolena.","3 - Les revenus sont générés par plusieurs activités liées à divers produits et services produits à la ferme.","3 - Income is generated from multiple activities linked to various products and services produced on the farm."
+"div_activ","3.5","3.5","3.5","3.5"
+"div_activ","4","4 - Ny fidiram-bola dia azo antoka amin'ny hetsika isan-karazany mifandray amin'ny vokatra sy serivisy vokarina ao amin'ny toeram-pambolena.","4 - Les revenus sont garantis par un large éventail d'activités associées à plusieurs produits et services produits à la ferme.","4 - Income is secured through a diverse range of activities associated with several products and services produced on the farm."
+"cla_int","0","0 - Pas d'intégration: : omena sakafo novidina ny biby ary tsy ampiasaina amin'ny fahavokarana ny tany ny zeziny; NA tsy misy biby ao amin'ny agroecosystem.","0 - Pas d'intégration: les animaux sont nourris avec des aliments achetés et leur fumier n'st pas utilisé pour la fertilité du sol; OU il n'y a pas d'animaux dans l'agroécosystème.","0 - No integration: animals are fed with purchased feed and their manure is not used for soil fertility; or no animals in the agroecosystem."
+"cla_int","0.5","0.5","0.5","0.5"
+"cla_int","1","1 - Faible intégration: sakafo novidina no omena ny biby, atao zezika ny zeziny.","1 - Faible intégration: les animaux sont principalement nourris avec des aliments achetés, leur fumier est utilisé comme engrais.","1 - Low integration: animals are mostly fed with purchased feed, their manure is used as fertilizer."
+"cla_int","1.5","1.5","1.5","1.5"
+"cla_int","2","2 - Intégration moyenne: sakafo novokarina eny amin'ny toeram-pambolena sy/na kijana no tena iveloman'ny biby, atao zezika ny zeziny.","2 - Intégration moyenne: les animaux sont principalement nourris avec des aliments produits à la ferme et/ou au pâturage, leur fumier est utilisé comme engrais.","2 - Medium integration: animals are mostly fed with feed produced on the farm and/or grazing, their manure is used as fertilizer."
+"cla_int","2.5","2.5","2.5","2.5"
+"cla_int","3","3 - Intégration élevée:  ny biby dia omena indrindra amin'ny fahana vokarina eo amin'ny toeram-pambolena, ny sisa tavela amin'ny vokatra sy ny vokatra sy/na kijana, ny zeziny dia ampiasaina ho zezika ary manome serivisy izy ireo (ohatra.","3 - Intégration élevée: les animaux sont principalement nourris avec des aliments produits à la ferme, des résidus de récolte et des sous-produits et / ou des pâturages, leur fumier est utilisé comme engrais et ils assurent un service (par ex. la traction).","3 - High integration: animals are mostly fed with feed produced on the farm, crop residues and by-products and/or grazing, their manure is used as fertilizer and they provide at least one service (e.g. traction)"
+"cla_int","3.5","3.5","3.5","3.5"
+"cla_int","4","4 - Intégration complète: ny biby dia  tsy omena sakafo afa-tsy amin'izay vokarina any amin'ny toeram-pambolena ihany, ny sisa amin'ny vokatra sy ny vokatra sy/na kijana, ny tainy rehetra dia atao ho zezika avokoa  et ils fournissent plus d'un service (ohatra ny sakafo, vokatra, traction, sns.).","4 - Intégration complète: les animaux sont exclusivement nourris avec des aliments produits à la ferme, des résidus de récolte et des sous-produits et / ou des pâturages, tout leur fumier est recyclé comme engrais et ils fournissent plus d'un service (par ex. nourriture, produits, traction, etc.).","4 - Complete integration: animals are exclusively fed with feed produced on the farm, crop residues and by-products and/or grazing, all their manure is recycled as fertilizer and they provide more than one service (food, products, traction, etc.)."
+"s_plant","0","0 - Avela miboridana ny tany rehefa avy miakabokatra. Tsy manao association de cultures, tsisy hetsika atao amin'ny haidratsy, tsy manao fifandimbiasam-boly...","0 - Le sol est nu après la récolte. Pas d'association de cultures. Aucune gestion des mauvaises herbes ni des combinaisons de cultures. Pas de rotations de cultures (ou de systèmes de pâturage rotationnel). Perturbation importante du sol (biologique, chimique ou mécanique) avec utilisation courante d'agrochimiques et/ou de feux, surpâturage ou utilisation de machines non adaptées.","0 - Soil is bare after harvest. No intercropping. No weed management or crop combination management. No crop rotations (or rotational grazing systems). Heavy soil disturbance (biological, chemical or mechanical) with common use of agrochemicals and/or fire, overgrazing, or non-adapted machineries."
+"s_plant","0.5","0.5","0.5","0.5"
+"s_plant","1","1 - (-20%) rakotry ny voly sisa tavela (résidus de cultures). Tsy misy fikarakarana tsimparifary. +80 % ny voly dia monoculture mitohy. Fikorontanan'ny tany, anisan'izany ny fampiasana matetika ny agrochemicals.","1 - Moins de 20 pour cent des terres arables sont couvertes de résidus ou de cultures de couverture. Aucun arrangement de mauvaises herbes ou de combinaisons de cultures. Plus de 80 pour cent des cultures sont produites en culture monophasée et continue (ou sans pâturage rotationnel). Perturbation du sol, y compris utilisation courante d'agrochimiques.","1 - Less than 20 percent of the arable land is covered with residues or cover crops. No weed or crop combination arrangements  . More than 80 percent of the crops are produced in mono and continuous cropping (or no rotational grazing). Soil disturbance, including common use of agrochemicals."
+"s_plant","1.5","1.5","1.5","1.5"
+"s_plant","2","2 - (- 50 %) rakotry ny voly sisa tavela (résidus de cultures). Tsy misy fikarakarana tsimparifary. Certaines cultures sont tournées ou associées (ou un certain pâturage rotationnel est effectué). Il peut y avoir une perturbation du sol, mais l'utilisation d'agrochimiques est minimisée, y compris certaine utilisation d'agrochimiques et/ou de feux.","2 - 50 pour cent du sol est couvert de résidus ou de cultures de couverture. Pratiques de gestion des mauvaises herbes et de combinaison de cultures connues mais non appliquées. Certaines cultures sont tournées ou associées (ou un certain pâturage rotationnel est effectué). Il peut y avoir une perturbation du sol, mais l'utilisation d'agrochimiques est minimisée, y compris certaine utilisation d'agrochimiques et/ou de feux.","2 - 50 percent of soil is covered with residues or cover crops. Weed management and crop combination practices known about but not applied. Some crops are rotated or intercropped (or some rotational grazing is carried out). There might be soil disturbance but the use of agrochemicals is minimized, including some use of agrochemicals and/or fire."
+"s_plant","2.5","2.5","2.5","2.5"
+"s_plant","3","3 - (+80 %) rakotry ny voly sisa tavela","3 - Plus de 80 pour cent du sol est couvert de résidus ou de cultures de couverture. Les cultures sont régulièrement tournées ou associées (ou le pâturage rotationnel est systématique). Pratiques de gestion des mauvaises herbes et de combinaison de cultures appliquées. Perturbation du sol minimisée et absence d'utilisation d'agrochimiques.","3 - More than 80 percent of soil is covered with residues or cover crops. Crops are rotated regularly or intercropped (or rotational grazing is systematic). Weed management and crop combination practices applied. Soil disturbance is minimized and there is no use of agrochemicals."
+"s_plant","3.5","3.5","3.5","3.5"
+"s_plant","4","4 - (100%) rakotry ny voly sisa tavela","4 - Tout le sol est couvert de résidus ou de cultures de couverture. Les cultures sont régulièrement tournées et l'association est courante (ou le pâturage rotationnel est systématique). Gestion des mauvaises herbes, combinaison de cultures et/ou régénération en jachère pratiquées et appliquées de manière systématique. Peu ou pas de perturbation du sol et pas d'utilisation d'agrochimiques.","4 - All the soil is covered with residues or cover crops. Crops are rotated regularly and intercropping is common (or rotational grazing is systematic). Weed management, crop combination and and/or fallow regeneration practiced and applied in a systematic way. Little or no soil disturbance and no use of agrochemicals."
+"tree_int","0","0 - Pas d'intégration: ny hazo (sy ny zavamaniry isan-taona) dia tsy manana anjara toerana ho an'ny fianakaviana na amin'ny famokarana zavamaniry na biby.","0 - Pas d'intégration: les arbres (et autres plantes vivaces) n'ont pas de rôle pour la famille ou dans la production végétale ou animale. ","0 - No integration: trees (and other perennials) don't have a role for humans or in crop or animal production . "
+"tree_int","0.5","0.5","0.5","0.5"
+"tree_int","1","1 - Faible intégration:  hazo kely (sy zava-maniry isan-taona) dia tsy manome afa-tsy vokatra iray (ohatra ny voankazo, ny hazo, ny vilona, ​​ny fanafody na ny biopesticides, sns) na ny serivisy iray ihany ho an'ny voly sy/na biby (oh. alokaloka ho an'ny biby, fitomboan'ny fahavokarana ny tany, fitehirizana rano, sakana amin'ny fikorontanan'ny tany, sns.).","1 - Faible intégration: un petit nombre d'arbres (et autres plantes vivaces) ne fournissent qu'un seul produit(par exemple fruits, bois, fourrage, substances médicinales ou biopesticides…) ou qu'un seul service pour les cultures et/ou les animaux (par exemple de l'ombre pour les animaux, une fertilité accrue du sol, une rétention d'eau, une barrière à l'érosion du sol…).","1 - Low integration: small number of trees(and other perennials) only provide one product(e . g . fruits, timber, forage, medicinal or biopesticides substances…) or service(e . g . shade for animals, increased soil fertility, water retention, barrier to soil erosion…) for humans crops and/or animals ."
+"tree_int","1.5","1.5","1.5","1.5"
+"tree_int","2","2 - Intégration moyenne: betsaka ny hazo (sy ny zavamaniry isan-taona) manome vokatra na serivisy iray farafahakeliny.","2 - Intégration moyenne: un nombre important d'arbres (et d'autres plantes vivaces) fournissent au moins un produit ou un service.","2 - Medium integration: significant number of trees (and other perennials) provide at least one product or service."
+"tree_int","2.5","2.5","2.5","2.5"
+"tree_int","3","3 - Intégration élevée: hazo marobe (sy zava-maniry isan-karazany) isan-karazany no manome vokatra sy serivisy maromaro.","3 - Intégration élevée: un nombre important d'arbres (et autres plantes vivaces) de différentes espèces fournissent plusieurs produits et services.","3 - High integration: significant number of trees (and other perennials) of different species provide several products and services."
+"tree_int","3.5","3.5","3.5","3.5"
+"tree_int","4","4- Intégration complète : hazo maro (sy ny zava-maniry hafa isan-taona) amin'ny karazany samihafa no manome vokatra sy serivisy maromaro, ary apetraka ny fomba fanao mikendry ny fanavaozana (ohatra, any amin'ny ala sy ny ala).","4 Intégration complète : de nombreux arbres (et autres plantes vivaces) de différentes espèces fournissent plusieurs produits et services, et des pratiques visant la régénération (par exemple, dans les forêts et les jachères) sont mises en place.","4 - Complete integration: many trees (and other perennials) of different species provide  several products and services, and practices aimed at regeneration (e.g. in forests and fallows) are in place."
+"connectivity","0","0 - Tsy misy ifandraisany mihintsy: mitovitovy ny anaty sy ivelan'ny exploitation agricole, pas d'environnements semi-naturels, pas de zones de compensation écologique.","0 - Pas de connectivité: grande uniformité à l'intérieur et à l'extérieur de l'agroécosystème, pas d'environnements semi-naturels, pas de zones de compensation écologique.","0 - No connectivity: high uniformity within and outside the agroecosystem, no semi-natural environments, no zones of ecological compensation."
+"connectivity","0.5","0.5","0.5","0.5"
+"connectivity","1","1 - Fifandraisana ambany: misy singa mitoka-monina vitsivitsy hita ao amin'ny agroecosystem, toy ny hazo, kirihitra, fefy voajanahary, dobo na faritra kely fanonerana ara-tontolo iainana.","1 - Faible connectivité: quelques éléments isolés peuvent être trouvés dans l'agroécosystème, tels que des arbres, des arbustes, des clôtures naturelles, un étang ou une petite zone de compensation écologique.","1 - Low connectivity: a few isolated elements can be found in the agroecosystem, such as trees, shrubs, natural fences, a pond or a small zone of ecological compensation."
+"connectivity","1.5","1.5","1.5","1.5"
+"connectivity","2","2 - Fifandraisana antonony: singa maromaro mifanakaiky amin'ny voly sy/na kijana na amin'ny faritra lehibe fanonerana ara-tontolo iainana.","2 - Connectivité moyenne: plusieurs éléments sont adjacents aux cultures et/ou pâturages ou à une grande zone de compensation écologique.","2 - Medium connectivity: several elements are adjacent to crops and/or pastures or a large zone of ecological compensation."
+"connectivity","2.5","2.5","2.5","2.5"
+"connectivity","3","3 - Fifandraisana manan-danja: misy singa maromaro hita eo anelanelan'ny tany fambolena sy/na kijana na faritra fanonerana ara-tontolo iainana (hazo, kirihitra, zavamaniry voajanahary, kijana, fefy, lakandrano, sns.).","3 - Connectivité importante: plusieurs éléments peuvent être trouvés entre des parcelles de cultures et/ou des pâturages ou plusieurs zones de compensation écologique (arbres, arbustes, végétation naturelle, pâturages, haies, canaux, etc.).","3 - Significant connectivity: several elements can be found in between plots of crops and/or pastures or several zones of ecological compensation (trees, shrubs, natural vegetation, pastures, hedges, channels, etc.)."
+"connectivity","3.5","3.5","3.5","3.5"
+"connectivity","4","4 - Fifandraisana avo: ny agroecosystem dia manolotra mosaika sy tontolo isan-karazany, singa maro toy ny hazo, kirihitra, fefy na dobo no hita eo anelanelan'ny tany na kijana tsirairay, na faritra fanonerana ara-tontolo iainana maromaro.","4 - Connectivité élevée: l'agroécosystème présente une mosaïque et un paysage diversifié, de nombreux éléments tels que des arbres, des arbustes, des clôtures ou des étangs peuvent être trouvés entre chaque parcelle de terrain ou pâturage, ou plusieurs zones de compensation écologique.","4 - High connectivity: the agroecosystem presents a mosaic and diversified landscape, many elements such as trees, shrubs, fences or ponds can be found in between each plot of cropland or pasture, or several zones of ecological compensation."
+"rec_biomass","0","0 - Ny sisamboly sy ny vokatra avy amin'ny  fiompiana dia tsy ampiasaina intsony amin'ny toeram-pambolena (ohatra: avela ho simba na hodorana) ","0 - Les résidus et sous-produits de la production végétale et animale ne sont pas réutilisés dans d'autres activités productives à la ferme (par exemple, ils sont laissés pour se décomposer ou brûlés).","0 - Residues and by-products of crop and animal production are not reused in other productive activities on farm (e.g. they are left for decomposition or burnt)."
+"rec_biomass","0.5","0.5","0.5","0.5"
+"rec_biomass","1","1 - Ny ampahany kely (une partie) amin'ny sisamboly sy ny vokatra avy amin'ny  fiompiana ihany no haverina ampiasaina amin'ny toeram-pambolena ","1 - Une petite partie des résidus et sous-produits de la production végétale et animale est réutilisée dans d'autres activités productives à la ferme (par exemple, les résidus de culture utilisés comme alimentation animale, l'utilisation du fumier comme engrais, la production de compost à partir du fumier et des déchets ménagers, l'engrais vert).","1 - A small part of the residues and by-products of crop and animal production is reused in other productive activities on farm (e.g. crop residues as animal feed, use of manure as fertilizer, production of compost from manure and household waste, green manure)."
+"rec_biomass","1.5","1.5","1.5","1.5"
+"rec_biomass","2","2 - Maherin'ny antsasany amin'ny sisamboly sy ny vokatra avy amin'ny  fiompiana dia tsy ampiasaina amin'ny toeram-pambolena ","2 - Plus de la moitié des résidus et sous-produits de la production végétale et animale sont réutilisés dans d'autres activités productives à la ferme. Des efforts sont déployés pour recycler la biomasse et les nutriments, tels que l'utilisation de résidus de culture, de fumier et d'autres matières organiques pour l'amendement du sol ou le compostage.","2 - More than half of the residues and by-products of crop and animal production is reused in other productive activities on farm. Efforts are made to recycle biomass and nutrients, such as utilizing crop residues, manure, and other organic materials for soil amendment or composting."
+"rec_biomass","2.5","2.5","2.5","2.5"
+"rec_biomass","3","3 - Ny ankamaroan'ny sisamboly sy ny vokatra avy amin'ny  fiompiana dia haverina ampiasaina amin'ny toeram-pambolena ","3 - La plupart des résidus et sous-produits de la production végétale et animale sont réutilisés dans d'autres activités productives à la ferme. Les pratiques de recyclage sont bien établies et prioritaires, avec un accent sur la capture et la réutilisation des matières organiques et des nutriments pour améliorer la fertilité du sol et l'efficacité des ressources.","3 - Most of the residues and by-products  of crop and animal production is reused in other productive activities on farm. Recycling practices are well-established and prioritized, focusing on capturing and reusing organic materials and nutrients to enhance soil fertility and resource efficiency."
+"rec_biomass","3.5","3.5","3.5","3.5"
+"rec_biomass","4","4 - Ny sisamboly sy ny vokatra avy amin'ny  fiompiana rehetra (total) dia tsy azo ampiasaina amin'ny toeram-pambolena ","4 - Tous les résidus et sous-produits de la production végétale et animale sont réutilisés dans d'autres activités productives à la ferme. Une approche globale du recyclage de la biomasse et des nutriments est mise en place, avec des systèmes efficaces de collecte, de traitement et de réintégration des matières organiques dans le système agricole.","4 - All the residues and by-products of crop and animal production is reused in other productive activities on farm. There is a comprehensive approach to recycling biomass and nutrients, with efficient systems in place for collecting, processing, and reintegrating organic materials into the agricultural system."
+"waste","0","0 - Ny toeram-pambolena dia mamokatra fako be loatra. Tsy misy fomba fampihenana, fampiasana indray na fanodinana fako, ary tsy voavaha tsara ny fiantraikan'ny tontolo iainana.","0 - La ferme produit de grandes quantités de déchets (y compris des émissions) qui sont principalement déversés dans l'environnement ou brûlés. Il n'y a aucune pratique de réduction, de réutilisation ou de recyclage des déchets, et les impacts environnementaux ne sont pas efficacement traités . ","0 - Large amounts of waste (including emissions) are produced by the farm and predominantly discharged into the environment or burned. There are no practices for waste reduction, reuse, or recycling, and environmental impacts are not effectively addressed."
+"waste","0.5","0.5","0.5","0.5"
+"waste","1","1 - Ny toeram-pambolena dia miteraka fako betsaka (anisan'izany ny entona), ny ampahany lehibe amin'izany dia ariana amin'ny tontolo iainana na may. Averina averina ny ampahany kely amin'ny fako. Misy ampahany kely ahodina atao fako. Efa misiy fepetra ny fomba fampihenana, fampiasana indray na fanodinana fako, ary tsy ampy ny ezaka hanalefahana ny fiantraikan'ny tontolo iainana.   ","1 - La ferme génère une grande quantité de déchets(y compris des émissions), dont une partie importante est déversée dans l'environnement ou brûlée. Une petite partie des déchets est recyclée. Il existe des pratiques limitées de réduction, de réutilisation ou de recyclage des déchets, et les efforts pour atténuer les impacts environnementaux sont insuffisants.","1 - The farm generates a large amount of waste(including emissions), with a significant portion being discharged into the environment or burned . A minor portion of the waste is recycled . There are limited practices for waste reduction, reuse, or recycling, and efforts to mitigate environmental impacts are insufficient ."
+"waste","1.5","1.5","1.5","1.5"
+"waste","2","2 - Ny toeram-pambolena dia miezaka mampihena ny fako...","2 - La ferme tente de réduire la quantité de déchets en amont et produit une quantité modérée de déchets (y compris des émissions). Une partie des déchets est déversée dans l'environnement ou brûlée, tandis que l'autre moitié est recyclée. Des mesures sont mises en place pour la réduction, la réutilisation et le recyclage des déchets, mais elles ne sont pas appliquées de manière cohérente. Des efforts sont déployés pour atténuer les impacts environnementaux, mais ils pourraient être améliorés.","2 - The farm makes attempts to reduce the quantity of waste upstream and produces a moderate amount of waste (including emissions). Part of the waste is discharged into the environment or burned, while the other half is recycled. There are measures in place for waste reduction, reuse, and recycling, but they are not consistently implemented. Efforts to mitigate environmental impacts are made but could be further improved."
+"waste","2.5","2.5","2.5","2.5"
+"waste","3","3 - Mamokatra fako kely (anisan'izany ny entona) ny toeram-pambolena ary manodina ny ankamaroany. Ny fomba fampihenana, fampiasana indray ary fanodinana fako mahomby dia ampiharina, ahafahan'ny fitantanana araka ny tokony ho izy. ","3 - La ferme produit de petites quantités de déchets (y compris des émissions) et recycle la majorité d'entre eux. Des pratiques efficaces de réduction, de réutilisation et de recyclage des déchets sont mises en œuvre, ce qui permet une gestion adéquate des déchets. Les impacts environnementaux liés aux déchets sont minimisés.","3 - The farm produces small amounts of waste (including emissions) and recycles the majority of it. Effective practices for waste reduction, reuse, and recycling are implemented, resulting in proper waste management. Environmental impacts associated with waste are minimized."
+"waste","3.5","3.5","3.5","3.5"
+"waste","4","4 - Ny toeram-pambolena dia mamokatra fako faran'izay kely (anisan'izany ny entona) ary havadika atao zezika manontolo ireo. ","4 - La ferme produit des quantités minimales de déchets (y compris des émissions) et recycle l'ensemble. Des pratiques avancées de réduction, de réutilisation et de recyclage des déchets sont appliquées, garantissant une gestion globale des déchets et minimisant les impacts environnementaux. La ferme promeut activement une approche d'économie circulaire.","4 - The farm produces minimal amounts of waste (including emissions) and recycles all of it. Advanced practices for waste reduction, reuse, and recycling are applied, ensuring comprehensive waste management and minimizing environmental impacts. The farm actively promotes a circular economy approach."
+"water","0","0 - Tsy misy fitaovana na teknika hamerenana, fanodinana na fitsitsiana rano. Tsy misy ezaka atao amin'ny fitsitsiana ny loharanon-drano, ary tsy misy ny fepetra hisorohana ny etona sy ny fitazonana ny hamandoan'ny tany, ka miteraka tsy fahampian-drano sy mety ho tsy fahampian-drano.","0 - Aucun équipement ou technique de récupération, de recyclage ou d'économie de l'eau n'st mis en œuvre. Aucun effort n'st fait pour conserver les ressources en eau, et les mesures visant à éviter l'évaporation et à retenir l'humidité du sol sont absentes, entraînant une utilisation inefficace de l'eau et une éventuelle pénurie d'eau.","0 - No equipment or techniques for water harvesting, recycling, or saving are implemented. There is no effort to conserve water resources, and measures to avoid evaporation and retain soil moisture are absent, leading to inefficient water use and potential water scarcity."
+"water","0.5","0.5","0.5","0.5"
+"water","1","1 - Fomba na karazana fitahirizana rano na fitaovana fitahirizana rano (ohatra ny fanondrahana rano mitete, toby fitehirizana). Ezaka voafetra ihany no atao amin'ny fitsitsiana ny rano, ary azo ampiharina ny fanaraha-maso ny etona sy ny fepetra fiarovana ny hamandoana amin'ny tany.","1 - Une méthode ou un type d'équipement de récupération ou d'économie de l'eau (par exemple, irrigation goutte à goutte, réservoir de stockage) est utilisé. Des efforts limités sont déployés pour conserver l'eau, et certaines mesures de contrôle de l'évaporation et de conservation de l'humidité du sol peuvent être appliquées.","1 - One method or type of equipment for water harvesting or saving (e.g., drip irrigation, storage tank) is used. Limited efforts are made to conserve water, and some basic measures to control evaporation and retain soil moisture might be applied."
+"water","1.5","1.5","1.5","1.5"
+"water","2","2 - Fomba fijinjana na fitahirizana rano na karazana fitaovana no ampiasaina, ary misy fomba fanao hamerana ny fanjifàna rano (ohatra ny fanondrahana ara-potoana, ny voly rakotra). ","2 - Une méthode ou un type d'équipement de récupération ou d'économie de l'eau est utilisé, et une pratique pour limiter la consommation d'eau (par exemple, irrigation au bon moment, cultures de couverture) est mise en œuvre. Des efforts sont faits pour réduire la consommation d'eau, et des mesures de contrôle de l'évaporation et de conservation de l'humidité du sol sont envisagées, mais des améliorations supplémentaires sont possibles.","2 - One method or type of equipment for water harvesting or saving is used, and one practice to limit water use (e.g., timing irrigation, cover crops) is implemented. Some efforts are made to reduce water consumption, and measures for evaporation control and moisture retention are considered, but further improvements are possible."
+"water","2.5","2.5","2.5","2.5"
+"water","3","3 - Fomba iray na maromaro amin'ny fomba fanarenana na fitahirizana rano no ampiasaina, ary koa fomba iray na maromaro hamerana ny fampiasana rano. Apetraka ny fepetra hifehezana ny etona sy ny fitahirizana ny hamandoan'ny tany, ahafahana mampiasa rano amin'ny fomba mahomby kokoa.  ","3 - Une ou plusieurs méthodes ou types d'équipement de récupération ou d'économie de l'eau sont utilisés, ainsi qu'une ou plusieurs pratiques pour limiter la consommation d'eau. Des mesures de contrôle de l'évaporation et de conservation de l'humidité du sol sont mises en œuvre, ce qui permet une utilisation plus efficace de l'eau.","3 - One or more methods or types of equipment for water harvesting or saving are used, along with one or more practices to limit water use. Measures for evaporation control and soil moisture retention are implemented, leading to more efficient water utilization."
+"water","3.5","3.5","3.5","3.5"
+"water","4","4 - Fomba sy fomba fitantanana sy fitsitsiana rano maro no atao. Karazana fitaovana fanarenana na fitahirizana rano isan-karazany no ampiasaina, ary koa fomba maro hamerana ny fanjifana rano. Ny fanaraha-maso tanteraka ny etona sy ny fepetra fiarovana ny hamandoan'ny tany dia ampiharina, mampitombo ny fitahirizana rano sy ny fahombiazany. Ny fifantohana amin'ny fitantanana ny rano dia feno sy mahomby indrindra, ahafahana mampiasa rano tsara indrindra ary mampihena kely ny fandaniam-drano, miaraka amin'ny fiheverana manokana ny fifehezana ny etona sy ny fiarovana ny hamandoan'ny tany.","4 - Plusieurs approches et méthodes de gestion et d'économie de l'eau sont pratiquées. Divers types d'équipement de récupération ou d'économie d'eau sont utilisés, ainsi que plusieurs pratiques pour limiter la consommation d'eau. Des mesures complètes de contrôle de l'évaporation et de conservation de l'humidité du sol sont mises en œuvre, ce qui permet de maximiser la conservation et l'efficacité de l'eau. l'accent sur la gestion de l'eau est complet et très efficace, ce qui permet une utilisation optimale de l'eau et une réduction minimale du gaspillage d'eau, avec une attention particulière sur le contrôle de l'évaporation et la conservation de l'humidité du sol.","4 - Several water management and water-saving approaches/methods are practiced. Various types of equipment for water harvesting or saving are utilized, along with multiple practices to limit water use. Comprehensive measures for evaporation control and moisture retention are implemented, maximizing water conservation and efficiency. The focus on water management is comprehensive and highly effective, leading to optimal water utilization and minimal water wastage, with special emphasis on evaporation control and soil moisture retention."
+"ren_energy","0","0 - Ny angovo rehetra ampiasaina amin'ny famokarana fambolena dia avy amin'ny loharano tsy azo havaozina (solika, jiro, sns.). Tsy misy angovo azo havaozina ampiasaina na vokarina. Toute l'énergie utilisée pour la production agricole provient de ressources non renouvelables (carburant, électricité, etc.). ","0 - Toute l'énergie utilisée pour la production agricole provient de ressources non renouvelables (carburant, électricité, etc.). Aucune énergie renouvelable n'st utilisée ni produite.","0 - All the energy for agricultural production comes from non-renewable resources (fuel, electricity, etc.). No renewable energy is used nor produced."
+"ren_energy","0.5","0.5","0.5","0.5"
+"ren_energy","1","1 - Ny ankamaroan'ny angovo ampiasaina amin'ny famokarana fambolena dia avy amin'ny loharanon-karena tsy azo havaozina, ary ny ampahany kely dia avy amin'ny angovo azo havaozina.","1 - La majorité de l'énergie utilisée pour la production agricole provient de ressources non renouvelables, avec une petite partie provenant de sources d'énergie renouvelable.","1 - Majority of the energy for agricultural production comes from non-renewable resources, with a small portion of renewable energy being used or produced."
+"ren_energy","1.5","1.5","1.5","1.5"
+"ren_energy","2","2 - Ny ampahany lehibe amin'ny angovo ampiasaina amin'ny famokarana fambolena dia avy amin'ny loharanon-karena tsy azo havaozina, saingy mitombo ny fiankinan-doha amin'ny angovo azo havaozina. Ny angovo azo havaozina sasany dia vokarina ho an'ny tenany na azo avy amin'ny loharano ivelany mba hamaliana ny filana angovo.","2 - Une partie importante de l'énergie utilisée pour la production agricole provient de ressources non renouvelables, mais il y a une dépendance croissante aux sources d'énergie renouvelable. Certaines énergies renouvelables sont auto-produites ou obtenues de sources externes pour répondre aux besoins énergétiques.","2 - A significant portion of the energy used for agricultural production comes from non-renewable resources, but there is an increasing reliance on renewable energy sources. OR No renewable energy is used nor produced, and the levels of non-renewable energy use are negligible."
+"ren_energy","2.5","2.5","2.5","2.5"
+"ren_energy","3","3 - Ny angovo azo havaozina dia ampidirina mavitrika ao anatin'ny rafi-pamokarana ara-pambolena (fanondrahana gravité, panneaux solaires, biogaz, asa olombelona sy biby, sns), ka mampihena ny fiankinan-doha amin'ny harena tsy azo havaozina. Ny ampahany betsaka amin'ny angovo ampiasaina dia avy amin'ny loharano azo havaozina, ary misy ny ezaka atao amin'ny fikarohana sy ny fampidirana ireo loharanom-angovo azo havaozina bebe kokoa ao anatin'ilay rafitra.","3 - Les sources d'énergie renouvelable sont activement intégrées dans le système de production agricole (irrigation par gravité, panneaux solaires, biogaz, travail humain et animal, etc.), réduisant ainsi la dépendance aux ressources non renouvelables. Une part substantielle de l'énergie utilisée provient de sources renouvelables, et des efforts sont déployés pour explorer et intégrer davantage de sources d'énergie renouvelable dans le système.","3 - Renewable energy sources are being actively integrated into the agricultural production system (gravity irrigation, solar panel, biogas, animal and human workforce, etc.), reducing the dependence on non-renewable resources. A substantial portion of the energy used is from renewable sources, and efforts are being made to explore and incorporate renewable energy sources into the system."
+"ren_energy","3.5","3.5","3.5","3.5"
+"ren_energy","4","4 - Ny angovo rehetra ampiasaina dia azo havaozina sy/na vokarin'ny tena. Ny trano dia tsy miankina amin'ny lafiny famatsiana angovo, miaraka amin'ny antoka ny fisian'ny fotoana rehetra. ny fampiasana solika fôsily dia tsinontsinona.","4 - Toute l'énergie utilisée est renouvelable et/ou auto-produite. Le foyer est autonome en matière d'approvisionnement en énergie, avec une garantie de disponibilité en tout temps. l'utilisation de combustibles fossiles est négligeable.","4 - All of the energy used is renewable and/or self-produced. Household is self-sufficient for energy supply, which is guaranteed at every time. Use of fossil fuel is negligible."
+"ext_inp","0","0 - Vidiana eny an-tsena ny entana rehetra, na tsy afaka miditra amin'ny fitaovana ilaina amin'ny asa mamokatra ny mpamokatra.","0 - Tous les intrants sont achetés sur le marché, ou les producteurs ne peuvent pas accéder aux intrants nécessaires à leurs activités productives.","0 - All inputs are purchased from the market, or producers cannot access the inputs needed for their productive activities."
+"ext_inp","0.5","0.5","0.5","0.5"
+"ext_inp","1","1 - Vidiana eny an-tsena ny ankamaroan'ny akora, na mety ho voafetra ihany ny fahafahan'ny mpamokatra amin'ny fitaovana ampy ho an'ny asa famokarana.","1 - La majorité des intrants est achetée sur le marché, ou les producteurs peuvent avoir un accès très limité à suffisamment d'intrants pour leurs activités productives.","1 - The majority of the inputs is purchased from the market, or producers may have very limited access to enough inputs for their productive activities."
+"ext_inp","1.5","1.5","1.5","1.5"
+"ext_inp","2","2 - Ny fitaovana sasany dia vokarina ao amin'ny toeram-pambolena/agroecosystem na mifanakalo amin'ny mpikambana hafa ao amin'ny fiaraha-monina, mamela ny mpamokatra ho voafetra ny fidirana amin'ny fitaovana ampy ho an'ny asa famokarana.","2 - Certains intrants sont produits sur l'exploitation/agroécosystème ou échangés avec d'autres membres de la communauté, permettant aux producteurs d'avoir un accès limité à suffisamment d'intrants pour leurs activités productives.","2 - Some inputs are produced on farm/within the agroecosystem or exchanged with other members of the community, allowing producers to have limited access to enough inputs for their productive activities."
+"ext_inp","2.5","2.5","2.5","2.5"
+"ext_inp","3","3 - Ny ankamaroan'ny akora dia vokarina ao amin'ny toeram-pambolena/agroecosystem na mifanakalo amin'ny mpikambana hafa ao amin'ny vondrom-piarahamonina, izay ahafahan'ny mpamokatra manana fidirana ampy amin'ny fitaovana ampy ho an'ny asa famokarana.","3 - La majorité des intrants est produite sur l'exploitation/agroécosystème ou échangée avec d'autres membres de la communauté, ce qui permet aux producteurs d'avoir un accès suffisant à suffisamment d'intrants pour leurs activités productives.","3 - The majority of the inputs is produced on farm/within the agroecosystem or exchanged with other members of the community, enabling producers to have sufficient access to enough inputs for their productive activities."
+"ext_inp","3.5","3.5","3.5","3.5"
+"ext_inp","4","4 - Ny vokatra rehetra dia vokarina ao amin'ny toeram-pambolena/agroecosystem na mifanakalo amin'ny mpikambana hafa ao amin'ny vondrom-piarahamonina, manome antoka fa ny mpamokatra dia mahazo fidirana feno amin'ny fitaovana ampy ho an'ny asa famokarana.","4 - Tous les intrants sont produits sur l'exploitation/agroécosystème ou échangés avec d'autres membres de la communauté, garantissant aux producteurs un accès complet à suffisamment d'intrants pour leurs activités productives.","4 - All inputs are produced on farm/within the agroecosystem or exchanged with other members of the community, ensuring that producers have full access to enough inputs for their productive activities."
+"soil_fert","0","0 - Ny zezika synthetic dia ampiasaina tsy tapaka amin'ny voly sy/na kijana rehetra (na tsy misy zezika ampiasaina noho ny tsy fahampian'ny fidirana, ary tsy misy rafitra fitantanana hafa ampiasaina).","0 - Des engrais synthétiques sont utilisés régulièrement sur toutes les cultures et/ou pâturages (ou aucun engrais n'st utilisé faute d'accès, et aucun autre système de gestion n'st utilisé).","0 - Synthetic fertilisers are used regularly on all crops and/or grasslands (or no fertilizers are used for lack of access, and no other management system is used)."
+"soil_fert","0.5","0.5","0.5","0.5"
+"soil_fert","1","1 - Ny zezika sintetika dia ampiasaina tsy tapaka amin'ny ankamaroan'ny voly ary ny fanao organika sasany (toy ny zezika na compost) dia ampiharina amin'ny voly sy/na ahitra sasany.","1 - Des engrais synthétiques sont utilisés régulièrement sur la plupart des cultures et certaines pratiques biologiques (comme le fumier ou le compost) sont appliquées sur certaines cultures et/ou prairies.","1 - Synthetic fertilizers are used regularly on most crops and some organic practices (e.g. manure or compost) are applied to some crops and/or grasslands."
+"soil_fert","1.5","1.5","1.5","1.5"
+"soil_fert","2","2 - Ny zezika sintetika dia tsy ampiasaina afa-tsy amin'ny voly manokana vitsivitsy. Ny fanao organika dia ampiharina amin'ny voly hafa sy/na ahitra.","2 - Des engrais synthétiques sont utilisés uniquement sur quelques cultures spécifiques. Des pratiques biologiques sont appliquées sur les autres cultures et/ou prairies.","2 - Synthetic fertilisers are used on a few specific crops only. Organic practices are applied to the other crops and/or grasslands."
+"soil_fert","2.5","2.5","2.5","2.5"
+"soil_fert","3","3 - ny fampiasana zezika synthetic dia afaka lazaina hoe kely. Fomba fanao isan-karazany no mahazatra.","3 - l'utilisation d'engrais synthétiques est négligeable. Une variété de pratiques biologiques sont la norme.","3 - Use of synthetic fertilisers is negligible. A variety of organic practices are the norm."
+"soil_fert","3.5","3.5","3.5","3.5"
+"soil_fert","4","4 - Tsy misy zezika synthetic ampiasaina. Ny fahavokarana ny tany sy ny fahasalaman'ny tany dia tantanina amin'ny alalan'ny fomba fanao organika sy dingana biolojika isan-karazany.","4 - Aucun engrais synthétique n'st utilisé. La fertilité du sol et la santé du sol sont gérées uniquement grâce à une variété de pratiques biologiques et de processus biologiques.","4 - No synthetic fertilisers are used. Soil fertility and soil health are managed only through a variety of organic practices and biological processes."
+"pest_dis","0","0 - Ampiasaina tsy tapaka ny fanafody famonoana bibikely sy fanafody simika mba hifehezana ny bibikely sy ny aretina. Tsy misy fitantanana hafa ampiasaina.","0 - Les pesticides chimiques et les médicaments sont utilisés régulièrement pour la lutte contre les ravageurs et les maladies. Aucune autre gestion n'st utilisée.","0 - Chemical pesticides and drugs are used regularly for pest and disease management. No other management is used."
+"pest_dis","0.5","0.5","0.5","0.5"
+"pest_dis","1","1 - Ny fanafody simika sy ny fanafody dia ampiasaina amin'ny voly/biby manokana ihany. Ny akora biôlôjika sy ny fanao organika sasany dia ampiharina tsindraindray.","1 - Les pesticides et médicaments chimiques sont utilisés pour une culture/un animal spécifique uniquement. Certaines substances biologiques et pratiques organiques sont appliquées sporadiquement.","1 - Chemical pesticides and drugs are used for a specific crop/animal only. Some biological substances and organic practices are applied sporadically."
+"pest_dis","1.5","1.5","1.5","1.5"
+"pest_dis","2","2 - Ny bibikely sy ny aretina dia asorina amin'ny fomba organika, fa ny pestiside simika dia ampiasaina amin'ny tranga manokana sy voafetra ihany.","2 - Les nuisibles, ravageurs et maladies sont gérés par des pratiques biologiques, mais les pesticides chimiques sont utilisés seulement dans des cas spécifiques et très limités.","2 - Pests and diseases are managed through organic practices but chemical pesticides are used only in specific and very limited cases."
+"pest_dis","2.5","2.5","2.5","2.5"
+"pest_dis","3","3 - Tsy misy pestiside na fanafody simika ampiasaina. Ny akora organika no mahazatra.","3 - Aucun pesticide ni médicament chimique n'st utilisé. Les substances biologiques sont la norme.","3 - No chemical pesticides and drugs are used. Biological substances are the norm."
+"pest_dis","3.5","3.5","3.5","3.5"
+"pest_dis","4","4 - Tsy mampiasa pesticide na fanafody simika. Les ravageurs et les maladies sont gérés par une variété de substances biologiques et de mesures de prévention.","4 - Aucun pesticide ni médicament chimique n'st utilisé. Les ravageurs et les maladies sont gérés par une variété de substances biologiques et de mesures de prévention.","4 - No chemical pesticides and drugs are used. Pests and diseases are managed through a variety of biological substances and prevention measures."
+"vuln","0","0 - Tsy misy fidirana amin'ny trosa, tsy misy fiantohana, tsy misy mekanika fanohanana fiaraha-monina. Pas d'accès au crédit, pas d'assurance, pas de mécanismes de soutien communa","0 - Pas d'accès au crédit, pas d'assurance, pas de mécanismes de soutien communautaire.","0 - No access to credit or difficulty accessing, no insurance, no community support mechanisms."
+"vuln","0.5","0.5","0.5","0.5"
+"vuln","1","1 - Tsy dia manohana loatra ny fiaraha-monina ary voafetra ny fahafahany manampy aorian'ny fahatairana. Ary/na ny fidirana amin'ny trosa sy fiantohana dia voafetra. La communauté n'st pas très supportive et sa capacité à aider après les chocs est très limitée. Et / ou l'accès au crédit et à l'assurance est limité.","1 - La communauté n'st pas très supportive et sa capacité à aider après les chocs est très limitée. Et / ou l'accès au crédit et à l'assurance est limité.","1 - Community is not very supportive and its capacity to help aftershocks is very limited. Customary arrangements that may act as a social safety net are absent. And/or access to credit and insurance is limited."
+"vuln","1.5","1.5","1.5","1.5"
+"vuln","2","2 - Miray hina ny fiaraha-monina saingy voafetra ihany ny fahafahany manampy rehefa misy tohina. Ary/na ny fidirana amin'ny crédit dia misy saingy sarotra ny mahazo amin'ny fampiharana. tsy fahita firy ny fiantohana ary tsy manome fandrakofana feno amin'ny risika.","2 - La communauté est solidaire mais sa capacité à aider après les chocs est limitée. Et / ou l'accès au crédit est disponible mais difficile à obtenir en pratique. l'assurance est rare et ne permet pas une couverture complète contre les risques.","2 - Community is supportive but its capacity to help aftershocks is limited. Customary social safety net arrangements not in place. And/or access to credit is available but hard to obtain in practice. Insurance is rare or difficult to obtain in practice and does not allow for complete coverage from risks."
+"vuln","2.5","2.5","2.5","2.5"
+"vuln","3","3 - Tena manohana ny lehilahy sy ny vehivavy ny vondrom-piarahamonina, saingy voafetra ny fahafahany manampy rehefa misy tohina. Ary/na ny fidirana amin'ny crédit dia misy ary ny fiantohana dia miantoka ny vokatra/risika manokana.","3 - La communauté est très solidaire aux hommes et aux femmes, mais sa capacité à aider après les chocs est limitée. Et / ou l'accès au crédit est disponible et l'assurance ne couvre que des produits / risques spécifiques.","3 - Community is very supportive for both men and women but its capacity to help after shocks is limited. Customary social safety net arrangements existing but not consistently functioning. And/or access to credit is available and insurance covers only specific products/risks ."
+"vuln","3.5","3.5","3.5","3.5"
+"vuln","4","4 - Manohana mafy ny lehilahy sy ny vehivavy ny vondrom-piarahamonina ary afaka manome fanampiana lehibe aorian'ny fahatairana. Ary/na ny fidirana amin'ny trosa dia saika rafitra ary ny fiantohana dia mandrakotra ny ankamaroan'ny famokarana.","4 - La communauté soutient fortement les hommes et les femmes et peut apporter une aide significative après les chocs. Et / ou l'accès au crédit est quasi systématique et l'assurance couvre l'essentiel de la production.","4 - Community is highly supportive for both men and women and can significantly help after shocks. Customary social safety net consistently functional. And/or access to credit is almost systematic and insurance covers most of production."
+"indebt","0","0 - ny tontolo iainana eo an-toerana dia tena mora tohina amin'ny fikorontanan'ny toetr'andro ary tsy dia manana fahafaha-manao firy amin'ny fiovaovan'ny toetr'andro ny rafitra. L'environnement local est très sujet aux chocs climatiques et le système a peu de capacité d'adaptation au changement climatique","0 - l'environnement local est très sujet aux chocs climatiques et le système a peu de capacité d'adaptation au changement climatique","0 - Local environment is highly prone to climatic shocks and the system has little capacity to adapt to climate change"
+"indebt","0.5","0.5","0.5","0.5"
+"indebt","1","1 - ny tontolo iainana eo an-toerana dia mijaly noho ny fikorontanan'ny toetr'andro ary ny rafitra dia tsy dia afaka mampifanaraka ny fiovaovan'ny toetr'andro.  l'environnement local souffre des chocs climatiques et le système a peu de capacité d'adaptation au changement climatique","1 - l'environnement local souffre des chocs climatiques et le système a peu de capacité d'adaptation au changement climatique","1 - Local environment  suffers from climatic shocks and the system has little capacity to adapt to climate change"
+"indebt","1.5","1.5","1.5","1.5"
+"indebt","2","2 - Ny tontolo iainana eo an-toerana dia mety hiharan'ny fikorontanan'ny toetr'andro saingy ny rafitra dia manana fahaiza-manao tsara amin'ny fiovaovan'ny toetr'andro","2 - l'environnement local peut souffrir de chocs climatiques mais le système a une bonne capacité d'adaptation au changement climatique","2 - Local environment can suffer from climatic shocks but the system has a good capacity to adapt to climate change"
+"indebt","2.5","2.5","2.5","2.5"
+"indebt","3","3 - Ny tontolo iainana eo an-toerana dia mety hiharan'ny fikorontanan'ny toetr'andro fa ny rafitra dia manana fahaiza-manao matanjaka amin'ny fiovaovan'ny toetr'andro","3 - l'environnement local peut souffrir des chocs climatiques mais le système a une forte capacité d'adaptation au changement climatique","3 - Local environment can suffer from climatic shocks but the system has a strong capacity to adapt to climate change"
+"indebt","3.5","3.5","3.5","3.5"
+"indebt","4","4 - Ny tontolo iainana eo an-toerana dia manana fototra fototra voajanahary voajanahary, tsy fahita firy ny fahatafintohinana amin'ny toetr'andro ary manana fahaiza-manao matanjaka amin'ny fiovaovan'ny toetr'andro ny rafitra","4 - l'environnement local a une forte base de capital naturel, les chocs climatiques sont rares et le système a une forte capacité d'adaptation au changement climatique","4 - Local environment has a strong natural capital base, climatic shocks are rare and the system has a strong capacity to adapt to climate change"
+"diet","0","0 - Ny sakafo dia tsy ampy amin'ny fomba ara-dalàna ny filàna ara-tsakafo ary tsy dia fantatra loatra ny fomba fanao ara-tsakafo tsara. l'alimentation est systématiquement insuffisante pour répondre aux besoins nutritionnels et les bonnes pratiques nutritionnelles sont peu connues.","0 - l'alimentation est systématiquement insuffisante pour répondre aux besoins nutritionnels et les bonnes pratiques nutritionnelles sont peu connues.","0 - Diet does not meet nutritional needs and there is a lack of awareness of good nutritional practices."
+"diet","0.5","0.5","0.5","0.5"
+"diet","1","1 - ny sakafo dia tsy ampy tsindraindray mba hanomezana sakafo ara-tsakafo sy/na ny sakafo dia mifototra amin'ny vondron-tsakafo voafetra. Ny tsy fahampian'ny fahatsiarovan-tena amin'ny fomba fanao ara-tsakafo tsara. 'alimentation est périodiquement insuffisante pour répondre aux besoins nutritionnels et /ou le régime alimentaire est basé sur un nombre limité de groupes alimentaires. Manque de sensibilisation aux bonnes pratiques nutritionnelles.","1 - l'alimentation est périodiquement insuffisante pour répondre aux besoins nutritionnels et /ou le régime alimentaire est basé sur un nombre limité de groupes alimentaires. Manque de sensibilisation aux bonnes pratiques nutritionnelles.","1 - Periodic insufficiencies for diet to meet nutritional needs and/or diet is based on a limited number of food groups. Lack of awareness of good nutritional practices."
+"diet","1.5","1.5","1.5","1.5"
+"diet","2","2 - Fiarovana ara-tsakafo amin'ny ankapobeny rehefa mandeha ny fotoana, saingy tsy ampy ny fahasamihafan'ny vondron-tsakafo. Ny fomba fanao ara-tsakafo tsara dia fantatra fa tsy ampiharina foana.","2 - Sécurité alimentaire globale au fil du temps, mais diversité insuffisante des groupes alimentaires. De bonnes pratiques nutritionnelles sont connues mais pas toujours appliquées.","2 - Overall food security over time, but insufficient diversity in food groups. Good nutritional practices are known but not always enforced."
+"diet","2.5","2.5","2.5","2.5"
+"diet","3","3 - Ny sakafo dia ampy sy isan-karazany. Ny fomba fanao ara-tsakafo tsara dia fantatra fa tsy ampiharina foana.","3 - La nourriture est suffisante et variée. De bonnes pratiques nutritionnelles sont connues mais pas toujours appliquées.","3 - Food is sufficient and diverse. Good nutritional practices are known but not always enforced."
+"diet","3.5","3.5","3.5","3.5"
+"diet","4","4 - Sakafo ara-pahasalamana, mahavelona ary isan-karazany. Ny fomba fanao ara-tsakafo tsara dia fantatra sy ampiharina.","4 - Alimentation saine, nutritive et diversifiée. Les bonnes pratiques nutritionnelles sont bien connues et appliquées.","4 - Healthy, nutritious, diversified diet. Good nutritional practices are well known and enforced."
+"food-self-suff","0","0 - Tsy misy vokatra avy ao amin'ny toeram-pamokarana hanin'ny tokantrano. Vidiny any ivelany avokoa ny sakafo rehetra. Aucun élément agricole produit sur la ferme n'est consommé par le ménage. Toute la nourriture consommée est achetée à l'extérieur.","0 - Aucun élément agricole produit sur la ferme n'est consommé par le ménage. Toute la nourriture consommée est achetée à l'extérieur.","0 - No agricultural items produced on the farm are consumed by the household. All the food consumed is purchased from outside."
+"food-self-suff","0.5","0.5","0.5","0.5"
+"food-self-suff","1","1 - Ny ampahany kely amin'ny sakafo lanin'ny tokantrano ihany no vokarina any amin'ny toeram-pambolena na takalon'ny fiaraha-monina. Mbola vidiana any ivelany ny ankamaroan'ny sakafo.","1 - Seule une petite partie de la nourriture consommée par le ménage est produite sur la ferme ou échangée au sein de la communauté. La majorité de la nourriture est encore achetée à l'extérieur.","1 - Only a small portion of the food consumed by the household is produced on the farm or exchanged within the community. Most of the food is still purchased from outside."
+"food-self-suff","1.5","1.5","1.5","1.5"
+"food-self-suff","2","2 - Ny ampahany lehibe amin'ny sakafo lanin'ny tokantrano dia vokarina any amin'ny toeram-pambolena na takalon'ny fiaraha-monina, fa ny ankamaroan'ny sakafo dia mbola vidiana any ivelany.","2 - Une part significative de la nourriture consommée par le ménage est produite sur la ferme ou échangée au sein de la communauté, mais la majorité de la nourriture est encore achetée à l'extérieur.","2 - A significant portion of the food consumed by the household is produced on the farm or exchanged within the community, but the majority of the food is still purchased from outside."
+"food-self-suff","2.5","2.5","2.5","2.5"
+"food-self-suff","3","3 - Ny sakafo be lanin'ny tokantrano dia vokarina any amin'ny toeram-piompiana na takalo eo anivon'ny fiaraha-monina, ka mampihena ny fiankinan-doha amin'ny loharano ivelany. Ny sakafon'ny fianakaviana dia mihamitombo hatrany amin'ny vokatra ambolena ao an-trano, miantoka ny fahasamihafàna tsara sy ny sakafo mahavelona.","3 - Une quantité importante de la nourriture consommée par le ménage est auto - produite sur la ferme ou échangée au sein de la communauté, réduisant ainsi la dépendance aux sources externes . Le régime alimentaire de la famille est de plus en plus composé de produits cultivés à domicile, assurant une bonne diversité et une alimentation nutritive .","3 - A substantial amount of the food consumed by the household is self-produced on the farm or exchanged within the community, reducing the reliance on external sources. The family's diet is increasingly composed of homegrown food that ensures good levels of diversity and nutritious diet . "
+"food-self-suff","3.5","3.5","3.5","3.5"
+"food-self-suff","4","4 - Ny sakafo rehetra lanin'ny fianakaviana dia vokarina any amin'ny toeram-piompiana na takalo eo anivon'ny fiaraha-monina, ahafahan'ny karazan-tsakafo mahasalama, voalanjalanja ary mahavelona ho an'ny mpianakavy rehetra.","4 - Toute la nourriture consommée par la famille est auto - produite sur la ferme ou échangée au sein de la communauté, permettant une diversité d'aliments sains, équilibrés et nutritifs pour tous les membres de la famille.","4 - All the food consumed by the family is self - produced within the farm or exchanged within the community, allowing for a diversity of healthy, balanced, and nutritious diet to all the members of the family ."
+"food-heritage","0","0 - Tsy misy fampiasana ny karazany eo an-toerana, ny masomboly nentim-paharazana (sy ny karazana), ary ny fahalalana nentim-paharazana amin'ny fikarakarana sakafo. Tsy misy vakoka sakafo eo an-toerana na nentim-paharazana. Aucune utilisation de variétés locales, de semences (et races) traditionnelles, et de connaissances traditionnelles pour la préparation des aliments. Aucun héritage alimentaire local ou traditionnel.","0 - Aucune utilisation de variétés locales, de semences (et races) traditionnelles, et de connaissances traditionnelles pour la préparation des aliments. Aucun héritage alimentaire local ou traditionnel.","0 - No use of local varieties, no traditional seeds (and breeds), and no traditional knowledge for food preparation. No local or traditional food heritage."
+"food-heritage","0.5","0.5","0.5","0.5"
+"food-heritage","1","1 - Fampiasana voafetra ny karazany eo an-toerana, ny masomboly (sy ny karazany), ary ny fahalalana nentim-paharazana amin'ny fikarakarana sakafo. Misy lafin-javatra sasany amin'ny vakoka ara-tsakafo eo an-toerana na nentim-paharazana dia ekena fa tsy raisina tanteraka. Utilisation limitée de variétés locales, de semences (et races) traditionnelles, et de connaissances traditionnelles pour la préparation des aliments. Certains aspects de l'héritage alimentaire local ou traditionnel sont reconnus mais pas pleinement adoptés.","1 - Utilisation limitée de variétés locales, de semences (et races) traditionnelles, et de connaissances traditionnelles pour la préparation des aliments. Certains aspects de l'héritage alimentaire local ou traditionnel sont reconnus mais pas pleinement adoptés.","1 - Limited use of local varieties, traditional seeds (and breeds), and traditional knowledge for food preparation. Some aspects of local or traditional food heritage are acknowledged but not fully embraced."
+"food-heritage","1.5","1.5","1.5","1.5"
+"food-heritage","2","2 - Samy ampiasaina amin'ny fihinanana sakafo ny karazany eto an-toerana sy avy any ivelany/idirana ary koa ny masomboly (sy ny karazana). Misy ny fahalalana sy fomba fanao nentim-paharazana amin'ny fikarakarana sakafo, saingy misy ny ezaka hitahiry sy hampiroborobo ny vakoka ara-tsakafo eo an-toerana sy mahazatra.","2 - À la fois des variétés locales et des variétés exotiques/introduites ainsi que des semences (et races) traditionnelles sont utilisées pour la consommation alimentaire. Certaines connaissances et pratiques traditionnelles pour la préparation des aliments sont présentes, mais il y a des efforts à faire pour préserver et promouvoir l'héritage alimentaire local et traditionnel.","2 - Both local and exotic/introduced varieties and traditional seeds (and breeds) are used for food consumption. Some traditional knowledge and practices for food preparation are present, but there is room for improvement in preserving and promoting the local and traditional food heritage."
+"food-heritage","2.5","2.5","2.5","2.5"
+"food-heritage","3","3 - Ny ampahany manan-danja amin'ny sakafo lanina dia avy amin'ny karazany eo an-toerana sy ny voa (ary ny karazany). Ny fahalalana sy fomba fanao nentim-paharazana momba ny fikarakarana sakafo dia ampiharina bebe kokoa sy ampidirina amin'ny fiainana andavanandro, manampy amin'ny fanamafisana ny fahatsapana ny lova ara-tsakafo eo an-toerana sy nentim-paharazana, ary mampiroborobo ny haavon'ny fahasamihafana sy ny sakafo.","3 - Une partie significative de la nourriture consommée provient de variétés locales et de semences (et races) traditionnelles. Les connaissances et pratiques traditionnelles pour la préparation des aliments sont davantage mises en œuvre et intégrées dans la vie quotidienne, contribuant à renforcer le sentiment d'héritage alimentaire local et traditionnel, et favorisant de bons niveaux de diversité et de nutrition.","3 - A significant portion of the food consumed comes from local varieties and traditional seeds (and breeds). Traditional knowledge and practices for food preparation are more extensively implemented and integrated into daily life, contributing to a stronger sense of local and traditional food heritage, contributing to good levels of diversity and nutrition."
+"food-heritage","3.5","3.5","3.5","3.5"
+"food-heritage","4","4 - Maromaro ny karazany eto an-toerana sy ny masomboly nentim-paharazana (ary ny karazany) no vokarina sy lanina","4 - Plusieurs variétés locales et semences (et races) traditionnelles sont produites et consommées. Les connaissances et pratiques traditionnelles pour la préparation des aliments sont identifiées, appliquées et reconnues dans des cadres officiels et/ou des événements spécifiques. l'identité locale ou traditionnelle est fortement ressentie et protégée, avec un grand respect pour l'héritage alimentaire traditionnel, contribuant à un régime alimentaire diversifié, sain, équilibré et nutritif pour tous les membres de la famille.","4 - A number of local varieties and traditional seeds (and breeds) are produced and consumed. Traditional knowledge and practices for food preparation are identified, applied, and recognized in official frameworks and/or specific events. Local or traditional identity is strongly felt and protected, with high respect for traditional food heritage, contributing to a diverse, healthy, balanced, and nutritious diet for all the members of the family."
+"seeds_breeds","0","0 - Vidiana eny an-tsena avokoa ny voa sy/na ny harena voajanahary avy amin'ny biby (ohatra ny akoho, ny zanak'omby, ny akofa).  Toutes les graines et/ou les ressources génétiques animales (par ex. poussins, jeunes animaux, paillettes) sont achetées sur le marché.","0 - Toutes les graines et/ou les ressources génétiques animales (par ex. poussins, jeunes animaux, paillettes) sont achetées sur le marché.","0 - All seeds and/or animal genetic resources (e.g. chicks, young animals, semen) are purchased from the market."
+"seeds_breeds","0.5","0.5","0.5","0.5"
+"seeds_breeds","1","1 - Mihoatra ny 80% amin'ny voan'ny biby / loharanon-karena no vidiana eny an-tsena.","1 - Plus de 80% des graines/ressources génétiques animales sont achetées sur le marché.","1 - More than 80% of seeds/animal genetic resources are purchased from the market."
+"seeds_breeds","1.5","1.5","1.5","1.5"
+"seeds_breeds","2","2 - Ny antsasany eo ho eo amin'ny masomboly dia amboarina na takalo, ny antsasany dia vidiana eny an-tsena. Manodidina ny antsasaky ny fananahana biby no karakaraina miaraka amin'ny toeram-pambolena manodidina, ny ambiny dia avy amin'ny tsena.","2 - Environ la moitié des graines sont autoproduites ou échangées, l'autre moitié est achetée au marché. Environ la moité dela reproduction des animaux est organisée avec les fermes voisines, le reste provient du marché.","2 - About half of the seeds are self-produced or exchanged, the other half is purchased from the market. About half of the breeding is done with neighbouring farms."
+"seeds_breeds","2.5","2.5","2.5","2.5"
+"seeds_breeds","3","3 - Ny ankabeazan'ny voa / loharanon-karena avy amin'ny biby dia novokarina na natakalo. Misy voa manokana no vidiana eny an-tsena.","3 - La majorité des graines/ressources génétiques animales sont autoproduites ou échangées. Certaines graines spécifiques sont achetées sur le marché.","3 - The majority of seeds/animal genetic resources are self-produced or exchanged. Some specific seeds are purchased from the market."
+"seeds_breeds","3.5","3.5","3.5","3.5"
+"seeds_breeds","4","4 - Ny masomboly rehetra/ny harena voajanahary avy amin'ny biby dia mamokatra ho azy, mifanakalo amin'ny mpamboly hafa na mitantana miaraka, miantoka ny fanavaozana sy ny fahasamihafana ampy.","4 - Toutes les graines/ressources génétiques animales sont autoproduites, échangées avec d'autres agriculteurs ou gérées collectivement, assurant suffisamment de renouvellement et de diversité.","4 - All seeds/animal genetic resources are self-produced, exchanged with other farmers or managed collectively, ensuring enough renewal and diversity."
+"ae_know","0","0 - Tsy fahampian'ny fahazoana fahalalana momba ny fambolena sy fiompiana: tsy miraharaha ny foto-kevitry ny agroecologie ny mpamokatra Manque d'accès aux connaissances agroécologiques: les producteurs ignorent les principes de l'agroécologie","0 - Manque d'accès aux connaissances agroécologiques: les producteurs ignorent les principes de l'agroécologie","0 - Lack of access to agroecological knowledge: principles of agroecology are unknown to producers."
+"ae_know","0.5","0.5","0.5","0.5"
+"ae_know","1","1 - Ny fitsipiky ny agroécologie dia tsy fantatry ny mpamokatra ary/na kely ny fahatokisana azy ireo.","1 - Les principes de l'agroécologie sont pour la plupart inconnus aux producteurs et/ou il y a peu de confiance en eux.","1 - Principles of agroecology are mostly unknown to producers and/or there is little trust in them."
+"ae_know","1.5","1.5","1.5","1.5"
+"ae_know","2","2 - Misy fitsipika momba ny fambolena sy fiompiana fantatry ny mpamokatra ary misy ny fahalianana amin'ny fanaparitahana ny fanavaozana, ny fanamorana ny fifampizaràna fahalalana eo anivon'ny fiaraha-monina ary ny fandraisan'anjaran'ny taranaka tanora.","2 - Certains principes agroécologiques sont connus aux producteurs et il existe un intérêt à diffuser l'innovation, à faciliter le partage des connaissances au sein des communautés et à impliquer les jeunes générations.","2 - Some agroecological principles are known to producers and there is interest in spreading the innovation, facilitating knowledge sharing within and between communities and involving younger generations."
+"ae_know","2.5","2.5","2.5","2.5"
+"ae_know","3","3 - Fantatra tsara ny agroecologie ary vonona ny mpamokatra hampihatra ny zava-baovaony, hanamora ny fifampizaràna fahalalana eo anivon’ny fiaraha-monina ary handray anjara amin’ny taranaka tanora, anisan’izany ny vehivavy.","3 - l'agroécologie est bien connue et les producteurs sont prêts à mettre en œuvre ses innovations, à faciliter le partage des connaissances au sein des communautés et à impliquer les jeunes générations, y compris les femmes.","3 - Agroecology is well known and producers are willing to implement innovations, facilitating knowledge sharing within and between communities and involving younger generations, including women and younger generations."
+"ae_know","3.5","3.5","3.5","3.5"
+"ae_know","4","4 - Fahazoana miely patrana amin'ny fahalalana momba ny fambolena sy fiompiana ho an'ny lehilahy sy ny vehivavy: fantatry ny mpamokatra tsara ny foto-kevitry ny agroecologie ary vonona ny hampihatra izany, manamora ny fifampizaràna fahalalana eo anivon'ny fiaraha-monina ary mahatafiditra taranaka tanora.","4 - Accès généralisé aux connaissances agroécologiques des hommes et des femmes: les producteurs sont bien conscients des principes de l'agroécologie et désireux de les appliquer, en facilitant le partage des connaissances au sein des communautés et en impliquant les jeunes générations.","4 - Widespread access to agroecological knowledge of both men and women: producers are well aware of the principles of agroecology and eager to apply them, facilitating knowledge sharing within and between communities and involving younger generations."
+"platforms","0","0 - Tsy misy sehatra fiaraha-miombon'antoka na rafitra fampitana fahalalana azon'ny mpamokatra. Aucune plateforme de co-création ou mécanisme de transfert de connaissances n'st disponible pour les producteurs.","0 - Aucune plateforme de co-création ou mécanisme de transfert de connaissances n'st disponible pour les producteurs.","0 - No platforms for co-creation or mechanism   and transfer of knowledge are available to producers."
+"platforms","0.5","0.5","0.5","0.5"
+"platforms","1","1 - Farafahakeliny sehatra iray na rafitra iray ho an'ny famoronana fiaraha-mientana sy fampitana fahalalana no misy, saingy tsy mandeha tsara ary / na tsy ampiasaina amin'ny fampiharana.","1 - Au moins une plateforme ou un mécanisme de co-création et de transfert de connaissances existe, mais il ne fonctionne pas bien et/ou n'st pas utilisé dans la pratique.","1 - At least one platform or mechanism for the co-creation and transfer of knowledge exists but does not function well and/or is not used in practice."
+"platforms","1.5","1.5","1.5","1.5"
+"platforms","2","2 - Farafahakeliny sehatra iray na rafitra iray ho an'ny famoronana fiaraha-mientana sy fampitana fahalalana no misy ary miasa, saingy tsy ampiasaina amin'ny fizarana fahalalana manokana momba ny agroecologie.","2 - Au moins une plateforme ou un mécanisme de co-création et de transfert de connaissances existe et fonctionne, mais il n'st pas utilisé pour partager des connaissances spécifiquement sur l'agroécologie.","2 - At least one platform or mechanism for the co-creation and transfer of knowledge exists and is functioning but is not used to share knowledge on agroecology specifically."
+"platforms","2.5","2.5","2.5","2.5"
+"platforms","3","3 - Sehatra na rafitra iray na maromaro ho an'ny famoronana sy fampitana fahalalana no misy, miasa ary ampiasaina amin'ny fizarana fahalalana momba ny agroecologie, anisan'izany ny vehivavy.","3 - Une ou plusieurs plateformes ou mécanismes de co-création et de transfert de connaissances existent, fonctionnent et sont utilisés pour partager des connaissances sur l'agroécologie, y compris les femmes.","3 - One or several platforms or mechanisms for the co-creation and transfer of knowledge exist, are functioning and are used to share knowledge on agroecology, including women."
+"platforms","3.5","3.5","3.5","3.5"
+"platforms","4","4 - Sehatra na fomba fiasa maromaro mirindra tsara sy miasa ho an'ny famoronana fiaraha-mientana sy fampitana fahalalana no hita ary miparitaka be eo anivon'ny fiaraha-monina, anisan'izany ny vehivavy.","4 - Plusieurs plateformes ou mécanismes bien établis et fonctionnels de co-création et de transfert de connaissances sont disponibles et largement répandus au sein de la communauté, y compris les femmes.","4 - Several well established and functioning platforms or mechanisms for the co-creation and transfer of knowledge are available and widespread within the community, including women."
+"partic_orgs","0","0 - Mitokana ny mpamokatra, saika tsy manana fifandraisana amin'ny vondrom-piarahamonina misy azy ary tsy mandray anjara amin'ny fivoriana sy fikambanana eo an-toerana. Les producteurs sont isolés, n'ont pratiquement aucune relation avec leur communauté locale et ne participent pas aux réunions et aux organisations locales . ","0 - Les producteurs sont isolés, n'ont pratiquement aucune relation avec leur communauté locale et ne participent pas aux réunions et aux organisations locales . ","0 - Producers are isolated, have almost no relations with their local community and do not participate in meetings and grass-root organisations."
+"partic_orgs","0.5","0.5","0.5","0.5"
+"partic_orgs","1","1 - Ny mpamokatra dia mitazona fifandraisana tsindraindray amin'ny vondrom-piarahamonina misy azy ary zara raha mandray anjara amin'ny fivoriana sy fikambanana eo an-toerana.","1 - Les producteurs entretiennent des relations sporadiques avec leur communauté locale et participent rarement aux réunions et aux organisations locales .","1 - Producers have sporadic relations with their local community and rarely participate in meetings and grass - root organisations ."
+"partic_orgs","1.5","1.5","1.5","1.5"
+"partic_orgs","2","2 - Ny mpamokatra dia mitazona fifandraisana tsy tapaka amin'ny vondrom-piarahamonina misy azy ary indraindray mandray anjara amin'ny hetsika ataon'ny fikambanana eo an-toerana fa tsy dia be loatra amin'ny vehivavy.","2 - Les producteurs entretiennent des relations régulières avec leur communauté locale et participent parfois aux événements de leurs organisations locales mais pas autant pour les femmes .","2 - Producers have regular relations with their local community and sometimes participate in the events of their grass - root organisations but not as much for women ."
+"partic_orgs","2.5","2.5","2.5","2.5"
+"partic_orgs","3","3 - Mifandray tsara amin'ny vondrom-piarahamonina misy azy ireo mpamokatra ary matetika mandray anjara amin'ny hetsika ataon'ny fikambanana misy azy, anisan'izany ny vehivavy.","3 - Les producteurs sont bien interconnectés avec leur communauté locale et participent souvent aux événements de leurs organisations locales, y compris les femmes .","3 - Producers are well interconnected with their local community and often participate in the events of their grass - root organisations, including women ."
+"partic_orgs","3.5","3.5","3.5","3.5"
+"partic_orgs","4","4 - Ny mpamokatra (miaraka amin'ny fandraisan'anjaran'ny lehilahy sy ny vehivavy mitovy) dia mifandray mafy sy manohana ary maneho fanoloran-tena sy fandraisana anjara lehibe amin'ny hetsika rehetra ao amin'ny fizarana misy azy.","4 - Les producteurs(avec une participation égale des hommes et des femmes) sont fortement interconnectés et solidaires et montrent un engagement et une participation très élevés à tous les événements de leur section locale .","4 - Producers(with equal participation of men and women) are highly interconnected and supportive and show a very high engagement and participation in all the events of their local ."
+"women","0","0 - Matetika ny vehivavy dia tsy manana feo amin'ny fanapahan-kevitry ny fianakaviana na ny fiaraha-monina. Tsy misy fikambanana manome hery ny vehivavy","0 - Les femmes n’ont normalement pas voix au chapitre dans les décisions de la famille ou de la communauté . Aucune organisation pour l'autonomisation des femmes n'xiste","0 - Women do not normally have a voice in decision making, not in the household nor in the community . No organisation for women empowerment exists ."
+"women","0.5","0.5","0.5","0.5"
+"women","1","1 - Ny vehivavy dia afaka manana feo ao an-tokantranony fa tsy eo amin'ny fiaraha-monina. Misy ny fikambanan'ny vehivavy sasany nefa tsy dia miasa loatra","1 - Les femmes peuvent avoir voix au sein de leur ménage mais pas dans la communauté. Certaines associations de femmes existent mais ne sont pas très fonctionnelles","1 - Women may have a voice in their household but not in the community. And/or one form of women association exists but is not fully functional."
+"women","1.5","1.5","1.5","1.5"
+"women","2","2 - Ny vehivavy dia afaka mitaona amin'ny fandraisana fanapahan-kevitra, na eo amin'ny sehatry ny tokantrano na eo amin'ny fiaraha-monina, fa tsy mpanapa-kevitra. Tsy manana fahafahana miditra amin'ny loharanon-karena izy ireo. Ary/na ny endrika fikambanan'ny vehivavy sasany dia misy saingy tsy miasa tanteraka.","2 - Les femmes peuvent influencer la prise de décision, tant au niveau du ménage que de la communauté, mais ne sont pas des décideurs . Ils n'ont pas accès aux ressources . Et / ou certaines formes d'associations de femmes existent mais ne sont pas pleinement fonctionnelles.","2 - Women can influence decision making, both at household and community level, but are not decision makers. They don't have access to resources . and/or some forms of women associations exist but are not fully functional . "
+"women","2.5","2.5","2.5","2.5"
+"women","3","3 - Mandray anjara feno amin'ny fandraisana fanapahan-kevitra ny vehivavy nefa mbola tsy manana fahafahana feno amin'ny loharanon-karena. Ary/na fikambanam-behivavy dia misy ary ampiasaina.","3 - Les femmes participent pleinement aux processus décisionnels mais n'ont toujours pas pleinement accès aux ressources. Et / ou des organisations de femmes existent et sont utilisées.","3 - Women take full part in decision making processes but still don't have full access to resources . and/or women organisations exist and are used . "
+"women","3.5","3.5","3.5","3.5"
+"women","4","4 - Ny vehivavy dia afaka tanteraka amin'ny fandraisana fanapahan-kevitra sy ny fahazoana loharanon-karena. Misy sy/na fikambanam-behivavy, miasa sy miasa.","4 - Les femmes sont complètement emancipées en termes de prise de décision et d'accès aux ressources. Et / ou des organisations de femmes existent, sont fonctionnelles et opérationnelles.","4 - Women are completely empowered in terms of decision making and access to resources. And/or women organisations exist, are functional and operational."
+"labour","0","0 - Ny rojo famatsiana ara-pambolena dia atambatra sy tantanin'ny agribusiness. Misy elanelana ara-tsosialy sy ara-toekarena eo amin’ny tompon’ny tany sy ny mpiasa. Ary/na mpiasa tsy manana fepetra miasa mendrika, manana karama ambany ary tena iharan'ny loza. ","0 - Les chaînes d'approvisionnement agricoles sont intégrées et gérées par l'agro-industrie. Il existe une distance sociale et économique entre les propriétaires fonciers et les travailleurs. Et/ou les travailleurs n'ont pas de conditions de travail décentes, ont de bas salaires et sont très exposés aux risques . ","0 - Agricultural supply chains are integrated and managed by agribusiness. There is a social and economic distance between landowners and workers. And/or workers don't have decent working conditions, make low wages and are highly exposed to risks . "
+"labour","0.5","0.5","0.5","0.5"
+"labour","1","1- Sarotra ny fepetra fiasana,","1 - Les conditions de travail sont difficiles, les travailleurs ont un salaire moyen pour le contexte local et peuvent être exposés à des risques .","1 - Working conditions are hard, workers have average wages for the local context and may be exposed to risks ."
+"labour","1.5","1.5","1.5","1.5"
+"labour","2","2 - Ny fambolena dia mifototra indrindra amin'ny fiompiana fianakaviana saingy voafetra ihany ny fahafahan'ny mpamokatra amin'ny renivola sy ny fomba fandraisana fanapahan-kevitra. Ny mpiasa dia manana fepetra faran'izay mendrika amin'ny asa.","2 - l'agriculture est principalement basée sur l'exploitation familiale mais les producteurs ont un accès limité aux capitaux et aux processus de prise de décision. Les travailleurs ont des conditions de travail décentes minimales.","2 - Agriculture is mostly based on family farming but producers have limited access to capital and decision - making processes . Workers have the minimum decent labour conditions ."
+"labour","2.5","2.5","2.5","2.5"
+"labour","3","3 - Ny fambolena dia mifototra indrindra amin'ny fiompiana fianakaviana ary ny mpamokatra (lehilahy sy vehivavy) dia afaka miditra amin'ny renivola sy ny dingana fandraisana fanapahan-kevitra. Manana fepetra miasa mendrika ny mpiasa.","3 - l'agriculture est principalement basée sur l'exploitation familiale et les producteurs (hommes et femmes) ont accès au capital et aux processus décisionnels. Les travailleurs ont des conditions de travail décentes.","3 - Agriculture is mostly based on family farming and producers (both men and women) have access to capital and decision-making processes. Workers have decent labour conditions."
+"labour","3.5","3.5","3.5","3.5"
+"labour","4","4 - ny fambolena dia mifototra amin'ny fiompiana fianakaviana izay manana fidirana feno amin'ny renivola sy ny dingana fandraisana fanapahan-kevitra miaraka amin'ny fitovian'ny lahy sy ny vavy. Misy ny fifankahazoana ara-tsosialy sy ara-toekarena eo amin’ny tantsaha sy ny mpiasa.","4 - l'agriculture est basée sur des exploitations familiales qui ont pleinement accès au capital et aux processus de prise de décision avec équité entre les sexes. Il existe une proximité sociale et économique entre agriculteurs et salariés.","4 - Agriculture is based on family farmers which have full access to capital and decision-making processes in gender equity. There is a social and economic proximity between farmers and employees."
+"youth","0","0 - Sarotra loatra ny asa fambolena ary tsy misy vokany. Ny tanora dia tsy mahita ho avy amin'ny fambolena ary tsy mieritreritra akory ny ho lasa tantsaha. ","0 - Le travail agricole est trop difficile et peu gratifiant. Ls jeunes ne voient aucun avenir dans l’agriculture et ne considèrent même pas de devenir agriculteurs.","0 - Agricultural work is too difficult and not rewarding. Young people see no future in agriculture and don't even consider becoming farmers."
+"youth","0.5","0.5","0.5","0.5"
+"youth","1","1 - Ny asa fambolena dia heverina ho mitaky fitakiana ary manome fahafaham-po na valisoa voafetra. Vokany, mihena ny fahalianan’ny ankizy amin’ny asa fambolena. Ny antony manosika hanohy ny fiompiana fianakaviana dia somary ambany.","1 - Le travail agricole est perçu comme exigeant et offre une satisfaction ou des récompenses limitées. Par conséquent, il y a moins d'intérêt de la part des enfants à poursuivre une carrière dans l'agriculture. La motivation pour continuer l'exploitation agricole familiale est relativement faible.","1- Agricultural work is perceived as demanding and offers limited satisfaction or rewards. Consequently, there is a decreased interest from children in pursuing a career in farming. The motivation to continue family farming is relatively low."
+"youth","1.5","1.5","1.5","1.5"
+"youth","2","2 - Ny asa fambolena dia mamporisika sy mahafa-po amin'ny antonony, ary ny tamberina na valisoa dia tsy miandany. Na dia mety hisy aza ny fiheverana ny ho lasa mpamboly amin'ny ankizy, dia tsy miandany ny fanoloran-tena hanohy ny fiompiana fianakaviana.","2 - Le travail agricole est modérément stimulant et satisfaisant, et les retours ou récompenses sont plutôt neutres. Bien qu'il puisse y avoir une certaine considération pour devenir agriculteurs de la part des enfants, l'engagement à poursuivre l'exploitation agricole familiale est neutre.","2- Agricultural work is moderately challenging and satisfying, and the returns or rewards are somewhat neutral. While there might be some consideration given to becoming farmers by the children, there is neutral commitment in continuing family farming."
+"youth","2.5","2.5","2.5","2.5"
+"youth","3","3 - Heverina ho mahafa-po ny asa fambolena ary manome valisoa mety. Misy ny fahalianan'ny ankizy amin'ny fanohizana ny fomba amam-panao fiompiana fianakaviana, na dia mety hiovaova aza ny fanoloran-tena. Ny antony manosika hanohy ny fiompiana fianakaviana dia mampiseho famantarana tsara, saingy mety mbola misy antony tokony hodinihina mba hanamafisana izany fanoloran-tena izany.","3 - Le travail agricole est perçu comme satisfaisant et offre des récompenses raisonnables. Il y a un intérêt notable de la part des enfants à perpétuer la tradition agricole familiale, bien que l'engagement puisse varier. La motivation pour continuer l'exploitation agricole familiale montre des signes positifs, mais il peut encore y avoir des facteurs à prendre en compte pour renforcer cet engagement.","3- Agricultural work is seen as satisfying and offers reasonable rewards. There is a notable interest from children in carrying on the family farming tradition, although the commitment might vary. The motivation to continue family farming shows positive signs, but there may still be some factors that need to be addressed to strengthen this commitment."
+"youth","3.5","3.5","3.5","3.5"
+"youth","4","4 - Mahafa-po sy mahafa-po tanteraka ny asa fambolena, ary manolo-tena ho tantsaha ny tanora.","4 - Le travail agricole est entièrement satisfaisant et gratifiant, et les jeunes sont engagés à devenir agriculteurs.","4- Agricultural work is fully satisfying and rewarding and young people are committed to become farmers."
+"animalwel","0","0 - Ny biby dia miaina hanoanana, hetaheta, adin-tsaina ary aretina tsy tapaka mandritra ny taona, ary ny famonoana azy dia atao tsy misy fiheverana mba hisorohana ny fanaintainana tsy ilaina. Tsy raisina amim-pahamendrehana izy ireo.","0 - Les animaux connaissent une faim, une soif, un stress et des maladies constants tout au long de l'année, et leur abattage est effectué sans considération pour éviter les douleurs inutiles. Ils ne sont pas traités avec dignité.","0 - Animals experience constant hunger, thirst, stress, and diseases throughout the year, and their slaughter is carried out without consideration for avoiding unnecessary pain. They are not treated with dignity."
+"animalwel","0.5","0.5","0.5","0.5"
+"animalwel","1","1 - Ny biby dia mahatsapa hanoanana, hetaheta, adin-tsaina na aretina, ary ny famonoana azy dia mety tsy ho laharam-pahamehana amin'ny fisorohana ny fanaintainana tsy ilaina. Voafetra ny fitondran-tenany amin'ny fahamendrehana.","1 - Les animaux connaissent une faim, une soif, un stress ou des maladies périodiques ou saisonniers, et leur abattage peut ne pas privilégier l'évitement des douleurs inutiles. Leur traitement avec dignité est limité.","1 - Animals experience periodic or seasonal hunger, thirst, stress, or diseases, and their slaughter may not prioritize avoiding unnecessary pain. Their treatment with dignity is limited."
+"animalwel","1.5","1.5","1.5","1.5"
+"animalwel","2","2 - Ny biby dia afaka mahazo sakafo sy rano, saingy mety hisy adin-tsaina na aretina indraindray, ary ny famonoana dia mety tsy ho laharam-pahamehana ny fisorohana ny fanaintainana tsy ilaina. Misy ezaka atao mba hitondrana azy ireo amim-pahamendrehana.","2 - Les animaux ont accès à la nourriture et à l'eau, mais ils peuvent connaître occasionnellement du stress ou des maladies, et les pratiques d'abattage pourraient ne pas prioriser l'évitement des douleurs inutiles. Certains efforts sont faits pour les traiter avec dignité.","2 - Animals have access to food and water, but they may experience occasional stress or diseases, and their slaughter practices might not fully prioritize avoiding unnecessary pain. Some efforts are made to treat them with dignity."
+"animalwel","2.5","2.5","2.5","2.5"
+"animalwel","3","3 - Ny biby dia salama amin'ny ankapobeny, manana sakafo sy rano ampy, ary ny famonoana dia mikendry ny hampihena ny adin-tsaina sy hisorohana ny fanaintainana tsy ilaina. Raisina amim-pahamendrehana izy ireo amin'ny ankamaroan'ny lafiny.","3 - Les animaux sont généralement en bonne santé, ont un accès suffisant à la nourriture et à l'eau, et les pratiques d'abattage visent à minimiser le stress et à éviter les douleurs inutiles. Ils sont traités avec dignité dans la plupart des aspects.","3 - Animals are generally healthy, have sufficient access to food and water, and their slaughter practices aim to minimize stress and avoid unnecessary pain. They are treated with dignity in most aspects."
+"animalwel","3.5","3.5","3.5","3.5"
+"animalwel","4","4 - Voakarakara tsara ny biby, miaina adin-tsaina kely ary mahazo sakafo sy fikarakarana sahaza azy. Ny fomba famonoana dia manome laharam-pahamehana ny fahasalamany, miantoka ny dingana tsy misy fanaintainana sy fanajana. Raisina amim-pahamendrehana hatrany izy ireo amin'ny lafiny rehetra amin'ny fikarakarana sy ny fikarakarana azy.","4 - Les animaux sont bien soignés, connaissent un stress minimal et ont accès à une nutrition et à des soins appropriés. Les pratiques d'abattage privilégient leur bien-être, assurant un processus sans douleur et respectueux. Ils sont constamment traités avec dignité dans tous les aspects de leurs soins et de leur manipulation.","4 - Animals are well-cared for, experience minimal stress, and have access to proper nutrition and healthcare. Slaughter practices prioritize their well-being, ensuring a painless and respectful process. They are consistently treated with dignity in all aspects of their care and handling."
+"mkt_local","0","0 - Tsy misy vokatra ara-pambolena amidy mihitsy NA ny vokatra rehetra amidy any an-tsena lavitra. ","0 - Aucun produit agricole n'st commercialisé du tout OU toute la production est vendue sur des marchés éloignés.","0 - No agricultural product is marketed at all OR the whole production is marketed in far away markets"
+"mkt_local","0.5","0.5","0.5","0.5"
+"mkt_local","1","1 - Vitsy dia vitsy ny vokatra/serivisy momba ny fambolena no amidy eto an-toerana.","1 - Très peu de produits / services de la ferme sont commercialisés localement .","1 - Hardly any of the farm's products / services are marketed locally . "
+"mkt_local","1.5","1.5","1.5","1.5"
+"mkt_local","2","2 - Ny vokatra (sy/na tolotra) sasany dia amidy eo an-toerana (na ao anatin'ny sehatry ny varotra ara-drariny).","2 - Certains produits(et / ou services) sont commercialisés localement(ou dans le cadre du commerce équitable).","2 - Some products(and/or services) are marketed locally(or in fair trade system)."
+"mkt_local","2.5","2.5","2.5","2.5"
+"mkt_local","3","3 - ny toeram-pambolena dia mamokatra vokatra ara-pambolena (sy/na tolotra) be dia be izay amidy indrindra eto an-toerana (na ao anatin'ny sehatry ny varotra ara-drariny).","3 - l'exploitation agricole produit une bonne quantité de produits agricoles (et/ou services) qui sont principalement commercialisés localement (ou dans le cadre du commerce équitable).","3 - The farm produces a good quantity of agricultural products(and/or services) that are mostly marketed locally(or in fair trade schemes)."
+"mkt_local","3.5","3.5","3.5","3.5"
+"mkt_local","4","4 - ny asa fambolena dia mamokatra vokatra ara-pambolena (sy/na tolotra) be dia be izay amidy tanteraka eto an-toerana (na amin'ny tetika ara-barotra ara-drariny) ary mandray anjara amin'ny fanjarian-tsakafo eo an-toerana.","4 - l'exploitation agricole produit une quantité importante de produits agricoles (et/ou services) qui sont entièrement commercialisés localement (ou dans des schémas de commerce équitable) et contribuent à la sécurité alimentaire locale.","4 - The farm produces an important quantity of agricultural products (and/or services) that are completely marketed locally (or in fair trade schemes) and contribute to the local food security."
+"networks","0","0 - Tsy misy tambajotram-pamokarana miasa amin'ny varotra ny vokatra fambolena, ary tsy misy fifandraisana mivantana amin'ny mpanjifa. ny fizotran'ny varotra manontolo dia tantanin'ny mpanelanelana. ","0 - Aucun réseau fonctionnel de producteurs pour la commercialisation de la production agricole n'xiste, et il n'y a aucune relation directe avec les consommateurs . l'ensemble du processus de commercialisation est géré par des intermédiaires.","0 - No functional networks of producers for marketing agricultural production exist, and there is no direct relationship with consumers. The entire marketing process is managed by intermediaries."
+"networks","0.5","0.5","0.5","0.5"
+"networks","1","1 - Misy ny tambajotra mpamokatra, saingy miatrika fanamby amin'ny asany izy ireo. Misy fifandraisana voafetra amin'ny mpanjifa, ary mandray anjara betsaka amin'ny fitantanana ny fizotran'ny varotra ny mpanelanelana.","1 - Des réseaux de producteurs existent, mais ils rencontrent des défis dans leurs opérations. Il existe une relation limitée avec les consommateurs, et les intermédiaires sont fortement impliqués dans la gestion du processus de commercialisation.","1 - Networks of producers exist but face challenges in their operations. Limited relationship with consumers exists, and intermediaries are heavily involved in managing the marketing process."
+"networks","1.5","1.5","1.5","1.5"
+"networks","2","2 - Ny tambajotra mpamokatra dia miasa amin'ny ampahany, saingy mety tsy ho tafiditra tanteraka izy ireo. Misy fifandraisana mivantana amin'ny mpanjifa, ary ny mpanelanelana dia manana anjara toerana lehibe amin'ny fitantanana ny ampahany amin'ny fizotran'ny varotra.","2 - Les réseaux de producteurs sont partiellement opérationnels, mais ils ne sont peut-être pas entièrement inclusifs. Certaines relations directes avec les consommateurs existent, et les intermédiaires jouent un rôle important dans la gestion d'une partie du processus de commercialisation.","2 - Networks of producers are partially operational, but they might not be fully inclusive. Some direct relationships with consumers exist, and intermediaries play a big role in managing part of the marketing process."
+"networks","2.5","2.5","2.5","2.5"
+"networks","3","3 - Ny tambajotran'ny mpamokatra dia miasa sy mitambatra, ahitana lehilahy sy vehivavy. Misy fifandraisana","3 - Les réseaux de producteurs sont opérationnels et inclusifs, impliquant à la fois les hommes et les femmes. Il existe des relations directes avec les consommateurs, et l'implication des intermédiaires dans la gestion du processus de commercialisation est négligeable.","3 - Networks of producers are operational and inclusive, involving both men and women. There are direct relationships with consumers, and intermediaries’ involvement in managing the marketing process is negligible."
+"networks","3.5","3,5","3.5","3.5"
+"networks","4","4 - Tambajotran'ny mpamokatra mahaleo tena efa miorina tsara sy miasa tanteraka, miaraka amin'ny fandraisan'anjaran'ny vehivavy. Misy fifandraisana matanjaka sy miorina amin'ny mpanjifa, ary tsy ilaina ny mpanelanelana satria ny mpamokatra dia mitantana mivantana ny fizotran'ny varotra.","4 - Des réseaux bien établis et entièrement opérationnels de producteurs autonomes sont en place, avec une participation inclusive des femmes. Il existe des relations solides et stables avec les consommateurs, et aucun intermédiaire n'st nécessaire car les producteurs gèrent directement l'ensemble du processus de commercialisation.","4 - Well-established and fully operational networks of empowered producers are in place, with inclusive participation from women. There are strong and stable relationships with consumers, and no intermediaries are needed as producers manage the entire marketing process directly."
+"local_fs","0","0 - Fiankinan-doha ivelany: miankina tanteraka amin'ny loharano ivelany ny toeram-pambolena mba hividianana fitaovana fambolena (anisan'izany ny fitaovana sy serivisy), ary ny ankamaroan'ny vokatra dia voahodina sy amidy any ivelan'ny faritra eo an-toerana. Tsy misy ezaka atao amin'ny fitadiavana fitaovana, fitaovana na fitaovana fanamboarana eo an-toerana, ary tsy misy ny circularity eo amin'ny toekarena eo an-toerana. Dépendance externe : la ferme dépend entièrement de sources externes pour l'achat des intrants agricoles (y compris les matériaux et les services), et la plupart des produits sont transformés et commercialisés en dehors de la zone locale. Aucun effort n'st fait pour se procurer localement les intrants, les matériaux ou les matériaux de réparation, et la circularité au sein de l'économie locale est absente.","0 - Dépendance externe : la ferme dépend entièrement de sources externes pour l'achat des intrants agricoles (y compris les matériaux et les services), et la plupart des produits sont transformés et commercialisés en dehors de la zone locale. Aucun effort n'st fait pour se procurer localement les intrants, les matériaux ou les matériaux de réparation, et la circularité au sein de l'économie locale est absente.","0 - External dependency: the farm relies entirely on external sources for purchasing agricultural inputs (including material and services), and most products are processed and marketed outside the local area. There is no effort to source inputs and product or repair materials locally, and circularity within the local economy is absent."
+"local_fs","0.5","0.5","0.5","0.5"
+"local_fs","1","1 - Ny famatsiana eto an-toerana voafetra: misy akora fambolena sasany azo avy any an-toerana, fa ny ampahany lehibe dia mbola azo any ivelan'ny faritany (vondrom-piarahamonina na eo an-toerana). Ny vokatra dia voahodina amin'ny ampahany eo an-toerana, ary zara raha misy fifanakalozana na varotra vokatra sy serivisy eo amin'ny mpamokatra eo an-toerana.","1 - Approvisionnement local limité : certains intrants agricoles sont sourcés localement, mais une partie importante est encore obtenue en dehors du territoire (communauté ou niveau local). Les produits sont partiellement transformés localement, et il y a peu d'échanges ou de commerce de produits et de services entre les producteurs locaux.","1 - Limited local sourcing: some agricultural inputs are sourced locally, but a significant portion is still obtained from outside the territory (community or local level). Products are partially processed locally, and there is minimal exchange or trade of products and services between local producers."
+"local_fs","1.5","1.5","1.5","1.5"
+"local_fs","2","2 - Fambolena antonony eo an-toerana sy circularity: manao ezaka ny toeram-pambolena mba hahazoana ny ankamaroan'ny akora sy ny fitaovana eo an-toerana, ka mahatonga ny circularity eo amin'ny toe-karena eo an-toerana. Mihatsara ny fahaleovan-tena ara-paritany na fiaraha-monina amin'ny famokarana fambolena sy sakafo, ary misy antonony ny fifanakalozana sy ny varotra vokatra sy serivisy eo amin'ny mpamokatra eo an-toerana.","2 - Approvisionnement local modéré et circularité : la ferme fait des efforts pour se procurer la plupart des intrants et des matériaux localement, contribuant ainsi à la circularité au sein de l'économie locale. l'autosuffisance territoriale ou communautaire pour la production agricole et alimentaire s'améliore, et il y a un niveau modéré d'échanges et de commerce de produits et de services entre les producteurs locaux.","2 - Moderate local sourcing and circularity: the farm makes efforts to source most of the inputs and materials locally, contributing to circularity within the local economy. Territorial or Community self-sufficiency for agricultural and food production improves, and there is a moderate level of exchange and trade of products and services between local producers."
+"local_fs","2.5","2.5","2.5","2.5"
+"local_fs","3","3 - Fambolena sy fihodinkodinana eo an-toerana: Ny toeram-pambolena dia manome ampahany betsaka amin'ny akora sy akora ara-pambolena eo an-toerana, mampiroborobo ny asa sy ny fivezivezena eo amin'ny toekarena eo an-toerana. Misy ny fifanakalozana tsy tapaka sy manan-danja amin'ny vokatra sy serivisy eo amin'ny mpamokatra eo an-toerana.","3 - Approvisionnement local substantiel et circularité : La ferme se procure une partie substantielle des intrants agricoles et des matériaux localement, favorisant l'emploi et la circularité au sein de l'économie locale. Il y a des échanges réguliers et significatifs de produits et de services entre les producteurs locaux.","3 - Substantial local sourcing and circularity: The farm sources a substantial portion of agricultural inputs and materials locally, fostering employment and circularity within the local economy. There is a regular and meaningful exchange or trade of products and services between local producers."
+"local_fs","3.5","3.5","3.5","3.5"
+"local_fs","4","4 - Fambolena sy fiodinana avo lenta: Ny toeram-pambolena dia miompana betsaka amin'ny akora sy akora eo an-toerana, mampiroborobo ny faritany amin'ny alàlan'ny toekarena boribory. Ny vondrom-piarahamonina dia manana ambaratonga avo lenta amin'ny fifanakalozana sy varotra vokatra sy serivisy eo amin'ny mpamokatra eo an-toerana, ka manamafy ny faribolana.","4 - Approvisionnement local élevé et circularité : La ferme se procure largement des intrants et des matériaux localement, favorisant le territoire grâce à l'économie circulaire. La communauté a un niveau élevé d'échanges et de commerce de produits et de services entre les producteurs locaux, renforçant ainsi la circularité.","4 - High local-sourcing and circularity: The farm extensively sources inputs and materials locally, fostering the territory through circular economy. The community has a high level of exchange and trade of products and services between local producers, further enhancing circularity."
+"prod_empow","0","0 - Tsy manana fahafahana ny mpamokatra, hiditra amin'ny tany na harena voajanahary hafa, tsy manana fahefana hifampiraharaha ary tsy manana fitaovana hanatsarana ny fivelomany sy hampivelatra ny fahaizany.","0 - Les producteurs ne sont pas du tout émancipés, ils n'ont pas un accès sécurisé à la terre ou aux autres ressources naturelles, ils n'ont aucun pouvoir de négociation et manquent de moyens pour améliorer leurs moyens de subsistance et développer leurs compétences.","0 - Producers lack empowerment, with limited or no access to land or other natural resources. They have little bargaining power and limited means to improve their livelihoods and develop their skills."
+"prod_empow","0.5","0.5","0.5","0.5"
+"prod_empow","1","1 - Voafetra ny fahafahan'ny mpamokatra, misy fanamby sasany amin'ny fiarovana ny fidirana amin'ny tany na harena voajanahary hafa. Kely ny fahefa-mividy ary voafetra ny fitaovana hanatsarana ny fivelomany sy hampivelarana ny fahaizany.","1 - Les producteurs ont une émancipation limitée, avec certains défis pour sécuriser l'accès à la terre ou aux autres ressources naturelles. Ils ont un pouvoir de négociation minimal et des moyens limités pour améliorer leurs moyens de subsistance et développer leurs compétences.","1 - Producers have limited empowerment, facing challenges in securing access to land or other natural resources. They possess minimal bargaining power and limited opportunities to improve their livelihoods and develop their skills."
+"prod_empow","1.5","1.5","1.5","1.5"
+"prod_empow","2","2 - Manana fahalalahana antonony ny mpamokatra, ka ekena sy hajaina ny zony ho an'ny lehilahy sy ny vehivavy. Manana ny fahefa-mividy izy ireo saingy tsy voatarika tanteraka hanatsara ny fivelomany sy hampivelatra ny fahaizany.","2 - Les producteurs ont une émancipation modérée, avec leurs droits reconnus et respectés pour les hommes et les femmes. Ils ont un certain pouvoir de négociation mais ne sont pas pleinement stimulés pour améliorer leurs moyens de subsistance et développer leurs compétences.","2 - Producers are moderately empowered, with their rights recognized and respected, including gender equity. They have some bargaining power but need further stimulation to enhance their livelihoods and skill development."
+"prod_empow","2.5","2.5","2.5","2.5"
+"prod_empow","3","3 - Manana fahalalahana lehibe ny mpamokatra, ka ekena sy hajaina ny zony ho an'ny lehilahy sy ny vehivavy. Manana ny fahaiza-manaony sy ny fomba hanatsarana ny fivelomany izy ireo, ary misy ny fanentanana indraindray mba hampivelatra ny fahaizany.","3 - Les producteurs ont une émancipation significative, avec leurs droits reconnus et respectés pour les hommes et les femmes. Ils ont la capacité et les moyens d'améliorer leurs moyens de subsistance, et il existe des stimuli occasionnels pour développer leurs compétences.","3 - Producers have significant empowerment, with their rights recognized and respected, including gender equity. They possess the capacity and means to improve their livelihoods, with occasional opportunities for skill development."
+"prod_empow","3.5","3.5","3.5","3.5"
+"prod_empow","4","4 - Avotsotra tsara ny mpamokatra, ekena sy hajaina ny zony (ho an’ny lehilahy sy vehivavy), voalamina tsara ary manana fahaiza-manao matanjaka sy fitaovana hanatsarana ny fivelomany sy hampivelatra ny fahaizany.","4 - Les producteurs sont bien émancipés, leurs droits sont reconnus et respectés (pour les hommes et les femmes), ils sont bien organisés et ont une forte capacité ainsi que les moyens d'améliorer leurs moyens de subsistance et de développer leurs compétences.","4 - Producers are well empowered, with their rights fully recognized and respected, ensuring gender equity. They are well-organized, demonstrating strong capacity, and have the means to improve their livelihoods and actively pursue skill development opportunities."
+"prod_orgs","0","0 - Tsy mangarahara ny fiaraha-miasa eo amin’ny samy mpamokatra Tsy misy fikambanana, tsy mizara tombony amin'ny mangarahara sy/na mitovy na manohana ny mpamokatra. ","0 - La coopération entre les producteurs n'est pas transparente, est corrompue ou inexistante. Il n'existe pas d'organisations ou elles ne distribuent pas les bénéfices de manière transparente et/ou égale ni ne soutiennent les producteurs.","0 - Cooperation among producers is non-transparent, corrupted or non-existent. No existing organisation or they do not to distribute profits transparently and/or equally nor do they support producers."
+"prod_orgs","0.5","0.5","0.5","0.5"
+"prod_orgs","1","1 - Misy ny fikambanan'ny mpamokatra saingy kely ny andraikiny ary voafetra amin'ny fidirana amin'ny tsena ny fanohanana ny mpamokatra.","1 - Une organisation de producteurs existe mais son rôle est marginal et le soutien aux producteurs est limité à l'accès au marché.","1 - One organisation of producers exists but its role is marginal and support to producers limited to market access."
+"prod_orgs","1.5","1.5","1.5","1.5"
+"prod_orgs","2","2 - Misy fikambanana mpamokatra ary manome fanohanana ny mpamokatra amin'ny fidirana amin'ny tsena sy ny serivisy hafa (ohatra ny fampahalalam-baovao, ny fampivoarana ny fahaiza-manao, ny fandrisihana ...), saingy mety tsy ho an'ny vehivavy izany na misy fetra hafa.","2 - Une organisation de producteurs existe et apporte son soutien aux producteurs pour l'accès aux marchés et d'autres services (par exemple, information, développement des capacités, incitations...), mais elle pourrait ne pas être inclusive pour les femmes ou présenter d'autres limitations.","2 - One organisation of producers exists and provides support to producers for market access and other services (e.g. information, capacity development, incentives…), but might not be inclusive for women or having other limitations."
+"prod_orgs","2.5","2.5","2.5","2.5"
+"prod_orgs","3","3 - Misy fikambanana mpamokatra ary manome fanohanana ny mpamokatra amin'ny fidirana amin'ny tsena sy ny serivisy hafa mitovy fidirana ho an'ny lehilahy sy ny vehivavy.","3 - Une organisation de producteurs existe et fournit un soutien aux producteurs pour l'accès au marché et d'autres services avec un accès égal tant pour les hommes que pour les femmes.","3 - One organisation of producers exists and provides support to producers for market access and other services with equal access to men and women."
+"prod_orgs","3.5","3.5","3.5","3.5"
+"prod_orgs","4","4 - Misy fikambanana maromaro. Izy ireo dia manome fahafahana miditra amin'ny tsena sy serivisy hafa ho an'ny lehilahy sy vehivavy.","4 - Il existe plusieurs organisations. Elles fournissent un accès aux marchés et d'autres services, tant pour les hommes que pour les femmes.","4 - More than one organisation exists. They provide market access and other services, with equal access to men and women."
+"partic_prod","0","0 - Voahilika tanteraka amin'ny dingana fandraisana fanapahan-kevitra mikasika ny tany, ny harena voajanahary ary ny lafiny mifandraika amin'ny rafitra famokarana azy ireo mpamokatra. Tsy raharahaina ny fandraisan'anjaran'izy ireo amin'ny resaka fitantanana sy fampandehanan-draharaha.","0 - Les producteurs sont complètement exclus des processus décisionnels concernant la terre, les ressources naturelles et les aspects pertinents de leurs systèmes de production. Leur contribution est ignorée dans les questions liées à la gestion et aux opérations.","0 - Producers are entirely excluded from decision-making processes concerning land, natural resources, and relevant aspects of their production systems. Their input is disregarded in matters related to management and operations."
+"partic_prod","0.5","0.5","0.5","0.5"
+"partic_prod","1","1 - Mandray anjara amin'ny fandraisana fanapahan-kevitra ny mpamokatra, saingy ny fiantraikany amin'ny fitantanana ny tany, ny harena voajanahary ary ny lafiny mifandraika amin'ny rafitra dia mbola voafetra be.","1 - Les producteurs participent aux processus décisionnels, mais leur impact sur la gestion des terres, des ressources naturelles et des aspects pertinents du système reste extrêmement limité.","1 - Producers participate in decision-making processes, but their impact on land, natural resource management, and relevant system aspects remains extremely limited."
+"partic_prod","1.5","1.5","1.5","1.5"
+"partic_prod","2","2 - Misy ny mekanika manamora ny fandraisan'anjaran'ny mpamokatra amin'ny dingan'ny fandraisana fanapahan-kevitra, saingy miasa tsy feno izy ireo, ka miteraka fiantraikany voafetra, ao anatin'izany ny momba ny fomba fanao maharitra sy ny fampiasana loharanon-karena. Ny fanamby toy ny fitovian'ny lahy sy ny vavy sy ny sakana hafa dia mety hanakana ny fandraisana anjara manan-danja.","2 - Des mécanismes facilitant l'engagement des producteurs dans les processus décisionnels sont présents, mais ils fonctionnent de manière incomplète, entraînant une influence limitée, y compris dans les questions de pratiques durables et d'utilisation des ressources. Des défis tels que l'équité entre les sexes et d'autres obstacles peuvent entraver une participation significative. ","2 - Mechanisms facilitating producer engagement in decision-making processes are present, but they function incompletely, resulting in constrained influence, including matters of sustainable practices and resource usage. Challenges like gender equity and other hindrances may impede meaningful participation."
+"partic_prod","2.5","2.5","2.5","2.5"
+"partic_prod","3","3 - Ny rafitra mamela ny fandraisan'anjaran'ny mpamokatra amin'ny dingan'ny fandraisana fanapahan-kevitra dia miasa, miaraka amin'ny fanamafisana ny fiarovana ny zo sy ny fiantohana ny fomba maharitra. Ny mpamokatra dia manana fahafahana mitaona ny fanapahan-kevitra mifandraika amin'ny tany, ny fitantanana ny harena voajanahary ary ny lafiny mifandraika amin'ny rafitra, miaraka amin'ny fandraisan'anjaran'ny mpandray anjara rehetra.","3 - Les mécanismes permettant la participation des producteurs aux processus décisionnels sont opérationnels, en mettant l'accent sur la sécurisation des droits et la garantie de pratiques durables. Les producteurs ont la capacité d'influencer les décisions liées aux terres, à la gestion des ressources naturelles et aux aspects pertinents du système, avec la participation inclusive de toutes les parties prenantes. ","3 - Mechanisms enabling producer involvement in decision-making processes are operational, focusing on securing rights and ensuring sustainable practices. Producers have the capability to influence decisions related to land, natural resource management, and relevant system aspects, with inclusive participation of all stakeholders."
+"partic_prod","3.5","3.5","3.5","3.5"
+"partic_prod","4","4 - Ny mekanika mampiroborobo ny fandraisan'anjaran'ny mpamokatra amin'ny dingana fandraisana fanapahan-kevitra dia miasa tanteraka, miaraka amin'ny fanamafisana ny fahazoana mitombina amin'ny loharanon-karena, antoka ny zo ary ny fomba fanao maharitra. Ny lahy sy ny vavy dia samy manana fahafahana mitaona ny fanapahan-kevitra, mampiroborobo ny fandraisana anjara amin'ny fitantanana ny rafitra sy ny fandraisana fanapahan-kevitra.","4 - Les mécanismes favorisant la participation des producteurs aux processus décisionnels sont entièrement opérationnels, en mettant l'accent sur l'accès équitable aux ressources, la garantie des droits et les pratiques durables. Les deux genres ont la possibilité d'influencer les décisions, favorisant une participation inclusive à la gouvernance et aux processus décisionnels du système. ","4 - Mechanisms promoting producer participation in decision-making processes are fully operational, emphasizing equitable access to resources, rights assurance, and sustainable practices. Both genders have the chance to influence decisions, fostering inclusive involvement in system governance and decision-making."
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
