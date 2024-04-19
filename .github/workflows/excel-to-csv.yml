@@ -1,0 +1,15 @@
+on:
+  push:
+    paths:
+      - 'odk/TAPE - WIP.xlsx'
+
+jobs:
+  excel_to_csv_files:
+    runs-on: ubuntu-latest
+    name: Split Excel file into multiple CSV files
+    steps:
+      - name: Split Step
+        id: excel_to_csv
+        uses: dave-mills/excel_to_csv@v1.1
+        with:
+          excel_path: 'odk/TAPE - WIP.xlsx'
