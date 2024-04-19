@@ -14,7 +14,7 @@
 ,"select_one language","language","Please select language you are using to complete this survey","**NOTE**: This is the language shown on the device, not the language you will use to speak to the farmer.
 
 We need this information to show options for some questions in the appropriate language.","TRUE",,"quick search('languages')"," ",,,,,,
-"maybe don't need this any more? ","select_multiple steps","steps_select","Which steps are you conducting in this visit?",,,,,,,,,,,
+,"select_multiple steps","steps_select","Which steps are you conducting in this visit?",,,,,,,,,,,
 ,"end_group","survey_start",,,,,,,,,,,,
 ,"begin_group","reg","Location",,,,,,,,,,,
 ,"calculate","count_location_levels",,,,,,,,,"count(${location_levels_rpt})",,,
