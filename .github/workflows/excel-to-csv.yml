@@ -8,8 +8,20 @@ jobs:
     runs-on: ubuntu-latest
     name: Split Excel file into multiple CSV files
     steps:
-      - name: Split Step
-        id: excel_to_csv
-        uses: dave-mills/excel-to-csv@v1.3
-        with:
-          excel_path: 'odk/TAPE - WIP.xlsx'
+    - name: checkout
+      uses: actions/checkout@v3
+
+    - name: Split Step
+      id: excel_to_csv
+      uses: dave-mills/excel-to-csv@v1.3
+      with:
+        excel_path: 'odk/TAPE - WIP.xlsx'
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "Auto Commit Bot"
+        git config --global user.email "support@stats4sd.org"
+
+        git add -A
+        git commit -m "update csv files based on changes to Excel"
+        git push
