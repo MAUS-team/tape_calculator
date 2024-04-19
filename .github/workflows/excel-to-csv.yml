@@ -10,6 +10,6 @@ jobs:
     steps:
       - name: Split Step
         id: excel_to_csv
-        uses: dave-mills/excel-to-csv@v1.1
+        uses: dave-mills/excel-to-csv@v1.2
         with:
           excel_path: 'odk/TAPE - WIP.xlsx'
