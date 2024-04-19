@@ -1,0 +1,1720 @@
+"list_name","name","label::English (en)"
+"ae_know","score","definition"
+"aname","0","Cow / Bull"
+"aname","1","Bison"
+"aname","2","Water buffalo"
+"aname","3","Horse"
+"aname","4","Reindeer"
+"aname","5","Donkey"
+"aname","6","Mule"
+"aname","7","Sheep"
+"aname","8","Goat"
+"aname","9","Pig"
+"aname","10","Camel"
+"aname","11","Llama"
+"aname","12","Rabbit"
+"aname","13","Chicken"
+"aname","14","Duck"
+"aname","15","Goose"
+"aname","16","Turkey"
+"aname","17","Pigeon"
+"aname","18","Ostrich"
+"aname","19","Fish"
+"aname","20","Crustaceans"
+"aname","21","Molluscs"
+"aname","22","Peacock"
+"aname","23","Crocodiles and other reptiles"
+"aname","771","Other 1"
+"aname","772","Other 2"
+"aname","773","Other 3"
+"animals","score","definition"
+"animalwel","score","definition"
+"animprod","11","Meat, bovine"
+"animprod","12","Meat, pig"
+"animprod","13","Meat, sheep"
+"animprod","14","Meat, goat"
+"animprod","15","Meat, poultry"
+"animprod","16","Meat, other"
+"animprod","17","Cured meat"
+"animprod","18","Fat"
+"animprod","19","Fat oils"
+"animprod","20","Entrails"
+"animprod","21","Milk, cow"
+"animprod","22","Milk, other"
+"animprod","23","Cheese"
+"animprod","24","Yogurt"
+"animprod","25","Butter"
+"animprod","26","Eggs"
+"animprod","27","Honey"
+"animprod","28","Bee wax"
+"animprod","29","Wool"
+"animprod","30","Skins"
+"animprod","31","Silk"
+"animprod","77","Other"
+"animprod","771","Other 1"
+"animprod","772","Other 2"
+"animprod","773","Other 3"
+"animprod","-97","None"
+"antib","1","I do not use antibiotics at all"
+"antib","2","For treatment of diseases only"
+"antib","3","For prevention of diseases"
+"antib","4","For both prevention of diseases and growth promotion"
+"antib","5","For growth promotion"
+"apunmeas","kg","Kg"
+"apunmeas","l","L"
+"apunmeas","num","Number of"
+"apunmeas","oth","Other"
+"bee","1","Yes, bees are raised and are very abudant within the agroecosystem."
+"bee","2","Yes, bees are raised within the agroecosystem."
+"bee","3","No, bees are not raised, but bees and pollinators are widespread within the agroecosystem."
+"bee","4","No, bees are not raised and are rare within the agroecosystem."
+"cla_int","score","definition"
+"soil_color","1","1 Pale and no presence of humus"
+"soil_color","2","2"
+"soil_color","3","3 Light brown, odorless, and some presence of humus"
+"soil_color","4","4"
+"soil_color","5","5 Dark brown, fresh odor, and abundant humus"
+"soil_compaction","1","1 Compacted soil, flag bends readily"
+"soil_compaction","2","2"
+"soil_compaction","3","3 Thin compacted layer, some restrictions to a penetrating wire"
+"soil_compaction","4","4"
+"soil_compaction","5","5 No compaction, flag can penetrate all the way into the soil"
+"connectivity","score","definition"
+"country","id","name"
+"soil_cover","1","1 Bare soil"
+"soil_cover","2","2"
+"soil_cover","3","3 Less than 50% soil covered by residues or live cover"
+"soil_cover","4","4"
+"soil_cover","5","5 More than 50% soil covered by residues or live cover"
+"credit","1","Possible in official and secure channels (bank or similar)"
+"credit","2","Possible in non-official channels"
+"credit","3","Not possible. Access to credit is too hard or too risky"
+"crop_area_unit","language_unit_id","name_rate"
+"crop_weight_unit","language_unit_id","name_rate"
+"crops","score","definition"
+"currency","USD","USD-United States dollar"
+"currency","EUR","EUR-Euro"
+"currency","ETB","ETB-Ethiopian birr"
+"currency","KES","KES-Kenyan shilling"
+"currency","MGA","MGA-Malagasy ariary"
+"currency","XOF","XOF-West African CFA franc"
+"currency","1","Other (specify)"
+"dec","1","Completely the man"
+"dec","2","Mostly the man"
+"dec","3","Both man and woman"
+"dec","4","Mostly the woman"
+"dec","5","Completely the woman"
+"dec","6","Someone else outside the family"
+"dec","88","Not applicable"
+"soil_depth","1","1 Thin soil > 1 foot until you hit rock or there is exposed rock on the soil surface"
+"soil_depth","2","2"
+"soil_depth","3","3 Shallow to moderate soil – less than 3 feet (1 meter) until you reach bedrock"
+"soil_depth","4","4"
+"soil_depth","5","5 Deep soil, more than three feet deepSuperficial soil"
+"diet","score","definition"
+"dietyn","1","Yes, I ate it in the last 24 hours"
+"dietyn","0","No, I did not eat it in the last 24 hours"
+"dietyn","-99","Don't know / Refused to answer"
+"div_activ","score","definition"
+"doc","1","Title deed"
+"doc","2","Certificate of customary tenure"
+"doc","3","Certificate of occupancy"
+"doc","4","Registered will or registered certificate of hereditary acquisition"
+"doc","5","Registered certificate of perpetual / long term lease"
+"doc","6","Registered rental contract"
+"doc","7","Secure mobility corridor"
+"doc","77","Other"
+"ecoman","1","Cultural control (more resistant varieties are chosen for production; plants and fruits presenting signs of disease are removed manually; crops are grown in crop rotation and intercropping schemes, etc.)"
+"ecoman","2","Plantation of natural repelling plants"
+"ecoman","3","Use of cover crops to increase biological interactions"
+"ecoman","4","Favor the reproduction of beneficial organisms for biological-control"
+"ecoman","5","Favor biodiversity and spatial diversity within the agroecosystem"
+"ecoman","77","Other"
+"ecoman","7","None of these"
+"edulev","1","Cannot read nor write"
+"edulev","2","Able to read and write"
+"edulev","3","Elementary"
+"edulev","4","High school"
+"edulev","5","University or higher"
+"soil_erosion","1","1 Severe erosion, presence of gullies"
+"soil_erosion","2","2"
+"soil_erosion","3","3 Evident, but low erosion signs (e.g. rill/sheet erosion)"
+"soil_erosion","4","4"
+"soil_erosion","5","5 No visible signs of erosion"
+"ext_inp","score","definition"
+"farms","id","name"
+"farms","-99","Farm not displayed on list"
+"fruits","558","Berries nes"
+"fruits","577","Dates"
+"fruits","515","Apples"
+"fruits","568","Melons, other (inc.cantaloupes)"
+"fruits","536","Plums and sloes"
+"fruits","534","Peaches and nectarines"
+"fruits","560","Grapes"
+"fruits","567","Watermelons"
+"fruits","526","Apricots"
+"fruits","569","Figs"
+"fruits","521","Pears"
+"fruits","544","Strawberries"
+"fruits","495","Tangerines, mandarins, clementines, satsumas"
+"fruits","530","Cherries, sour"
+"fruits","497","Lemons and limes"
+"fruits","531","Cherries"
+"fruits","486","Bananas"
+"fruits","507","Grapefruit (inc. pomelos)"
+"fruits","249","Coconuts"
+"fruits","574","Pineapples"
+"fruits","254","Oil palm fruit"
+"fruits","571","Mangoes, mangosteens, guavas"
+"fruits","600","Papayas"
+"fruits","572","Avocados"
+"fruits","547","Raspberries"
+"fruits","592","Kiwi fruit"
+"fruits","552","Blueberries"
+"fruits","550","Currants"
+"fruits","587","Persimmons"
+"fruits","549","Gooseberries"
+"fruits","554","Cranberries"
+"fruits","489","Plantains and others"
+"fruits","310","Kapok fruit"
+"fruits","490","Oranges"
+"fruits","77","Other"
+"gender","1","Male"
+"gender","2","Female"
+"inc3","1","Much more income"
+"inc3","2","More income"
+"inc3","3","Same income"
+"inc3","4","Less income"
+"inc3","5","Much less income"
+"indebt","score","definition"
+"soil_invertebrates","1","1 No signs of invertebrate presence or activity"
+"soil_invertebrates","2","2"
+"soil_invertebrates","3","3 A few earthworms and arthropods present"
+"soil_invertebrates","4","4"
+"soil_invertebrates","5","5 Abundant presence of invertebrate organisms"
+"involv","1","I do not participate in such organizations"
+"involv","2","I rarely participate in such meetings / organizations"
+"involv","3","I participate often but I rarely speak in the meetings"
+"involv","4","I am an active member of such organization sometimes I speak in the meetings"
+"involv","5","I often speak in the meetings and participate in the decisions making processes"
+"labour","score","definition"
+"level_fies","0","Never"
+"level_fies","1","Rarely"
+"level_fies","2","Sometimes"
+"level_fies","3","Often"
+"level_fies","-99","Don't know / Refused to answer"
+"local_fs","score","definition"
+"local_id","score","definition"
+"local_var","score","definition"
+"meas","l","Liters"
+"meas","g","Grams"
+"soil_microbio","1","1 Very little effervescence after application of water peroxide to the topsoil"
+"soil_microbio","2","2"
+"soil_microbio","3","3 Light to medium effervescence"
+"soil_microbio","4","4"
+"soil_microbio","5","5 Abundant - longer effervescences period"
+"mitig","1","Mask"
+"mitig","2","Body protection (glasses, gloves, etc.)"
+"mitig","3","Special protection for women and children"
+"mitig","4","Visible signs of danger after spraying"
+"mitig","5","Community is informed of the danger"
+"mitig","6","Secure disposal of the empty containers after use"
+"mitig","77","Other"
+"mitig","8","None of these"
+"mkt_local","score","definition"
+"nat_veg","1","Absent: area covered with natural or diverse vegetation is negligible."
+"nat_veg","2","Small: less than 10% of the system is covered with natural or diverse vegetation."
+"nat_veg","3","Significant: at least 20% of the system is covered with natural or diverse vegetation."
+"nat_veg","4","Abundant: more than 25% of the system is covered with natural or diverse vegetation."
+"networks","score","definition"
+"occupation","1","Working in the agricultural production within the system assessed"
+"occupation","2","Both working in the agricultural production within the system and also employed outside the system"
+"occupation","3","Employed outside the system assessed"
+"occupation","4","Both working in the agricultural production within the system and also enrolled in formal education"
+"occupation","5","Enrolled in formal education"
+"occupation","0","Not working nor studying"
+"occupation","6","Works in his/her own farm"
+"output","1","Crops and crop products"
+"output","2","Animals (including fish) and animal products"
+"output","3","Fruit trees"
+"output","4","Timber trees"
+"output","5","Non-timber forest products"
+"output","77","Other"
+"partic_orgs","score","definition"
+"partic_prod","score","definition"
+"past","1","Mostly with feed"
+"past","2","Both with feed and on pasture"
+"past","3","Only on pasture"
+"perc_dec","1","I think that I cannot take any decision"
+"perc_dec","2","Just little decisions"
+"perc_dec","3","Some decisions"
+"perc_dec","4","In great part / totally"
+"perc_dec","88","Not applicable"
+"pest_dis","score","definition"
+"pestimpo","1","Irrelevant"
+"pestimpo","2","Not very important"
+"pestimpo","3","Neutral"
+"pestimpo","4","Important"
+"pestimpo","5","Very important"
+"platforms","score","definition"
+"poll","1","Abundant"
+"poll","2","Significant"
+"poll","3","Little"
+"poll","4","Absent"
+"prod_empow","score","definition"
+"prod_orgs","score","definition"
+"productivity","score","definition"
+"prosoils_comp","1","ProSoils programme farm"
+"prosoils_comp","0","Comparison group"
+"rec_biomass","score","definition"
+"ren_energy","score","definition"
+"soil_residues","1","1 Organic residues are applied but decomposition is very slow, more than 1 year"
+"soil_residues","2","2"
+"soil_residues","3","3 Residues are visible they are slowly decomposing during the season"
+"soil_residues","4","4"
+"soil_residues","5","5 Residues are quickly decomposed and we can see various stages of decomposition"
+"s_plant","score","definition"
+"seeds_breeds","score","definition"
+"site","id","name"
+"soil_fert","score","definition"
+"source","sp","Self-produced"
+"source","p","Purchased"
+"stab","score","definition"
+"steps","1","Step 1"
+"steps","2","Step 2"
+"steps","3","Soil Health and Soil Sampling"
+"soil_structure","1","1 Loose, powdery soil without visible aggregates"
+"soil_structure","2","2"
+"soil_structure","3","3 Few aggregates that break with little pressure"
+"soil_structure","4","4"
+"soil_structure","5","5 Well-formed aggregates – difficult to break"
+"tox","1","Extremely/highly toxic"
+"tox","2","Moderately toxic"
+"tox","3","Slightly toxic or relatively non-toxic"
+"tree_int","score","definition"
+"trees","score","definition"
+"vegetables","116","Potatoes"
+"vegetables","157","Sugar beet"
+"vegetables","403","Onions, dry"
+"vegetables","388","Tomatoes"
+"vegetables","407","Leeks, other alliaceous vegetables"
+"vegetables","402","Onions, shallots, green"
+"vegetables","394","Pumpkins, squash and gourds"
+"vegetables","372","Lettuce and chicory"
+"vegetables","414","Beans, green"
+"vegetables","373","Spinach"
+"vegetables","417","Peas, green"
+"vegetables","181","Broad beans, horse beans, dry"
+"vegetables","406","Garlic"
+"vegetables","393","Cauliflowers and broccoli"
+"vegetables","426","Carrots and turnips"
+"vegetables","358","Cabbages and other brassicas"
+"vegetables","430","Okra"
+"vegetables","449","Mushrooms and truffles"
+"vegetables","399","Eggplants (aubergines)"
+"vegetables","397","Cucumbers and gherkins"
+"vegetables","401","Chillies and peppers, green"
+"vegetables","689","Chillies and peppers, dry"
+"vegetables","187","Peas, dry"
+"vegetables","366","Artichokes"
+"vegetables","136","Taro (cocoyam)"
+"vegetables","125","Cassava"
+"vegetables","137","Yams"
+"vegetables","122","Sweet potatoes"
+"vegetables","367","Asparagus"
+"vegetables","423","String beans"
+"vegetables","720","Ginger"
+"vegetables","459","Chicory roots"
+"vegetables","149","Roots and tubers nes"
+"vegetables","135","Yautia (cocoyam)"
+"vegetables","77","Other"
+"vuln","score","definition"
+"water","score","definition"
+"soil_water_ret","1","1 Dry soil, does not hold water"
+"soil_water_ret","2","2"
+"soil_water_ret","3","3 Limited moisture level available for short time"
+"soil_water_ret","4","4"
+"soil_water_ret","5","5 Reasonable moisture level for a reasonable period of time"
+"women","score","definition"
+"yn","1","Yes"
+"yn","0","No"
+"yn","-99","Don't know / Refused to answer"
+"youth","score","definition"
+"language","language_id","language"
+"activity","1","Agrotourism / ecotourism"
+"activity","2","Transformation of products on farm"
+"activity","3","Livestock services (rent, breeing services, others)"
+"activity","4","Seed production"
+"activity","5","Greenhouse or nursery sale"
+"activity","6","Compost and organic fertilizers sale"
+"activity","7","Rental of farm equipment (machineries, or similar)"
+"activity","8","Rental of land"
+"activity","9","Workshop or training"
+"activity","10","Renawble energy sale"
+"activity","11","Farm based events"
+"activity","12","Carbon credits"
+"activity","77","Other (please specify)"
+"dest","1","Sale"
+"dest","2","Mostly sale and a small part of self-consumption"
+"dest","3","Equally sale and self-consumption"
+"dest","4","Mostly self-consumption and a small part of sale"
+"dest","5","Self-consumption"
+"stabincome","0","Very unstable and decreasing trend."
+"stabincome","1","Unstable with notable fluctuations."
+"stabincome","2","Neutral, sometimes up, sometimes down."
+"stabincome","3","Stable with minor fluctuations."
+"stabincome","4","Very stable and growing trend."
+"livcon","0","much worse"
+"livcon","1","worse"
+"livcon","2","same"
+"livcon","3","better"
+"livcon","4","much better"
+"envfuture","0","I am very concerned that the agricultural production on my farm will decline, jeopardizing my household's livelihood."
+"envfuture","1","I have doubts about the future of my agricultural production, and I'm uncertain if it will be able to fully sustain my household's livelihood."
+"envfuture","2","My agricultural production will probably remain at the same level without significant changes."
+"envfuture","3","I am hopeful about the future of my agricultural production, and I believe it will bring some improvements to my household's livelihood."
+"envfuture","4","I am very confident that the agricultural production on my farm will thrive and continue to sustain my household's livelihood for many years to come."
+"impo","1","Irrelevant"
+"impo","2","Not very important"
+"impo","3","Neutral"
+"impo","4","Important"
+"impo","5","Very important"
+"cpestimpact","5","Mostly positive"
+"cpestimpact","4","Positive"
+"cpestimpact","3","Neutral"
+"cpestimpact","2","Negative"
+"cpestimpact","1","Mostly negative"
+"cpestfuture","1","I would like to use more chemical pesiticides"
+"cpestfuture","2","I would like to use some chemical pesticides"
+"cpestfuture","3","I would like to use just enough quantity"
+"cpestfuture","4","I would like to stop using chemical pesticides totally"
+"cpestfuture","-99","NA (e.g. the farmer does not use chemical pesticides)"
+"y_emig_where","1","to another farm in the area"
+"y_emig_where","2","to the nearest city"
+"y_emig_where","3","within the country"
+"y_emig_where","4","in a neighbouring country"
+"y_emig_where","5","abroad in a far away country"
+"y_emig_why","1","study"
+"y_emig_why","2","looking for a job in agriculture"
+"y_emig_why","3","looking for a job outside agriculture"
+"y_emig_why","4","lack of good living conditions in the farm"
+"y_emig_why","77","other"
+"y_emig_return","4","Yes, for sure"
+"y_emig_return","3","Yes, likely"
+"y_emig_return","2","Maybe"
+"y_emig_return","1","Probably not"
+"y_emig_return","0","For sure not"
+"cfpname","11","Beverage, alcohol"
+"cfpname","12","Beverage, fermented"
+"cfpname","13","Bread"
+"cfpname","14","Butter, vegetable"
+"cfpname","15","Cakes and biscuits"
+"cfpname","16","Canned products"
+"cfpname","17","Cigars and cigarrettes"
+"cfpname","18","Coal"
+"cfpname","19","Coffee, roasted or grounded"
+"cfpname","20","Concentrated of fruits or crops"
+"cfpname","21","Dried crops"
+"cfpname","22","Dried fruits"
+"cfpname","23","Extracts of oils"
+"cfpname","24","Fibers"
+"cfpname","25","Flour"
+"cfpname","26","Flowers"
+"cfpname","27","Food waste"
+"cfpname","281","Juices"
+"cfpname","282","Medicinal plants"
+"cfpname","29","Molasses"
+"cfpname","30","Mushrooms"
+"cfpname","31","Nuts (shelled)"
+"cfpname","32","Oils (vegetable oils)"
+"cfpname","33","Pastes"
+"cfpname","34","Preserves and jams"
+"cfpname","35","Wood"
+"cfpname","771","Other 1"
+"cfpname","772","Other 2"
+"cfpname","773","Other 3"
+"cfpname","-97","None"
+"sources","1","crop production"
+"sources","2","animal production"
+"sources","3","other income-generating activities on farm"
+"sources","4","salary earned off farm"
+"sources","5","remittances from a family member emigrated"
+"sources","77","other (please specify)"
+"waste","score","definition"
+"food-self-suff","score","definition"
+"food-heritage","score","definition"
+"locations","id","name"
+"slope","lt-4","< 4 degrees"
+"slope","4-15","4 - 15 degrees"
+"slope","gt-15","> 15 degrees"
+"soil_sample_erosion","absent","Absent"
+"soil_sample_erosion","gully","Gully erosion"
+"soil_sample_erosion","sheet","Sheet erosion"
+"soil_sample_erosion","rill","Rill erosion"
+"soil_trees","0","No"
+"soil_trees","1-5","< 5 trees, low density with more than 20 m distance"
+"soil_trees","5-10","5 - 10 trees, medium density from 10 to 20 m distance"
+"soil_trees","gt-10","> 10 trees, high density from 5 to 10 m distance "
+"yn_noref","1","Yes"
+"yn_noref","0","No"
+"soil_cropping_pattern","long_fallow","Long fallow and shifting cultivation"
+"soil_cropping_pattern","medium_short_fallow","Medium to short fallow"
+"soil_cropping_pattern","permanent_cropping","Permanent cropping (each year, one crop at minimum)"
+"cname","221","Almonds, with shell"
+"cname","711","Anise, badian, fennel, coriander"
+"cname","515","Apples"
+"cname","526","Apricots"
+"cname","226","Areca nuts"
+"cname","366","Artichokes"
+"cname","367","Asparagus"
+"cname","572","Avocados"
+"cname","203","Bambara beans"
+"cname","486","Bananas"
+"cname","44","Barley"
+"cname","558","Berries"
+"cname","552","Blueberries"
+"cname","216","Brazil nuts, with shell"
+"cname","181","Broad beans, horse beans, dry"
+"cname","89","Buckwheat"
+"cname","358","Cabbages and other brassicas"
+"cname","101","Canary seed"
+"cname","461","Carobs"
+"cname","426","Carrots and turnips"
+"cname","217","Cashew nuts, with shell"
+"cname","591","Cashewapple"
+"cname","125","Cassava"
+"cname","378","Cassava leaves"
+"cname","265","Castor oil seed"
+"cname","393","Cauliflowers and broccoli"
+"cname","220","Chestnut"
+"cname","191","Chick peas"
+"cname","459","Chicory"
+"cname","693","Cinnamon (cannella)"
+"cname","512","Citrics"
+"cname","698","Cloves"
+"cname","661","Cocoa, beans"
+"cname","249","Coconuts"
+"cname","813","Coir"
+"cname","554","Cranberries"
+"cname","397","Cucumbers and gherkins"
+"cname","550","Currants"
+"cname","577","Dates"
+"cname","754","Dried pyrethrum"
+"cname","176","Dry beans"
+"cname","689","Dry chillies and peppers"
+"cname","195","Dry cow peas"
+"cname","403","Dry onions"
+"cname","187","Dry peas"
+"cname","399","Eggplants (aubergines)"
+"cname","569","Figs"
+"cname","773","Flax fibre and tow"
+"cname","94","Fonio"
+"cname","619","Fresh fruit"
+"cname","463","Fresh vegetables"
+"cname","542","Fruit"
+"cname","406","Garlic"
+"cname","720","Ginger"
+"cname","549","Gooseberries"
+"cname","507","Grapefruit (including pomelos)"
+"cname","560","Grapes"
+"cname","414","Green beans"
+"cname","401","Green chillies and peppers"
+"cname","656","Green coffee"
+"cname","446","Green maize"
+"cname","402","Green onions, shallots"
+"cname","417","Green peas"
+"cname","242","Groundnuts, with shell"
+"cname","225","Hazelnuts, with shell"
+"cname","777","Hemp tow waste"
+"cname","336","Hempseed"
+"cname","677","Hops"
+"cname","277","Jojoba seed"
+"cname","780","Jute"
+"cname","310","Kapok fruit"
+"cname","592","Kiwi fruit"
+"cname","224","Kola nuts"
+"cname","407","Leeks, other alliaceous vegetables"
+"cname","420","Leguminous vegetables"
+"cname","497","Lemons and limes"
+"cname","201","Lentils"
+"cname","372","Lettuce and chicory"
+"cname","333","Linseed"
+"cname","210","Lupins"
+"cname","56","Maize"
+"cname","571","Mangoes, mangosteens, guavas"
+"cname","809","Manila fibre (abaca)"
+"cname","671","Maté"
+"cname","568","Melons"
+"cname","299","Melonseed"
+"cname","79","Millet"
+"cname","103","Mixed grain"
+"cname","449","Mushrooms and truffles"
+"cname","292","Mustard seed"
+"cname","836","Natural rubber"
+"cname","702","Nutmeg, mace and cardamoms"
+"cname","234","Nuts"
+"cname","75","Oats"
+"cname","254","Oil palm fruit"
+"cname","430","Okra"
+"cname","260","Olives"
+"cname","490","Oranges"
+"cname","600","Papayas"
+"cname","534","Peaches and nectarines"
+"cname","521","Pears"
+"cname","687","Pepper (piper spp.)"
+"cname","748","Peppermint"
+"cname","587","Persimmons"
+"cname","197","Pigeon peas"
+"cname","574","Pineapples"
+"cname","223","Pistachios"
+"cname","489","Plantains and others"
+"cname","536","Plums and sloes"
+"cname","296","Poppy seed"
+"cname","116","Potatoes"
+"cname","211","Pulses"
+"cname","394","Pumpkins, squash and gourds"
+"cname","523","Quinces"
+"cname","92","Quinoa"
+"cname","788","Ramie"
+"cname","270","Rapeseed"
+"cname","547","Raspberries"
+"cname","27","Rice, paddy"
+"cname","71","Rye"
+"cname","280","Safflower seed"
+"cname","328","Seed cotton"
+"cname","289","Sesame seed"
+"cname","263","Shea nuts (karite nuts)"
+"cname","789","Sisal"
+"cname","83","Sorghum"
+"cname","530","Sour cherries"
+"cname","236","Soybeans"
+"cname","723","Spices"
+"cname","373","Spinach"
+"cname","541","Stone fruit"
+"cname","544","Strawberries"
+"cname","423","String beans"
+"cname","157","Sugar beet"
+"cname","156","Sugar cane"
+"cname","267","Sunflower seed"
+"cname","531","Sweet cherries"
+"cname","122","Sweet potatoes"
+"cname","305","Tallowtree seed"
+"cname","495","Tangerines, mandarins, clementines, satsumas"
+"cname","136","Taro (cocoyam)"
+"cname","667","Tea"
+"cname","388","Tomatoes"
+"cname","97","Triticale"
+"cname","603","Tropical fresh fruit"
+"cname","275","Tung nuts"
+"cname","826","Unmanufactured tobacco"
+"cname","692","Vanilla"
+"cname","205","Vetches"
+"cname","222","Walnuts, with shell"
+"cname","567","Watermelons"
+"cname","15","Wheat"
+"cname","137","Yams"
+"cname","135","Yautia (cocoyam)"
+"cname","77771","Other 1"
+"cname","800","Other agave fibres"
+"cname","782","Other bastfibres"
+"cname","108","Other cereals"
+"cname","821","Other fibre crops"
+"cname","339","Other oilseeds"
+"cname","149","Other roots and tubers"
+"cname","161","Other sugar crops"
+"cname","777770","Other Fruits"
+"cname","777771","Other Vegetables"
+"enumerator","name","label"
+"enumerator","77","Name not on the list / other"
+,,
+"cname","teff","Teff (Eragrostis teff)"
+"cname","enset","Enset (Enset ventricusum)"
+"cname","haricot_bean","Haricot Bean"
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
