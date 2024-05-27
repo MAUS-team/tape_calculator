@@ -582,13 +582,13 @@ step2_YouthEmploymentEmigration <- function(){
     mutate(y_good_perc = y_good_sum*100/ymembers,
            y_med_perc = y_med_sum*100/ymembers,
            y_bad_perc = y_bad_sum*100/ymembers) %>% 
-    mutate(youth_employ = (y_good_perc + 0.5*y_med_perc)/1.5) %>%
+    mutate(youth_employ = (y_good_perc + 0.5*y_med_perc)) %>%
     # Emigration score
     mutate(g1_perc = g1_sum/ymembers*100,
            g2_perc = g2_sum/ymembers*100,
            g3_perc = g3_sum/ymembers*100,
            g4_perc = g4_sum/ymembers*100) %>% 
-    mutate(youth_emigr = (g1_perc + 0.5*g3_perc + 0.5*g4_perc)/2) %>%
+    mutate(youth_emigr = (g1_perc + 0.5*g3_perc + 0.5*g4_perc)) %>%
     # Total youth score
     rowwise() %>%
     mutate(youth_score = mean(c(youth_employ , youth_emigr),na.rm = T)) %>%
@@ -623,13 +623,13 @@ step2_YouthEmploymentEmigration <- function(){
     mutate(y_good_perc = y_good_sum*100/ymembers,
            y_med_perc = y_med_sum*100/ymembers,
            y_bad_perc = y_bad_sum*100/ymembers) %>% 
-    mutate(youth_employ = (y_good_perc + 0.5*y_med_perc)/1.5) %>%
+    mutate(youth_employ = (y_good_perc + 0.5*y_med_perc)) %>%
     # Emigration score
     mutate(g1_perc = g1_sum/ymembers*100,
            g2_perc = g2_sum/ymembers*100,
            g3_perc = g3_sum/ymembers*100,
            g4_perc = g4_sum/ymembers*100) %>% 
-    mutate(youth_emigr = (g1_perc + 0.5*g3_perc + 0.5*g4_perc)/2) %>%
+    mutate(youth_emigr = (g1_perc + 0.5*g3_perc + 0.5*g4_perc)) %>%
     # Total youth score
     rowwise() %>%
     mutate(youth_score_male = mean(c(youth_employ , youth_emigr),na.rm = T)) %>%
@@ -663,13 +663,13 @@ step2_YouthEmploymentEmigration <- function(){
     mutate(y_good_perc = y_good_sum*100/ymembers,
            y_med_perc = y_med_sum*100/ymembers,
            y_bad_perc = y_bad_sum*100/ymembers) %>% 
-    mutate(youth_employ = (y_good_perc + 0.5*y_med_perc)/1.5) %>%
+    mutate(youth_employ = (y_good_perc + 0.5*y_med_perc)) %>%
     # Emigration score
     mutate(g1_perc = g1_sum/ymembers*100,
            g2_perc = g2_sum/ymembers*100,
            g3_perc = g3_sum/ymembers*100,
            g4_perc = g4_sum/ymembers*100) %>% 
-    mutate(youth_emigr = (g1_perc + 0.5*g3_perc + 0.5*g4_perc)/2) %>%
+    mutate(youth_emigr = (g1_perc + 0.5*g3_perc + 0.5*g4_perc)) %>%
     # Total youth score
     rowwise() %>%
     mutate(youth_score_female = mean(c(youth_employ , youth_emigr),na.rm = T)) %>%
