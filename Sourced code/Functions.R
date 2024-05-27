@@ -78,7 +78,7 @@ caet_culture <- function(){
   Culture <- Culture %>%
     rowwise() %>%
     mutate(cultf_sum = sum(c(diet, food_self_suff, food_heritage, seeds_breeds),na.rm = TRUE),
-           cultf_score = round((cultf_sum/12)*100,6))
+           cultf_score = round((cultf_sum/16)*100,6))
   return(Culture)
 }
 
