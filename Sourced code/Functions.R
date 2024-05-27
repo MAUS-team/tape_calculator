@@ -195,7 +195,7 @@ step2_SoilHealth <- function(){
   SoilHealth <- SoilHealth %>%
     rowwise() %>%
     mutate(soil_health = mean(c(structure,compaction,depth,residues,color,water_ret,cover,erosion,invertebrates,microbio),na.rm = T)) %>%
-    mutate(soil_health = (soil_health - 1) * 25)
+    mutate(soil_health = (soil_health/4* 100)
   return(SoilHealth)
 }
 
