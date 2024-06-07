@@ -1454,7 +1454,7 @@ step2_economy <- function(){
   machine <- machine %>%
     mutate(init_v = mowned * mprice,
            res_v = (init_v/100)*10,
-           depreciation = (init_v - res_v)/(myused/(myused+myplan))) # change of the formula
+           depreciation = (init_v - res_v)*(myused/(myused+myplan))) # change of the formula
   
   machine <- machine %>%
     group_by(key) %>%
